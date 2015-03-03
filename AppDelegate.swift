@@ -1,3 +1,4 @@
+
 //
 //  AppDelegate.swift
 //  Stanford-Crushes
@@ -16,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        var data = Data()
+        Parse.setApplicationId(data.applicationID, clientKey: data.clientKey)
         return true
     }
 

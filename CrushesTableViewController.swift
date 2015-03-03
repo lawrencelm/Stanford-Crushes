@@ -21,6 +21,20 @@ class CrushesTableViewController: UITableViewController, UITextFieldDelegate
     // MARK: - View Controller Lifecycle
     
     override func viewDidLoad() {
+        
+        //testing Parse
+        var gameScore = PFObject(className: "GameScore")
+        gameScore.setObject(1337, forKey: "score")
+        gameScore.setObject("Sean Plott", forKey: "playerName")
+        gameScore.saveInBackgroundWithBlock {
+            (success: Bool!, error: NSError!) -> Void in
+            if success! {
+                NSLog("Object created with id: \(gameScore.objectId)")
+            } else {
+                NSLog("%@", error)
+            }
+        }
+        
         super.viewDidLoad()
         
         self.parentViewController?.title = "Recent";
