@@ -51,6 +51,23 @@ class CrushesTableViewCell: UITableViewCell
     }
     
     func updateUI() {
+        
+        var query = PFQuery(className: "AnonCrush")
+        var array = query.findObjects()
+     //   query.find
+       // var newArray: Void = query.findObjectsInBackgroundWithBlock { (object, error) -> Void in
+           // println("hi")
+       // }
+        println(array[array.count - 1 - row!])//.objectForKey("post"))
+        //for object in array {
+          /*  println("START ARRAY>>")
+            println(array)
+            println(">>>>")
+            println(array.last)
+            println("<<END THAT")*/
+        //}
+        
+        
         anonPost?.attributedText = nil
         var count = NSUserDefaults.standardUserDefaults().dictionaryRepresentation().count
         var index = count/2 - row!

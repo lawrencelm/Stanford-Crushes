@@ -16,19 +16,44 @@ class WriteViewController: UIViewController, UITextFieldDelegate
             destination = navCon.visibleViewController
         }
         if let mtvc = destination as? CrushesTableViewController {
+            //means that clicked post
+            if postText != nil {
+                var post = PFObject(className: "AnonCrush")
+                post.setObject(postText.text, forKey: "post")
+                
+                if email != nil {
+                    post.setObject(email.text, forKey: "crush_email")
+                    post.setObject(true, forKey: "set_name")
+                } else {
+                    post.setObject(false, forKey: "set_name")
+                }
+                post.saveInBackgroundWithBlock {
+                    (success: Bool!, error: NSError!) -> Void in
+                    if success! {
+                        NSLog("Object created with id: \(post.objectId)")
+                    } else {
+                        NSLog("%@", error)
+                    }
+                }
+
+            } else {
+               // NSlog("Error D:")
+            }
             mtvc.needReload = true
         }
     }
     
+    @IBOutlet weak var postText: UITextField!
     
+    @IBOutlet weak var email: UITextField!
     // MARK: - Public API
     
-    var postText: String? {
+   /* var postText: String? {
         didSet {
             searchTextField?.text = postText
-            refresh()
+            //refresh()
         }
-    }
+    }*/
     
     // MARK: - View Controller Lifecycle
     
@@ -56,7 +81,7 @@ class WriteViewController: UIViewController, UITextFieldDelegate
     
     // store the searchText into a dictionary in NSUserDefaults
     func refresh() {
-        if postText != nil{
+       /* if postText != nil{
             println("post text >>")
             println(postText)
             let defaults = NSUserDefaults.standardUserDefaults()
@@ -66,12 +91,12 @@ class WriteViewController: UIViewController, UITextFieldDelegate
             
             defaults.setObject(postText, forKey: String(count/2 + 1))
             defaults.setObject(votes, forKey: String(-(count/2 + 1)))
-        }
+        }*/
     }
     
     // MARK: - Storyboard Connectivity
     
-    @IBOutlet private weak var searchTextField: UITextField! {
+   /* @IBOutlet private weak var searchTextField: UITextField! {
         didSet {
             searchTextField.delegate = self
             searchTextField.text = postText
@@ -84,6 +109,6 @@ class WriteViewController: UIViewController, UITextFieldDelegate
             postText = textField.text
         }
         return true
-    }
+    }*/
     
 }

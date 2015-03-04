@@ -36,6 +36,7 @@
 		21E328571AA5916F00ABFDC0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E328561AA5916E00ABFDC0 /* Parse.framework */; };
 		21E328591AA5917A00ABFDC0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E328581AA5917A00ABFDC0 /* Bolts.framework */; };
 		21E3285B1AA593A600ABFDC0 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E3285A1AA593A600ABFDC0 /* Data.swift */; };
+		21E3285F1AA5C16700ABFDC0 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E3285E1AA5C16600ABFDC0 /* MatchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		21E328561AA5916E00ABFDC0 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "frameworks/parse-library-1.6.3/Parse.framework"; sourceTree = SOURCE_ROOT; };
 		21E328581AA5917A00ABFDC0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "frameworks/parse-library-1.6.3/Bolts.framework"; sourceTree = SOURCE_ROOT; };
 		21E3285A1AA593A600ABFDC0 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		21E3285E1AA5C16600ABFDC0 /* MatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				21E3282F1AA5806B00ABFDC0 /* CrushesNavigationViewController.swift */,
 				21E328531AA5906200ABFDC0 /* Stanford-Crushes-Bridging-Header.h */,
 				21E3285A1AA593A600ABFDC0 /* Data.swift */,
+				21E3285E1AA5C16600ABFDC0 /* MatchViewController.swift */,
 			);
 			path = "Stanford-Crushes";
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21E3285F1AA5C16700ABFDC0 /* MatchViewController.swift in Sources */,
 				21E3280C1AA4678300ABFDC0 /* ViewController.swift in Sources */,
 				21E328301AA5806B00ABFDC0 /* CrushesNavigationViewController.swift in Sources */,
 				21E3285B1AA593A600ABFDC0 /* Data.swift in Sources */,
@@ -530,6 +534,7 @@
 				21E328251AA4678300ABFDC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21E328261AA4678300ABFDC0 /* Build configuration list for PBXNativeTarget "Stanford-CrushesTests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +543,7 @@
 				21E328281AA4678300ABFDC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

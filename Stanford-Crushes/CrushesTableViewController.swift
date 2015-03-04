@@ -35,6 +35,21 @@ class CrushesTableViewController: UITableViewController, UITextFieldDelegate
             }
         }
         
+        var user = PFUser()
+        user.username = "myUsername"
+        user.password = "myPassword"
+        user.email = "lmurata@stanford.edu"
+        user.signUpInBackgroundWithBlock {
+            (succeeded: Bool!, error: NSError!) -> Void in
+            if error == nil {
+                // Hooray! Let them use the app now.
+                //self.messageLabel.text = "User Signed Up";
+            } else {
+                // Show the errorString somewhere and let the user try again.
+            }
+        }
+        
+        
         super.viewDidLoad()
         
         self.parentViewController?.title = "Recent";

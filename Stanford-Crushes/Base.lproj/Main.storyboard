@@ -8,7 +8,7 @@
         <!--Explore-->
         <scene sceneID="gCF-52-4ew">
             <objects>
-                <viewController id="QYq-o6-wp1" colorLabel="IBBuiltInLabel-Red" sceneMemberID="viewController">
+                <viewController id="QYq-o6-wp1" customClass="MatchViewController" customModule="Stanford_Crushes" customModuleProvider="target" colorLabel="IBBuiltInLabel-Red" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Px6-7P-Phd"/>
                         <viewControllerLayoutGuide type="bottom" id="gkM-BN-mGL"/>
@@ -21,11 +21,17 @@
                                 <rect key="frame" x="93" y="145" width="491" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="enteredCrush:" destination="QYq-o6-wp1" eventType="editingDidEnd" id="Vtc-AD-3gP"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5nL-Ji-lym">
                                 <rect key="frame" x="93" y="261" width="491" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="enteredCrush:" destination="QYq-o6-wp1" eventType="editingDidEnd" id="VF0-0a-9cy"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gw4-x6-uUG">
                                 <rect key="frame" x="93" y="321" width="491" height="30"/>
@@ -42,6 +48,9 @@
                                 <rect key="frame" x="93" y="200" width="491" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="enteredCrush:" destination="QYq-o6-wp1" eventType="editingDidEnd" id="Ue5-VN-aAa"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -55,7 +64,6 @@
         <!--Me-->
         <scene sceneID="nM6-EM-vN3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sHT-D8-21o" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="a1J-06-szF" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AZv-E9-zuy"/>
@@ -68,6 +76,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Me" id="Yee-9o-wnb"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sHT-D8-21o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="876" y="-445"/>
         </scene>
@@ -94,7 +103,6 @@
         <!--Crushes-->
         <scene sceneID="FZ0-P4-ALj">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cGa-iU-vx1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="MRf-sa-XT1" customClass="CrushesTableViewController" customModule="Stanford_Crushes" customModuleProvider="target" colorLabel="IBBuiltInLabel-Red" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="104" sectionHeaderHeight="22" sectionFooterHeight="22" id="fEV-72-b0T">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -141,7 +149,7 @@
                                                 <constraint firstAttribute="width" constant="30" id="fRi-a5-pWi"/>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="wkU-v9-Cl5"/>
                                             </constraints>
-                                            <state key="normal" image="FCE4ECD4-5A00-4529-A0D9-B429B39412AD">
+                                            <state key="normal" image="00786C05-2491-4D53-AD72-2EAB78D39F0E">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <variation key="default">
@@ -202,35 +210,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cGa-iU-vx1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="672" y="990"/>
-        </scene>
-        <!--Root View Controller-->
-        <scene sceneID="vAM-m2-e69">
-            <objects>
-                <tableViewController id="DTJ-sq-6yv" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="rX7-LJ-iIx">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xrj-sT-RUd">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xrj-sT-RUd" id="9XO-rV-ZpP">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="DTJ-sq-6yv" id="omJ-tk-VIm"/>
-                            <outlet property="delegate" destination="DTJ-sq-6yv" id="Tob-Nx-fEY"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="YRj-oJ-03D"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3A9-or-pby" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="869" y="1695"/>
         </scene>
         <!--Item-->
         <scene sceneID="uVE-JI-dLo">
@@ -262,10 +244,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="What's on your Mind?..." clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YQZ-mC-5ST">
-                                <rect key="frame" x="26" y="74" width="548" height="177"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="What's on your Mind?..." clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YQZ-mC-5ST">
+                                <rect key="frame" x="26" y="74" width="548" height="226"/>
                                 <color key="textColor" red="0.54884785349999998" green="0.54884785349999998" blue="0.54884785349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tJG-Ip-a3R">
+                                <rect key="frame" x="26" y="356" width="548" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
@@ -275,6 +262,7 @@
                             <constraint firstItem="YQZ-mC-5ST" firstAttribute="leading" secondItem="ZSm-Af-dbf" secondAttribute="leadingMargin" constant="10" id="Xh2-qE-Agv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YQZ-mC-5ST" secondAttribute="trailing" constant="10" id="eiH-pI-pJh"/>
                             <constraint firstItem="69T-4u-Rix" firstAttribute="top" secondItem="YQZ-mC-5ST" secondAttribute="bottom" constant="300" id="lDF-Y4-VKv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tJG-Ip-a3R" secondAttribute="trailing" constant="10" id="urO-1Z-7Zt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New" id="Qju-YC-nsY">
@@ -285,7 +273,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchTextField" destination="YQZ-mC-5ST" id="hlz-cz-cSU"/>
+                        <outlet property="email" destination="tJG-Ip-a3R" id="6kc-ca-PHx"/>
+                        <outlet property="postText" destination="YQZ-mC-5ST" id="6ry-Ch-oBB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rIH-hO-Rb1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -294,7 +283,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="FCE4ECD4-5A00-4529-A0D9-B429B39412AD" width="66" height="78">
+        <image name="00786C05-2491-4D53-AD72-2EAB78D39F0E" width="66" height="78">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
