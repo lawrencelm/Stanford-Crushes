@@ -11,6 +11,8 @@ import LocalAuthentication
 
 class AuthController: UITabBarController, UIAlertViewDelegate
  {
+    //changes: move this to chat only.
+    //add a settings page where user can turn this on and off
     
     override func viewDidLoad() {
         super.viewDidLoad()

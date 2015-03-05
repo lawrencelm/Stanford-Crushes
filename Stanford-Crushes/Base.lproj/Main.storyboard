@@ -334,7 +334,7 @@
                     <tabBarItem key="tabBarItem" systemItem="mostRecent" id="nEQ-Bj-MGZ"/>
                     <navigationItem key="navigationItem" title="Crushes" id="mdj-HV-DPr" colorLabel="IBBuiltInLabel-Red">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="OZF-zf-Yuh">
-                            <color key="tintColor" red="0.79480350379999998" green="0.10372675169999999" blue="0.1036643355" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="7RN-xo-MSk" kind="show" id="qBl-Zw-XzI"/>
                             </connections>
