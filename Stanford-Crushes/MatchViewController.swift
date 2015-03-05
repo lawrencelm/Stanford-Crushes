@@ -26,13 +26,35 @@ class MatchViewController: UIViewController {
     
     @IBOutlet weak var message: UILabel!
     
+    func matchFound(crush: String, user: String) {
+        let alert = UIAlertView()
+        alert.title = "Match found!"
+        alert.message = "You matched with " + crush
+        alert.addButtonWithTitle("OK")
+        alert.show()
+        
+        var post = PFObject(className: "Chat")
+        post.setObject("match", forKey: "type")
+        post.setObject([user, crush], forKey: "members")
+        post.saveInBackgroundWithBlock {
+            (success: Bool!, error: NSError!) -> Void in
+            if success! {
+                NSLog("Object created with id: \(post.objectId)")
+            } else {
+                NSLog("%@", error)
+            }
+        }
+    }
+    
     func findMatch() {
         var user = PFUser.currentUser()
         var query = PFQuery(className: "CrushList")
         var array = query.findObjects()
         println(array)
-        for crushes in array {
+        for crushList in array {
+            var crushes: AnyObject? = crushList.objectForKey("crushes")
             var crushesArray = (crushes as? NSArray) as Array?
+            println(crushesArray)
             if crushesArray != nil {
                 for crush in crushesArray! {
                     var crushEmail = crush as String
@@ -40,6 +62,7 @@ class MatchViewController: UIViewController {
 
                     if crushEmail == user.email {
                         println("we have a match!")
+                        matchFound(crushEmail, user: user.email)
                     }
                 }
             }
@@ -49,6 +72,7 @@ class MatchViewController: UIViewController {
     @IBAction func enteredCrush(sender: UITextField) {
         var user = PFUser.currentUser()
         if user != nil {
+            sender.hidden = true
             var array: Array<String>?
             var crushes: AnyObject! = user.objectForKey("crushes")
             if crushes == nil {
@@ -75,7 +99,6 @@ class MatchViewController: UIViewController {
                 }
             }
             
-            sender.hidden = true
             //use graphics to cover
             
             findMatch()
