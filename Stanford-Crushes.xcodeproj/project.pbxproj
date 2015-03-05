@@ -41,7 +41,10 @@
 		21E66C001AA7FE67005FD649 /* ChatCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E66BFF1AA7FE67005FD649 /* ChatCollectionView.swift */; };
 		21E66C021AA7FEAA005FD649 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E66C011AA7FEAA005FD649 /* AuthController.swift */; };
 		21E66C041AA80795005FD649 /* pic1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21E66C031AA80795005FD649 /* pic1.jpg */; };
-		21E66C061AA80C98005FD649 /* archery_target.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E66C051AA80C97005FD649 /* archery_target.png */; };
+		21E66C081AA81346005FD649 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E66C071AA81346005FD649 /* LoginViewController.swift */; };
+		21E66C0B1AA819E6005FD649 /* pic2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21E66C091AA819E6005FD649 /* pic2.jpg */; };
+		21E66C0C1AA819E6005FD649 /* pic3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21E66C0A1AA819E6005FD649 /* pic3.jpg */; };
+		21E66C0E1AA81A6B005FD649 /* archery_target.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E66C0D1AA81A6A005FD649 /* archery_target.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,7 +97,10 @@
 		21E66BFF1AA7FE67005FD649 /* ChatCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCollectionView.swift; sourceTree = "<group>"; };
 		21E66C011AA7FEAA005FD649 /* AuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		21E66C031AA80795005FD649 /* pic1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic1.jpg; sourceTree = "<group>"; };
-		21E66C051AA80C97005FD649 /* archery_target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = archery_target.png; path = Images.xcassets/arrows.imageset/archery_target.png; sourceTree = "<group>"; };
+		21E66C071AA81346005FD649 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		21E66C091AA819E6005FD649 /* pic2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic2.jpg; sourceTree = "<group>"; };
+		21E66C0A1AA819E6005FD649 /* pic3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic3.jpg; sourceTree = "<group>"; };
+		21E66C0D1AA81A6A005FD649 /* archery_target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = archery_target.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,15 +172,18 @@
 				21E328071AA4678300ABFDC0 /* Supporting Files */,
 				21E328291AA547CB00ABFDC0 /* CrushesTableViewController.swift */,
 				21E3282B1AA5702700ABFDC0 /* CrushesTableviewCell.swift */,
+				21E66C091AA819E6005FD649 /* pic2.jpg */,
+				21E66C0A1AA819E6005FD649 /* pic3.jpg */,
 				21E3282D1AA5785400ABFDC0 /* WriteViewController.swift */,
 				21E3282F1AA5806B00ABFDC0 /* CrushesNavigationViewController.swift */,
 				21E328531AA5906200ABFDC0 /* Stanford-Crushes-Bridging-Header.h */,
-				21E66C051AA80C97005FD649 /* archery_target.png */,
+				21E66C0D1AA81A6A005FD649 /* archery_target.png */,
 				21E66C031AA80795005FD649 /* pic1.jpg */,
 				21E3285A1AA593A600ABFDC0 /* Data.swift */,
 				21E3285E1AA5C16600ABFDC0 /* MatchViewController.swift */,
 				21E66BFF1AA7FE67005FD649 /* ChatCollectionView.swift */,
 				21E66C011AA7FEAA005FD649 /* AuthController.swift */,
+				21E66C071AA81346005FD649 /* LoginViewController.swift */,
 			);
 			path = "Stanford-Crushes";
 			sourceTree = "<group>";
@@ -316,11 +325,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21E66C061AA80C98005FD649 /* archery_target.png in Resources */,
+				21E66C0E1AA81A6B005FD649 /* archery_target.png in Resources */,
+				21E66C0B1AA819E6005FD649 /* pic2.jpg in Resources */,
 				21E66C041AA80795005FD649 /* pic1.jpg in Resources */,
 				21E3280F1AA4678300ABFDC0 /* Main.storyboard in Resources */,
 				21E328141AA4678300ABFDC0 /* LaunchScreen.xib in Resources */,
 				21E328111AA4678300ABFDC0 /* Images.xcassets in Resources */,
+				21E66C0C1AA819E6005FD649 /* pic3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +359,7 @@
 				21E3282E1AA5785500ABFDC0 /* WriteViewController.swift in Sources */,
 				21E66C001AA7FE67005FD649 /* ChatCollectionView.swift in Sources */,
 				21E3280A1AA4678300ABFDC0 /* AppDelegate.swift in Sources */,
+				21E66C081AA81346005FD649 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

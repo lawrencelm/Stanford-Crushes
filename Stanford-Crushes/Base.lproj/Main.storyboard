@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cmb-dy-NKd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FOo-gZ-6GG">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -155,6 +155,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bd3-wg-W6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="791" y="-331"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="hFU-HJ-lTA">
+            <objects>
+                <viewController id="FOo-gZ-6GG" customClass="LoginViewController" customModule="Stanford_Crushes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zcx-Qh-juW"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ni5-8j-8FV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5fc-I9-95U">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Stanford e-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="55i-Pk-xLa">
+                                <rect key="frame" x="103" y="174" width="394" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ig3-4a-R8F">
+                                <rect key="frame" x="103" y="285" width="394" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJl-w5-QGj">
+                                <rect key="frame" x="103" y="440" width="52" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="sign up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signupAction:" destination="FOo-gZ-6GG" eventType="touchUpInside" id="Hh9-qA-1ic"/>
+                                    <segue destination="cmb-dy-NKd" kind="show" identifier="signupSegue" id="EE9-sX-tEV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eZ-yA-cKx">
+                                <rect key="frame" x="462" y="440" width="35" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginAction:" destination="FOo-gZ-6GG" eventType="touchUpInside" id="ueo-MP-4fk"/>
+                                    <segue destination="cmb-dy-NKd" kind="show" identifier="loginSegue" id="ren-m7-Ddy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SJl-w5-QGj" firstAttribute="leading" secondItem="55i-Pk-xLa" secondAttribute="leading" id="49F-1g-Zaz"/>
+                            <constraint firstItem="55i-Pk-xLa" firstAttribute="leading" secondItem="5fc-I9-95U" secondAttribute="leadingMargin" constant="87" id="4OW-3w-Bbb"/>
+                            <constraint firstItem="SJl-w5-QGj" firstAttribute="top" secondItem="ig3-4a-R8F" secondAttribute="bottom" constant="125" id="9Uv-3h-nIL"/>
+                            <constraint firstItem="ig3-4a-R8F" firstAttribute="top" secondItem="55i-Pk-xLa" secondAttribute="bottom" constant="81" id="KUx-wa-Xqj"/>
+                            <constraint firstItem="4eZ-yA-cKx" firstAttribute="trailing" secondItem="ig3-4a-R8F" secondAttribute="trailing" id="Mft-oJ-X6F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="55i-Pk-xLa" secondAttribute="trailing" constant="87" id="QwY-PS-rLN"/>
+                            <constraint firstItem="55i-Pk-xLa" firstAttribute="top" secondItem="Zcx-Qh-juW" secondAttribute="bottom" constant="154" id="aBl-ZZ-6tG"/>
+                            <constraint firstItem="SJl-w5-QGj" firstAttribute="bottom" secondItem="4eZ-yA-cKx" secondAttribute="bottom" id="eis-X7-OHI"/>
+                            <constraint firstItem="4eZ-yA-cKx" firstAttribute="trailing" secondItem="55i-Pk-xLa" secondAttribute="trailing" id="i3f-FL-5Rm"/>
+                            <constraint firstItem="SJl-w5-QGj" firstAttribute="leading" secondItem="ig3-4a-R8F" secondAttribute="leading" id="kjs-S4-B5p"/>
+                            <constraint firstItem="Ni5-8j-8FV" firstAttribute="top" secondItem="4eZ-yA-cKx" secondAttribute="bottom" constant="130" id="to1-kT-GTp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="email" destination="55i-Pk-xLa" id="450-GC-Pyi"/>
+                        <outlet property="login" destination="4eZ-yA-cKx" id="dU1-dg-rPH"/>
+                        <outlet property="password" destination="ig3-4a-R8F" id="k31-lb-cG4"/>
+                        <outlet property="signup" destination="SJl-w5-QGj" id="N3q-C2-w5g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Lv-1W-aHv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-659" y="30"/>
         </scene>
         <!--Auth Controller-->
         <scene sceneID="DA8-xC-5Dy">
@@ -350,6 +423,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="399-hR-Hae"/>
-        <segue reference="05L-wa-KI2"/>
+        <segue reference="Sua-qW-2B7"/>
+        <segue reference="EE9-sX-tEV"/>
     </inferredMetricsTieBreakers>
 </document>
