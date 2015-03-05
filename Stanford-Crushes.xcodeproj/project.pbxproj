@@ -40,6 +40,8 @@
 		21E66BFE1AA7FDF6005FD649 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E66BFD1AA7FDF5005FD649 /* LocalAuthentication.framework */; };
 		21E66C001AA7FE67005FD649 /* ChatCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E66BFF1AA7FE67005FD649 /* ChatCollectionView.swift */; };
 		21E66C021AA7FEAA005FD649 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E66C011AA7FEAA005FD649 /* AuthController.swift */; };
+		21E66C041AA80795005FD649 /* pic1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21E66C031AA80795005FD649 /* pic1.jpg */; };
+		21E66C061AA80C98005FD649 /* archery_target.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E66C051AA80C97005FD649 /* archery_target.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		21E66BFD1AA7FDF5005FD649 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		21E66BFF1AA7FE67005FD649 /* ChatCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCollectionView.swift; sourceTree = "<group>"; };
 		21E66C011AA7FEAA005FD649 /* AuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		21E66C031AA80795005FD649 /* pic1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic1.jpg; sourceTree = "<group>"; };
+		21E66C051AA80C97005FD649 /* archery_target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = archery_target.png; path = Images.xcassets/arrows.imageset/archery_target.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,8 @@
 				21E3282D1AA5785400ABFDC0 /* WriteViewController.swift */,
 				21E3282F1AA5806B00ABFDC0 /* CrushesNavigationViewController.swift */,
 				21E328531AA5906200ABFDC0 /* Stanford-Crushes-Bridging-Header.h */,
+				21E66C051AA80C97005FD649 /* archery_target.png */,
+				21E66C031AA80795005FD649 /* pic1.jpg */,
 				21E3285A1AA593A600ABFDC0 /* Data.swift */,
 				21E3285E1AA5C16600ABFDC0 /* MatchViewController.swift */,
 				21E66BFF1AA7FE67005FD649 /* ChatCollectionView.swift */,
@@ -310,6 +316,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21E66C061AA80C98005FD649 /* archery_target.png in Resources */,
+				21E66C041AA80795005FD649 /* pic1.jpg in Resources */,
 				21E3280F1AA4678300ABFDC0 /* Main.storyboard in Resources */,
 				21E328141AA4678300ABFDC0 /* LaunchScreen.xib in Resources */,
 				21E328111AA4678300ABFDC0 /* Images.xcassets in Resources */,
