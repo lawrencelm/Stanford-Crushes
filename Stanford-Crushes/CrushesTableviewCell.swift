@@ -22,16 +22,16 @@ class CrushesTableViewCell: UITableViewCell
     @IBOutlet weak var anonPost: UILabel!
     
     @IBAction func upvote(sender: AnyObject) {
-        var count = NSUserDefaults.standardUserDefaults().dictionaryRepresentation().count
-        var index = count/2 - row!
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let number = NSUserDefaults.standardUserDefaults().objectForKey(String(-index)) as Int?
-        if number != nil {
-            var numberN = number!
-            numberN++
-            println(numberN)
-            countLabel.text = String(numberN)
-            defaults.setInteger(numberN, forKey: String(-index))
+        var query = PFQuery(className: "AnonCrush")
+        var array = query.findObjects()
+        var index = array.count - 1 - row!
+        if index >= 0 {
+            var newNumber = array[array.count - 1 - row!].objectForKey("upvotes") as Int?
+            if newNumber != nil {
+                newNumber!++
+                array[array.count - 1 - row!].setObject(newNumber, forKey: "upvotes")
+                countLabel.text = String(newNumber!)
+            }
         }
     }
     
@@ -51,37 +51,18 @@ class CrushesTableViewCell: UITableViewCell
     }
     
     func updateUI() {
+        anonPost?.attributedText = nil
         
         var query = PFQuery(className: "AnonCrush")
         var array = query.findObjects()
-     //   query.find
-       // var newArray: Void = query.findObjectsInBackgroundWithBlock { (object, error) -> Void in
-           // println("hi")
-       // }
-        println(array[array.count - 1 - row!])//.objectForKey("post"))
-        //for object in array {
-          /*  println("START ARRAY>>")
-            println(array)
-            println(">>>>")
-            println(array.last)
-            println("<<END THAT")*/
-        //}
-        
-        
-        anonPost?.attributedText = nil
-        var count = NSUserDefaults.standardUserDefaults().dictionaryRepresentation().count
-        var index = count/2 - row!
-        let defaults = NSUserDefaults.standardUserDefaults()
-        var keys = NSUserDefaults.standardUserDefaults().dictionaryRepresentation().keys
-        
-        
-        var arrK = keys.array
-        
-        let newText = defaults.objectForKey(String(index)) as String?
-        let newNumber = defaults.objectForKey(String(-index))as Int?
-        if newText != nil && newNumber != nil {
-            anonPost.text = newText!
-            countLabel.text = String(newNumber!)
+        var index = array.count - 1 - row!
+        if index >= 0 {
+            let newText: AnyObject? = array[array.count - 1 - row!].objectForKey("post")
+            let newNumber: AnyObject? = array[array.count - 1 - row!].objectForKey("upvotes")
+            if newText != nil && newNumber != nil {
+                anonPost.text = newText as? String
+                countLabel.text = String(newNumber as Int)
+            }
         }
     }
 }

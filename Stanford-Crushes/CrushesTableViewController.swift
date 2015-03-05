@@ -22,20 +22,7 @@ class CrushesTableViewController: UITableViewController, UITextFieldDelegate
     
     override func viewDidLoad() {
         
-        //testing Parse
-        var gameScore = PFObject(className: "GameScore")
-        gameScore.setObject(1337, forKey: "score")
-        gameScore.setObject("Sean Plott", forKey: "playerName")
-        gameScore.saveInBackgroundWithBlock {
-            (success: Bool!, error: NSError!) -> Void in
-            if success! {
-                NSLog("Object created with id: \(gameScore.objectId)")
-            } else {
-                NSLog("%@", error)
-            }
-        }
-        
-        var user = PFUser()
+        /*var user = PFUser()
         user.username = "myUsername"
         user.password = "myPassword"
         user.email = "lmurata@stanford.edu"
@@ -47,8 +34,7 @@ class CrushesTableViewController: UITableViewController, UITextFieldDelegate
             } else {
                 // Show the errorString somewhere and let the user try again.
             }
-        }
-        
+        }*/
         
         super.viewDidLoad()
         

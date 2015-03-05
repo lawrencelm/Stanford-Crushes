@@ -27,6 +27,7 @@ class WriteViewController: UIViewController, UITextFieldDelegate
                 } else {
                     post.setObject(false, forKey: "set_name")
                 }
+                post.setObject(0, forKey: "upvotes")
                 post.saveInBackgroundWithBlock {
                     (success: Bool!, error: NSError!) -> Void in
                     if success! {
