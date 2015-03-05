@@ -28,6 +28,7 @@ class MatchViewController: UIViewController {
     
     @IBAction func enteredCrush(sender: UITextField) {
         //limit to 5
+        //update user's array
     }
     
 }
