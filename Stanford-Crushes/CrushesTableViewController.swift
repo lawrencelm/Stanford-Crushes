@@ -104,11 +104,18 @@ class CrushesTableViewController: UITableViewController, UITextFieldDelegate
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        var query = PFQuery(className: "AnonCrush")
+        var array = query.findObjects()
+        if array.count < 100 {
+            return array.count
+        } else {
+            return 100
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
+
         let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.CellReuseIdentifier, forIndexPath: indexPath) as CrushesTableViewCell
         
         cell.row = indexPath.row

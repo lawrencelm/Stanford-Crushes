@@ -32,6 +32,36 @@ class LoginViewController: UIViewController {
        //email.superview?.sendSubviewToBack(loginBackground)
         email.superview?.addSubview(imageView)
         email.superview?.sendSubviewToBack(imageView)
+        //let defaults = NSUserDefaults.standardUserDefaults()
+       // var user: AnyObject? = defaults.objectForKey("user")
+        //consider using KeyChain later for safety
+       // if user != nil {
+       //     var curUser = user as PFUser
+       //     PFUser.logInWithUsername(curUser.email, password: curUser.password)
+        println(PFUser.currentUser())
+            if PFUser.currentUser() != nil {
+                //self.performSegueWithIdentifier("loginSegue", sender: self)
+                println(PFUser.currentUser())
+                
+            }
+        //}
+    }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+        println(PFUser.currentUser())
+
+        if identifier == "loginSegue" || identifier == "signupSegue" {
+            if PFUser.currentUser() == nil {
+            let alert = UIAlertView()
+            alert.title = "Wrong information!"
+            alert.message = "Enter correct e-mail/password"
+            alert.addButtonWithTitle("OK")
+            alert.show()
+            
+            return false
+            }
+        }
+        return true
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,11 +69,15 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
     @IBAction func loginAction(sender: AnyObject) {
         if email.text != nil && password.text != nil {
             PFUser.logInWithUsername(email.text, password: password.text)
             if PFUser.currentUser() != nil {
-                self.performSegueWithIdentifier("loginSegue", sender: self)
+            //    let defaults = NSUserDefaults.standardUserDefaults()
+                //defaults.setObject(PFUser.currentUser(), forKey: "user")
+         //   self.performSegueWithIdentifier("loginSegue", sender: self)
 
             }
         }
@@ -58,7 +92,9 @@ class LoginViewController: UIViewController {
             user.signUpInBackgroundWithBlock {
                 (succeeded: Bool!, error: NSError!) -> Void in
                 if error == nil {
-                    self.performSegueWithIdentifier("signupSegue", sender: self)
+                    //let defaults = NSUserDefaults.standardUserDefaults()
+                    //defaults.setObject(PFUser.currentUser(), forKey: "user")
+                    //self.performSegueWithIdentifier("signupSegue", sender: self)
 
                     // Hooray! Let them use the app now.
                     //self.messageLabel.text = "User Signed Up";

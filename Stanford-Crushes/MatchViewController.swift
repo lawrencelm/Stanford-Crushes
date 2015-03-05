@@ -26,7 +26,61 @@ class MatchViewController: UIViewController {
     
     @IBOutlet weak var message: UILabel!
     
+    func findMatch() {
+        var user = PFUser.currentUser()
+        var query = PFQuery(className: "CrushList")
+        var array = query.findObjects()
+        println(array)
+        for crushes in array {
+            var crushesArray = (crushes as? NSArray) as Array?
+            if crushesArray != nil {
+                for crush in crushesArray! {
+                    var crushEmail = crush as String
+                    println(crushEmail)
+
+                    if crushEmail == user.email {
+                        println("we have a match!")
+                    }
+                }
+            }
+        }
+    }
+    
     @IBAction func enteredCrush(sender: UITextField) {
+        var user = PFUser.currentUser()
+        if user != nil {
+            var array: Array<String>?
+            var crushes: AnyObject! = user.objectForKey("crushes")
+            if crushes == nil {
+                array = [sender.text]
+            } else {
+                array = (crushes as? NSArray) as Array?
+                if array!.count < 5 {
+                    array!.append(sender.text)
+                }
+            }
+            user.setObject(array, forKey: "crushes")
+            user.save()
+            
+            var post = PFObject(className: "CrushList")
+            
+            post.setObject(user.email, forKey: "owner")
+            post.setObject(array, forKey: "crushes")
+            post.saveInBackgroundWithBlock {
+                (success: Bool!, error: NSError!) -> Void in
+                if success! {
+                    NSLog("Object created with id: \(post.objectId)")
+                } else {
+                    NSLog("%@", error)
+                }
+            }
+            
+            sender.hidden = true
+            //use graphics to cover
+            
+            findMatch()
+        }
+        
         //limit to 5
         //update user's array
     }

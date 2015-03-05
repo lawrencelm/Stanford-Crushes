@@ -51,6 +51,7 @@ class CrushesTableViewCell: UITableViewCell
     
     func updateUI() {
         anonPost?.attributedText = nil
+        countLabel?.attributedText = nil
         
         var query = PFQuery(className: "AnonCrush")
         var array = query.findObjects()

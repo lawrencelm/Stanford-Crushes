@@ -45,6 +45,7 @@
 		21E66C0B1AA819E6005FD649 /* pic2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21E66C091AA819E6005FD649 /* pic2.jpg */; };
 		21E66C0C1AA819E6005FD649 /* pic3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21E66C0A1AA819E6005FD649 /* pic3.jpg */; };
 		21E66C0E1AA81A6B005FD649 /* archery_target.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E66C0D1AA81A6A005FD649 /* archery_target.png */; };
+		21E66C101AA83D5C005FD649 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E66C0F1AA83D5B005FD649 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,10 +98,11 @@
 		21E66BFF1AA7FE67005FD649 /* ChatCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCollectionView.swift; sourceTree = "<group>"; };
 		21E66C011AA7FEAA005FD649 /* AuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		21E66C031AA80795005FD649 /* pic1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic1.jpg; sourceTree = "<group>"; };
-		21E66C071AA81346005FD649 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		21E66C071AA81346005FD649 /* LoginViewController.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; fileEncoding = 4; path = LoginViewController.swift; sourceTree = "<group>"; };
 		21E66C091AA819E6005FD649 /* pic2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic2.jpg; sourceTree = "<group>"; };
 		21E66C0A1AA819E6005FD649 /* pic3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic3.jpg; sourceTree = "<group>"; };
 		21E66C0D1AA81A6A005FD649 /* archery_target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = archery_target.png; sourceTree = "<group>"; };
+		21E66C0F1AA83D5B005FD649 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 				21E66BFF1AA7FE67005FD649 /* ChatCollectionView.swift */,
 				21E66C011AA7FEAA005FD649 /* AuthController.swift */,
 				21E66C071AA81346005FD649 /* LoginViewController.swift */,
+				21E66C0F1AA83D5B005FD649 /* SettingsViewController.swift */,
 			);
 			path = "Stanford-Crushes";
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				21E66C001AA7FE67005FD649 /* ChatCollectionView.swift in Sources */,
 				21E3280A1AA4678300ABFDC0 /* AppDelegate.swift in Sources */,
 				21E66C081AA81346005FD649 /* LoginViewController.swift in Sources */,
+				21E66C101AA83D5C005FD649 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
