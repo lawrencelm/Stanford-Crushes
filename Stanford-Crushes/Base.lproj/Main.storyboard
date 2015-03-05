@@ -17,49 +17,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1du-zU-pAF">
-                                <rect key="frame" x="93" y="145" width="491" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1du-zU-pAF">
+                                <rect key="frame" x="93" y="145" width="428" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="enteredCrush:" destination="QYq-o6-wp1" eventType="editingDidEnd" id="Vtc-AD-3gP"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5nL-Ji-lym">
-                                <rect key="frame" x="93" y="261" width="491" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5nL-Ji-lym">
+                                <rect key="frame" x="93" y="261" width="428" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="enteredCrush:" destination="QYq-o6-wp1" eventType="editingDidEnd" id="VF0-0a-9cy"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gw4-x6-uUG">
-                                <rect key="frame" x="93" y="321" width="491" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gw4-x6-uUG">
+                                <rect key="frame" x="93" y="321" width="428" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your top 5 crushes:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XY2-c7-Emj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your top 5 crushes:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XY2-c7-Emj">
                                 <rect key="frame" x="93" y="80" width="194" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3iD-Qa-fo5">
-                                <rect key="frame" x="93" y="200" width="491" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3iD-Qa-fo5">
+                                <rect key="frame" x="93" y="200" width="428" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="enteredCrush:" destination="QYq-o6-wp1" eventType="editingDidEnd" id="Ue5-VN-aAa"/>
                                 </connections>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FcZ-1u-ccN">
+                                <rect key="frame" x="93" y="382" width="428" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1du-zU-pAF" firstAttribute="trailing" secondItem="5nL-Ji-lym" secondAttribute="trailing" id="9jB-AS-qEa"/>
+                            <constraint firstItem="1du-zU-pAF" firstAttribute="centerX" secondItem="gw4-x6-uUG" secondAttribute="centerX" id="A4r-dd-IHW"/>
+                            <constraint firstItem="1du-zU-pAF" firstAttribute="leading" secondItem="gw4-x6-uUG" secondAttribute="leading" id="Am6-b2-0Cu"/>
+                            <constraint firstItem="1du-zU-pAF" firstAttribute="leading" secondItem="5nL-Ji-lym" secondAttribute="leading" id="EGm-EM-ToY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XY2-c7-Emj" secondAttribute="trailing" constant="297" id="F8U-i2-eiM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1du-zU-pAF" secondAttribute="trailing" constant="63" id="IoC-uz-yWa"/>
+                            <constraint firstItem="1du-zU-pAF" firstAttribute="trailing" secondItem="gw4-x6-uUG" secondAttribute="trailing" id="KLP-gE-sZF"/>
+                            <constraint firstItem="1du-zU-pAF" firstAttribute="trailing" secondItem="5nL-Ji-lym" secondAttribute="trailing" id="Lgy-td-pbS"/>
+                            <constraint firstItem="3iD-Qa-fo5" firstAttribute="top" secondItem="1du-zU-pAF" secondAttribute="bottom" constant="25" id="MZf-kt-lP6"/>
+                            <constraint firstItem="1du-zU-pAF" firstAttribute="leading" secondItem="3iD-Qa-fo5" secondAttribute="leading" id="Th3-Su-Bul"/>
+                            <constraint firstItem="1du-zU-pAF" firstAttribute="top" secondItem="XY2-c7-Emj" secondAttribute="bottom" constant="44" id="cDt-RF-y5u"/>
+                            <constraint firstItem="1du-zU-pAF" firstAttribute="leading" secondItem="XY2-c7-Emj" secondAttribute="leading" id="cEb-cQ-pgN"/>
+                            <constraint firstItem="XY2-c7-Emj" firstAttribute="top" secondItem="Px6-7P-Phd" secondAttribute="bottom" constant="60" id="dfj-lH-JWi"/>
+                            <constraint firstItem="1du-zU-pAF" firstAttribute="centerX" secondItem="5nL-Ji-lym" secondAttribute="centerX" id="ecu-8s-Ai9"/>
+                            <constraint firstItem="gw4-x6-uUG" firstAttribute="top" secondItem="5nL-Ji-lym" secondAttribute="bottom" constant="30" id="fw1-lj-ZMg"/>
+                            <constraint firstItem="XY2-c7-Emj" firstAttribute="leading" secondItem="guF-cU-d9Y" secondAttribute="leadingMargin" constant="77" id="hSO-tu-4SC"/>
+                            <constraint firstItem="3iD-Qa-fo5" firstAttribute="trailing" secondItem="guF-cU-d9Y" secondAttribute="trailingMargin" id="jdR-vh-Ujj"/>
+                            <constraint firstItem="5nL-Ji-lym" firstAttribute="top" secondItem="3iD-Qa-fo5" secondAttribute="bottom" constant="31" id="oG7-rs-6rg"/>
+                            <constraint firstItem="1du-zU-pAF" firstAttribute="trailing" secondItem="3iD-Qa-fo5" secondAttribute="trailing" id="qqB-4h-64i"/>
+                            <constraint firstItem="1du-zU-pAF" firstAttribute="trailing" secondItem="3iD-Qa-fo5" secondAttribute="trailing" id="yXq-my-Bj6"/>
+                            <constraint firstItem="1du-zU-pAF" firstAttribute="trailing" secondItem="gw4-x6-uUG" secondAttribute="trailing" id="z8M-U2-aMq"/>
+                            <constraint firstItem="1du-zU-pAF" firstAttribute="centerX" secondItem="3iD-Qa-fo5" secondAttribute="centerX" id="z97-zq-ybL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1du-zU-pAF" secondAttribute="trailing" constant="63" id="zzM-Zi-u48"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="IoC-uz-yWa"/>
+                                <exclude reference="yXq-my-Bj6"/>
+                                <exclude reference="jdR-vh-Ujj"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Explore" id="gWf-id-hR7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Qh-vo-1oL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="896" y="234"/>
+            <point key="canvasLocation" x="911" y="356"/>
         </scene>
         <!--Item-->
         <scene sceneID="lHh-AR-vn2">
@@ -105,12 +142,12 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bd3-wg-W6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="802" y="-232"/>
+            <point key="canvasLocation" x="791" y="-331"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Auth Controller-->
         <scene sceneID="DA8-xC-5Dy">
             <objects>
-                <tabBarController id="cmb-dy-NKd" sceneMemberID="viewController">
+                <tabBarController id="cmb-dy-NKd" customClass="AuthController" customModule="Stanford_Crushes" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="paU-QS-9o7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -300,6 +337,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="399-hR-Hae"/>
-        <segue reference="Sua-qW-2B7"/>
+        <segue reference="05L-wa-KI2"/>
     </inferredMetricsTieBreakers>
 </document>

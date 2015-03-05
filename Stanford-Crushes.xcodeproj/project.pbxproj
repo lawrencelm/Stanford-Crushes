@@ -38,6 +38,8 @@
 		21E3285B1AA593A600ABFDC0 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E3285A1AA593A600ABFDC0 /* Data.swift */; };
 		21E3285F1AA5C16700ABFDC0 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E3285E1AA5C16600ABFDC0 /* MatchViewController.swift */; };
 		21E66BFE1AA7FDF6005FD649 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E66BFD1AA7FDF5005FD649 /* LocalAuthentication.framework */; };
+		21E66C001AA7FE67005FD649 /* ChatCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E66BFF1AA7FE67005FD649 /* ChatCollectionView.swift */; };
+		21E66C021AA7FEAA005FD649 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E66C011AA7FEAA005FD649 /* AuthController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		21E3285A1AA593A600ABFDC0 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		21E3285E1AA5C16600ABFDC0 /* MatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
 		21E66BFD1AA7FDF5005FD649 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		21E66BFF1AA7FE67005FD649 /* ChatCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCollectionView.swift; sourceTree = "<group>"; };
+		21E66C011AA7FEAA005FD649 /* AuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,8 @@
 				21E328531AA5906200ABFDC0 /* Stanford-Crushes-Bridging-Header.h */,
 				21E3285A1AA593A600ABFDC0 /* Data.swift */,
 				21E3285E1AA5C16600ABFDC0 /* MatchViewController.swift */,
+				21E66BFF1AA7FE67005FD649 /* ChatCollectionView.swift */,
+				21E66C011AA7FEAA005FD649 /* AuthController.swift */,
 			);
 			path = "Stanford-Crushes";
 			sourceTree = "<group>";
@@ -329,8 +335,10 @@
 				21E328301AA5806B00ABFDC0 /* CrushesNavigationViewController.swift in Sources */,
 				21E3285B1AA593A600ABFDC0 /* Data.swift in Sources */,
 				21E3282C1AA5702700ABFDC0 /* CrushesTableviewCell.swift in Sources */,
+				21E66C021AA7FEAA005FD649 /* AuthController.swift in Sources */,
 				21E3282A1AA547CB00ABFDC0 /* CrushesTableViewController.swift in Sources */,
 				21E3282E1AA5785500ABFDC0 /* WriteViewController.swift in Sources */,
+				21E66C001AA7FE67005FD649 /* ChatCollectionView.swift in Sources */,
 				21E3280A1AA4678300ABFDC0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
