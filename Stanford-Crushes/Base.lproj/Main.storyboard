@@ -115,13 +115,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" restorationIdentifier="anon" text="Crushes Post" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYP-V1-BF1">
-                                            <rect key="frame" x="8" y="8" width="98" height="87"/>
+                                            <rect key="frame" x="8" y="11" width="549" height="86"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2L-LJ-Afl">
-                                            <rect key="frame" x="565" y="43" width="22" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2L-LJ-Afl">
+                                            <rect key="frame" x="565" y="42" width="22" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20.5" id="IiE-vz-hIw"/>
                                                 <constraint firstAttribute="width" constant="22" id="ZsS-Ex-MDg"/>
@@ -135,21 +135,15 @@
                                                 </mask>
                                             </variation>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WyI-eJ-H8n">
-                                            <rect key="frame" x="277" y="37" width="46" height="30"/>
-                                            <state key="normal" title="Button">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLH-TX-CuH">
-                                            <rect key="frame" x="557" y="0.0" width="30" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLH-TX-CuH">
+                                            <rect key="frame" x="561" y="4" width="30" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="HoA-ZI-e85"/>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="doB-ok-oZf"/>
                                                 <constraint firstAttribute="width" constant="30" id="fRi-a5-pWi"/>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="wkU-v9-Cl5"/>
                                             </constraints>
-                                            <state key="normal" image="6F3DA155-6613-4D05-9BDA-DB5C3D347A67">
+                                            <state key="normal" image="8DDC0ABE-233D-459D-AFB2-8FC525EB41C7">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <variation key="default">
@@ -163,27 +157,18 @@
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="g2L-LJ-Afl" firstAttribute="top" secondItem="yLH-TX-CuH" secondAttribute="bottom" constant="5" id="28e-ts-42Z"/>
-                                        <constraint firstItem="g2L-LJ-Afl" firstAttribute="top" secondItem="yLH-TX-CuH" secondAttribute="bottom" constant="1" id="7BM-8m-vww"/>
-                                        <constraint firstItem="hYP-V1-BF1" firstAttribute="leading" secondItem="rfw-og-oIu" secondAttribute="leadingMargin" id="98C-ew-faH"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="yLH-TX-CuH" secondAttribute="trailing" constant="5" id="9QF-KZ-FRV"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="g2L-LJ-Afl" secondAttribute="bottom" constant="32.5" id="Jue-TD-sxi"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="g2L-LJ-Afl" secondAttribute="trailing" constant="5" id="O1U-rr-6WU"/>
-                                        <constraint firstItem="hYP-V1-BF1" firstAttribute="top" secondItem="rfw-og-oIu" secondAttribute="topMargin" id="PCw-qU-NFT"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="yLH-TX-CuH" secondAttribute="bottom" constant="57" id="XNV-AZ-ffy"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="yLH-TX-CuH" secondAttribute="trailing" constant="6" id="a9e-rD-Zab"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="g2L-LJ-Afl" secondAttribute="bottom" constant="31" id="j2S-Gi-iCe"/>
-                                        <constraint firstItem="g2L-LJ-Afl" firstAttribute="top" secondItem="yLH-TX-CuH" secondAttribute="bottom" constant="1" id="rS4-tq-XUv"/>
-                                        <constraint firstItem="yLH-TX-CuH" firstAttribute="top" secondItem="rfw-og-oIu" secondAttribute="topMargin" constant="4" id="roL-bV-F0g"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="hYP-V1-BF1" secondAttribute="bottom" id="vAX-qO-EIV"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="g2L-LJ-Afl" secondAttribute="trailing" constant="5" id="7E4-yq-7dg"/>
+                                        <constraint firstItem="g2L-LJ-Afl" firstAttribute="leading" secondItem="hYP-V1-BF1" secondAttribute="trailing" constant="8" id="Asw-wp-2fo"/>
+                                        <constraint firstItem="hYP-V1-BF1" firstAttribute="top" secondItem="rfw-og-oIu" secondAttribute="topMargin" constant="3" id="Bjs-JC-lZy"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="hYP-V1-BF1" secondAttribute="bottom" constant="-2" id="FGu-vJ-P49"/>
+                                        <constraint firstItem="yLH-TX-CuH" firstAttribute="centerX" secondItem="g2L-LJ-Afl" secondAttribute="centerX" id="HDn-CN-5aT"/>
+                                        <constraint firstItem="g2L-LJ-Afl" firstAttribute="leading" secondItem="hYP-V1-BF1" secondAttribute="trailing" constant="8" id="JGE-Il-j80"/>
+                                        <constraint firstItem="hYP-V1-BF1" firstAttribute="leading" secondItem="rfw-og-oIu" secondAttribute="leadingMargin" id="KI5-DC-AbQ"/>
+                                        <constraint firstItem="g2L-LJ-Afl" firstAttribute="top" secondItem="yLH-TX-CuH" secondAttribute="bottom" constant="8" id="TZC-k1-cl3"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="g2L-LJ-Afl" secondAttribute="bottom" constant="32" id="Zvp-Ea-v4U"/>
+                                        <constraint firstItem="yLH-TX-CuH" firstAttribute="top" secondItem="rfw-og-oIu" secondAttribute="topMargin" constant="-4" id="awB-th-HP3"/>
+                                        <constraint firstItem="g2L-LJ-Afl" firstAttribute="top" secondItem="rfw-og-oIu" secondAttribute="topMargin" constant="34" id="bGd-cr-GcO"/>
                                     </constraints>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="roL-bV-F0g"/>
-                                            <exclude reference="Jue-TD-sxi"/>
-                                            <exclude reference="rS4-tq-XUv"/>
-                                        </mask>
-                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="anonPost" destination="hYP-V1-BF1" id="XDC-kB-ryT"/>
@@ -212,7 +197,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGa-iU-vx1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="672" y="990"/>
+            <point key="canvasLocation" x="672" y="986"/>
         </scene>
         <!--Item-->
         <scene sceneID="uVE-JI-dLo">
@@ -283,7 +268,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="6F3DA155-6613-4D05-9BDA-DB5C3D347A67" width="66" height="78">
+        <image name="8DDC0ABE-233D-459D-AFB2-8FC525EB41C7" width="66" height="78">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
