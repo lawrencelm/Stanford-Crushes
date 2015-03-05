@@ -22,30 +22,29 @@ class CrushesTableViewCell: UITableViewCell
     @IBOutlet weak var anonPost: UILabel!
     
     @IBAction func upvote(sender: AnyObject) {
+        println("upvote")
         var query = PFQuery(className: "AnonCrush")
         var array = query.findObjects()
         var index = array.count - 1 - row!
         if index >= 0 {
-            var newNumber = array[array.count - 1 - row!].objectForKey("upvotes") as Int?
+            println(index)
+            var newNumber = array[index].objectForKey("upvotes") as Int?
             if newNumber != nil {
+                println(newNumber)
                 newNumber!++
-                array[array.count - 1 - row!].setObject(newNumber, forKey: "upvotes")
+                println(newNumber)
+                array[index].setObject(newNumber, forKey: "upvotes")
+                println(array[index].objectForKey("upvotes"))//(newNumber, forKey: "upvotes")
                 countLabel.text = String(newNumber!)
+                array[index].saveInBackgroundWithBlock {
+                    (success: Bool!, error: NSError!) -> Void in
+                    if success! {
+                        NSLog("Object created with id: \(array[index].objectId)")
+                    } else {
+                        NSLog("%@", error)
+                    }
+                }
             }
-        }
-    }
-    
-    @IBAction func downvote(sender: AnyObject) {
-        var count = NSUserDefaults.standardUserDefaults().dictionaryRepresentation().count
-        var index = count/2 - row!
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let number = NSUserDefaults.standardUserDefaults().objectForKey(String(-index)) as Int?
-        if number != nil {
-            var numberN = number!
-            numberN--
-            println(numberN)
-            countLabel.text = String(numberN)
-            defaults.setInteger(numberN, forKey: String(-index))
         }
         
     }
@@ -57,7 +56,7 @@ class CrushesTableViewCell: UITableViewCell
         var array = query.findObjects()
         var index = array.count - 1 - row!
         if index >= 0 {
-            let newText: AnyObject? = array[array.count - 1 - row!].objectForKey("post")
+            let newText: AnyObject? = array[index].objectForKey("post")
             let newNumber: AnyObject? = array[array.count - 1 - row!].objectForKey("upvotes")
             if newText != nil && newNumber != nil {
                 anonPost.text = newText as? String

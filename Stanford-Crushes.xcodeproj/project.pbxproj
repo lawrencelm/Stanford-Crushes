@@ -37,6 +37,7 @@
 		21E328591AA5917A00ABFDC0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E328581AA5917A00ABFDC0 /* Bolts.framework */; };
 		21E3285B1AA593A600ABFDC0 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E3285A1AA593A600ABFDC0 /* Data.swift */; };
 		21E3285F1AA5C16700ABFDC0 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E3285E1AA5C16600ABFDC0 /* MatchViewController.swift */; };
+		21E66BFE1AA7FDF6005FD649 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E66BFD1AA7FDF5005FD649 /* LocalAuthentication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		21E328581AA5917A00ABFDC0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "frameworks/parse-library-1.6.3/Bolts.framework"; sourceTree = SOURCE_ROOT; };
 		21E3285A1AA593A600ABFDC0 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		21E3285E1AA5C16600ABFDC0 /* MatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
+		21E66BFD1AA7FDF5005FD649 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21E66BFE1AA7FDF6005FD649 /* LocalAuthentication.framework in Frameworks */,
 				21E328461AA58DFC00ABFDC0 /* libsqlite3.dylib in Frameworks */,
 				21E328441AA58DEB00ABFDC0 /* libz.dylib in Frameworks */,
 				21E328421AA58DDA00ABFDC0 /* SystemConfiguration.framework in Frameworks */,
@@ -126,6 +129,7 @@
 		21E327FB1AA4678200ABFDC0 = {
 			isa = PBXGroup;
 			children = (
+				21E66BFD1AA7FDF5005FD649 /* LocalAuthentication.framework */,
 				21E328471AA58E3600ABFDC0 /* frameworks */,
 				21E328061AA4678300ABFDC0 /* Stanford-Crushes */,
 				21E3281C1AA4678300ABFDC0 /* Stanford-CrushesTests */,
