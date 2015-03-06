@@ -17,7 +17,8 @@ class MatchViewController: UIViewController {
         let imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0.0, y: 0.0), size: view.frame.size))
         imageView.image = UIImage(named: "pic1.jpg")
         message.superview?.addSubview(imageView)
-        message.superview?.sendSubviewToBack(imageView)    }
+        message.superview?.sendSubviewToBack(imageView)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -103,9 +104,7 @@ class MatchViewController: UIViewController {
             
             findMatch()
         }
-        
-        //limit to 5
-        //update user's array
+
     }
     
 }

@@ -37,20 +37,6 @@ class CrushesTableViewController: UITableViewController, UITextFieldDelegate
     
     override func viewDidLoad() {
         
-        /*var user = PFUser()
-        user.username = "myUsername"
-        user.password = "myPassword"
-        user.email = "lmurata@stanford.edu"
-        user.signUpInBackgroundWithBlock {
-            (succeeded: Bool!, error: NSError!) -> Void in
-            if error == nil {
-                // Hooray! Let them use the app now.
-                //self.messageLabel.text = "User Signed Up";
-            } else {
-                // Show the errorString somewhere and let the user try again.
-            }
-        }*/
-        
         super.viewDidLoad()
         
         self.parentViewController?.title = "Recent";
@@ -60,21 +46,11 @@ class CrushesTableViewController: UITableViewController, UITextFieldDelegate
         rightBarButton.target = self
         refresh()
         
-        //self.navigationController?.navigationBar.tintColor = UIColor.purpleColor()
-        //self.navigationItem.backBarButtonItem?.tintColor = UIColor.purpleColor()
-        
         self.navigationController?.navigationBar.barTintColor = UIColor(netHex: 0xF3726D)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
-     //   setupViewController(1)
     }
-    
-   /* func setupViewController(index: Int) {
-        let vas CrushesNavigationViewController
-        //vc.podcast = podcast
-        vc.tabBarItem.title = "Episode"
-        //vc.tabBarItem.image = UIImage(named: "png")
-    }*/
+
     
     @IBAction func unwindToRecent(segue: UIStoryboardSegue) {
         

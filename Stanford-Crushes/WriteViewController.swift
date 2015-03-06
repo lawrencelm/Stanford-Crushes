@@ -82,34 +82,9 @@ class WriteViewController: UIViewController, UITextFieldDelegate
     
     // store the searchText into a dictionary in NSUserDefaults
     func refresh() {
-       /* if postText != nil{
-            println("post text >>")
-            println(postText)
-            let defaults = NSUserDefaults.standardUserDefaults()
-            var votes = 0
-            
-            var count = NSUserDefaults.standardUserDefaults().dictionaryRepresentation().count
-            
-            defaults.setObject(postText, forKey: String(count/2 + 1))
-            defaults.setObject(votes, forKey: String(-(count/2 + 1)))
-        }*/
+
     }
     
     // MARK: - Storyboard Connectivity
-    
-   /* @IBOutlet private weak var searchTextField: UITextField! {
-        didSet {
-            searchTextField.delegate = self
-            searchTextField.text = postText
-        }
-    }
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        if textField == searchTextField {
-            textField.resignFirstResponder()
-            postText = textField.text
-        }
-        return true
-    }*/
-    
+
 }

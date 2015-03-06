@@ -27,24 +27,14 @@ class LoginViewController: UIViewController {
         let imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0.0, y: 0.0), size: view.frame.size))
         imageView.image = UIImage(named: "pic2.jpg")
     
-       // loginBackground.opaque = false
-       //email.superview?.addSubview(loginBackground)
-       //email.superview?.sendSubviewToBack(loginBackground)
         email.superview?.addSubview(imageView)
         email.superview?.sendSubviewToBack(imageView)
-        //let defaults = NSUserDefaults.standardUserDefaults()
-       // var user: AnyObject? = defaults.objectForKey("user")
-        //consider using KeyChain later for safety
-       // if user != nil {
-       //     var curUser = user as PFUser
-       //     PFUser.logInWithUsername(curUser.email, password: curUser.password)
+
         println(PFUser.currentUser())
             if PFUser.currentUser() != nil {
-                //self.performSegueWithIdentifier("loginSegue", sender: self)
                 println(PFUser.currentUser())
                 
             }
-        //}
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {

@@ -34,7 +34,7 @@ class CrushesTableViewCell: UITableViewCell
                 newNumber!++
                 println(newNumber)
                 array[index].setObject(newNumber, forKey: "upvotes")
-                println(array[index].objectForKey("upvotes"))//(newNumber, forKey: "upvotes")
+                println(array[index].objectForKey("upvotes"))
                 countLabel.text = String(newNumber!)
                 array[index].saveInBackgroundWithBlock {
                     (success: Bool!, error: NSError!) -> Void in
