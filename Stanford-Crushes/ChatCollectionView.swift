@@ -42,6 +42,8 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
         }
     }
     
+    private var numPics = 3 //number of pics available
+    
     //3
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as ChatCell
@@ -63,7 +65,15 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
 
         }
         
-        cell.imageView.image = UIImage(named: "pic1.jpg")
+        var randomNum : Int = Int(CGFloat.random(numPics))
+        if randomNum == 0 {
+            randomNum++
+        }
+        
+        var picName: String = "pic" + String(randomNum) + ".jpg"
+        println(picName)
+        
+        cell.imageView.image = UIImage(named: picName)
         cell.imageView.sizeThatFits(cell.bounds.size)
         
         cell.row = indexPath.row
@@ -148,5 +158,13 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
         layout collectionViewLayout: UICollectionViewLayout!,
         insetForSectionAtIndex section: Int) -> UIEdgeInsets {
             return sectionInsets
+    }
+}
+
+// MARK: - Extensions
+
+private extension CGFloat {
+    static func random(max: Int) -> CGFloat {
+        return CGFloat(arc4random() % UInt32(max))
     }
 }
