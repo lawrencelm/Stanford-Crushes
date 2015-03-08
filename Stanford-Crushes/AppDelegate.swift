@@ -13,12 +13,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    let themeColor = UIColor(netHex: 0xF3726D)
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         var data = Data()
         Parse.setApplicationId(data.applicationID, clientKey: data.clientKey)
+        
+        window?.tintColor = themeColor
+        
         return true
     }
 

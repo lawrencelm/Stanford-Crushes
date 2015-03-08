@@ -22,6 +22,10 @@ class SettingsViewController: UITableViewController {
         defaults.setObject(sender.value, forKey: "bounciness")
     }
     
+    @IBAction func changeAuth(sender: UISwitch) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(sender.selected, forKey: "auth")
+    }
     
     @IBAction func changePush(sender: UIStepper) {
         let defaults = NSUserDefaults.standardUserDefaults()

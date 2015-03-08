@@ -239,8 +239,8 @@
 		21E328481AA58E3600ABFDC0 /* parse-library-1.6.3 */ = {
 			isa = PBXGroup;
 			children = (
-				21E328491AA58E3600ABFDC0 /* Bolts.framework */,
 				21E3284A1AA58E3600ABFDC0 /* Parse.framework */,
+				21E328491AA58E3600ABFDC0 /* Bolts.framework */,
 				21E3284B1AA58E3600ABFDC0 /* ParseCrashReporting.framework */,
 				21E3284C1AA58E3600ABFDC0 /* ParseFacebookUtils.framework */,
 				21E3284D1AA58E3600ABFDC0 /* ParseUI.framework */,
