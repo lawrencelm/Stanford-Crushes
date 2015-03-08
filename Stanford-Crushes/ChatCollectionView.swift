@@ -66,12 +66,12 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
                 size.height += 10
                 return size
             }*/
-            var width = 100
-            var height = 100
+            var width: CGFloat = 100
+            var height: CGFloat = 100
             
             var multiply = 1
             
-            var convo : Array<String>?
+           // var convo : Array<String>?
             var index = Int()
             var classType = String()
             
@@ -86,18 +86,32 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
             
             var query = PFQuery(className: classType)
             var array = query.findObjects()
+            let factor = 5
+            let margin = 10
+            let maxWidth = UIScreen.mainScreen().bounds.size.width - 2*CGFloat(margin)
+            
             if (array != nil) {
+                println("ARRAY NOT NIL")
                 var index: Int = array.count - 1 - indexPath.row
                 
-                var conversations: AnyObject? = array[index].objectForKey("crushes")
-                convo = (conversations as? NSArray) as Array?
-                if convo != nil {
+                var conversations: AnyObject? = array[index].objectForKey("conversation")
+                if conversations != nil {
+                    var convo = (conversations as? NSArray) as Array?
+                    if convo != nil {
                // convo = array[index].objectForKey("conversation") as Array
-                    multiply *= convo!.count % 5
+                        println("MULTIPLYING CONVO")
+                        if convo!.count > factor {
+                            multiply *= convo!.count / factor
+                            if CGFloat(multiply) >= maxWidth{
+                                multiply = 1
+                                width = maxWidth
+                            }
+                        }
+                    }
                 }
             }
             
-            return CGSize(width: width*multiply, height: height*multiply)
+            return CGSize(width: width*CGFloat(multiply), height: height*CGFloat(multiply))
     }
     
     //3
