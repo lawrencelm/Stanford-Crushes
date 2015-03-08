@@ -11,22 +11,45 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flat-circle-christmas-tree+8-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="W5O-lf-U4y">
+                    <rect key="frame" x="90" y="45" width="300" height="256"/>
+                    <color key="backgroundColor" red="0.95294117649999999" green="0.44705882349999998" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stanford Crushes" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="20" y="140" width="441" height="43"/>
+                    <rect key="frame" x="20" y="309" width="441" height="43"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.95294117649999999" green="0.44705882349999998" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="W5O-lf-U4y" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="90" id="4Lg-Tm-OCx"/>
+                <constraint firstAttribute="trailing" secondItem="W5O-lf-U4y" secondAttribute="trailing" constant="90" id="4S4-Ge-src"/>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="bottom" multiplier="1/3" constant="1" id="5cJ-9S-tgC"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="W5O-lf-U4y" secondAttribute="bottom" constant="70" id="ErY-18-b71"/>
                 <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="Koa-jz-hwk"/>
+                <constraint firstAttribute="bottom" secondItem="kId-c2-rCX" secondAttribute="bottom" constant="85" id="XcZ-TP-Ubo"/>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="fvb-Df-36g"/>
+                <constraint firstItem="W5O-lf-U4y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="42" id="pp0-MO-Xw9"/>
+                <constraint firstAttribute="bottom" secondItem="kId-c2-rCX" secondAttribute="bottom" constant="128" id="vGm-cI-fV6"/>
+                <constraint firstItem="W5O-lf-U4y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="45" id="y6n-36-D3G"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="pp0-MO-Xw9"/>
+                    <exclude reference="5cJ-9S-tgC"/>
+                    <exclude reference="ErY-18-b71"/>
+                    <exclude reference="XcZ-TP-Ubo"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
+    <resources>
+        <image name="flat-circle-christmas-tree+8-icon.png" width="256" height="256"/>
+    </resources>
 </document>
