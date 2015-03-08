@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId(data.applicationID, clientKey: data.clientKey)
         
         window?.tintColor = themeColor
-        
+                
         return true
     }
 

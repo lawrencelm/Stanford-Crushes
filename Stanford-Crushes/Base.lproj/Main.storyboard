@@ -160,6 +160,7 @@
                                 </variation>
                                 <connections>
                                     <outlet property="imageView" destination="TLl-uV-Ab5" id="fQa-LD-IVJ"/>
+                                    <segue destination="s1W-19-EbV" kind="show" id="slO-2R-2yX"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -173,6 +174,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bd3-wg-W6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="795" y="-351"/>
+        </scene>
+        <!--Chat Room Table View Controller-->
+        <scene sceneID="30l-LO-Wd8">
+            <objects>
+                <tableViewController id="s1W-19-EbV" customClass="ChatRoomTableViewController" customModule="Stanford_Crushes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="97" sectionHeaderHeight="22" sectionFooterHeight="22" id="Sok-7s-sEx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="97" id="Wuu-zL-kXc">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wuu-zL-kXc" id="h5G-vu-Chp">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="s1W-19-EbV" id="Kps-Sf-FJZ"/>
+                            <outlet property="delegate" destination="s1W-19-EbV" id="xmU-oA-SCu"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1UA-p2-JWY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1463" y="-384"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="hFU-HJ-lTA">

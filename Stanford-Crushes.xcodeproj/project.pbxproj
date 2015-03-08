@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2177FFA91AACF68F00295C7C /* EmailSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2177FFA81AACF68F00295C7C /* EmailSender.swift */; };
+		2177FFAB1AAD0A0D00295C7C /* ChatRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2177FFAA1AAD0A0D00295C7C /* ChatRoomTableViewController.swift */; };
 		21BE692A1AABF44900E0B790 /* ChatCollectionChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BE69291AABF44900E0B790 /* ChatCollectionChat.swift */; };
 		21BE692C1AAC2DE300E0B790 /* flat-circle-christmas-tree+8-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 21BE692B1AAC2DE300E0B790 /* flat-circle-christmas-tree+8-icon.png */; };
 		21E3280A1AA4678300ABFDC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E328091AA4678300ABFDC0 /* AppDelegate.swift */; };
@@ -62,7 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2177FFA81AACF68F00295C7C /* EmailSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailSender.swift; sourceTree = "<group>"; };
+		2177FFAA1AAD0A0D00295C7C /* ChatRoomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewController.swift; sourceTree = "<group>"; };
 		21BE69291AABF44900E0B790 /* ChatCollectionChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCollectionChat.swift; sourceTree = "<group>"; };
 		21BE692B1AAC2DE300E0B790 /* flat-circle-christmas-tree+8-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flat-circle-christmas-tree+8-icon.png"; sourceTree = "<group>"; };
 		21E328041AA4678300ABFDC0 /* Stanford-Crushes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stanford-Crushes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,7 +195,7 @@
 				21E66C071AA81346005FD649 /* LoginViewController.swift */,
 				21E66C0F1AA83D5B005FD649 /* SettingsViewController.swift */,
 				21BE69291AABF44900E0B790 /* ChatCollectionChat.swift */,
-				2177FFA81AACF68F00295C7C /* EmailSender.swift */,
+				2177FFAA1AAD0A0D00295C7C /* ChatRoomTableViewController.swift */,
 			);
 			path = "Stanford-Crushes";
 			sourceTree = "<group>";
@@ -363,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2177FFAB1AAD0A0D00295C7C /* ChatRoomTableViewController.swift in Sources */,
 				21E3285F1AA5C16700ABFDC0 /* MatchViewController.swift in Sources */,
 				21E3280C1AA4678300ABFDC0 /* ViewController.swift in Sources */,
 				21E328301AA5806B00ABFDC0 /* CrushesNavigationViewController.swift in Sources */,
@@ -372,7 +373,6 @@
 				21E66C021AA7FEAA005FD649 /* AuthController.swift in Sources */,
 				21E3282A1AA547CB00ABFDC0 /* CrushesTableViewController.swift in Sources */,
 				21E3282E1AA5785500ABFDC0 /* WriteViewController.swift in Sources */,
-				2177FFA91AACF68F00295C7C /* EmailSender.swift in Sources */,
 				21E66C001AA7FE67005FD649 /* ChatCollectionView.swift in Sources */,
 				21E3280A1AA4678300ABFDC0 /* AppDelegate.swift in Sources */,
 				21E66C081AA81346005FD649 /* LoginViewController.swift in Sources */,

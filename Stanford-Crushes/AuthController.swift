@@ -18,11 +18,13 @@ class AuthController: UITabBarController, UIAlertViewDelegate
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        authenticateUser()
+        //might turn it ON later.
+        //you can turn it on by uncommenting the following line:
+        //authenticateUser()
     }
     
     func showPasswordAlert() {
-        var passwordAlert : UIAlertView = UIAlertView(title: "TouchIDDemo", message: "Please type your password", delegate: self, cancelButtonTitle: "Cancel", otherButtonTitles: "Okay")
+        var passwordAlert : UIAlertView = UIAlertView(title: "TouchID", message: "Please type your password", delegate: self, cancelButtonTitle: "Cancel", otherButtonTitles: "Okay")
         passwordAlert.alertViewStyle = UIAlertViewStyle.SecureTextInput
         passwordAlert.show()
     }

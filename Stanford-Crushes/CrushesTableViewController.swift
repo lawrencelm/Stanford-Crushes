@@ -33,12 +33,13 @@ class CrushesTableViewController: UITableViewController, UITextFieldDelegate
         }
     }
     
+    //allows auto reload of the data/posts every 10 seconds
     func reloadTable() {
         println("RELOADING")
 
         tableView.reloadData() // clear out the table view
-        refresh()
-        viewDidLoad()
+       // refresh()
+       // viewDidLoad()
     }
     
     // MARK: - View Controller Lifecycle
@@ -46,6 +47,8 @@ class CrushesTableViewController: UITableViewController, UITextFieldDelegate
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        var timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: Selector("reloadTable"), userInfo: nil, repeats: true)
         
         self.parentViewController?.title = "Recent";
         var rightBarButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Compose, target:self, action: "composeButton")
