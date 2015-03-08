@@ -71,7 +71,7 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
             
             var multiply = 1
             
-            var convo = Array<String>()
+            var convo : Array<String>?
             var index = Int()
             var classType = String()
             
@@ -88,8 +88,13 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
             var array = query.findObjects()
             if (array != nil) {
                 var index: Int = array.count - 1 - indexPath.row
-                convo = array[index].objectForKey("conversation") as Array
-                multiply *= 2//convo.count % 5
+                
+                var conversations: AnyObject? = array[index].objectForKey("crushes")
+                convo = (conversations as? NSArray) as Array?
+                if convo != nil {
+               // convo = array[index].objectForKey("conversation") as Array
+                    multiply *= convo!.count % 5
+                }
             }
             
             return CGSize(width: width*multiply, height: height*multiply)
