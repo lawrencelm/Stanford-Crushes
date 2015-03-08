@@ -22,6 +22,22 @@ class SettingsViewController: UITableViewController {
         defaults.setObject(sender.value, forKey: "bounciness")
     }
     
+    func logoutMessage() {
+        let alert = UIAlertView()
+        alert.title = "Successfully logged out!"
+        //alert.message = "Enter correct e-mail/password"
+        alert.addButtonWithTitle("OK")
+        alert.show()
+    }
+
+    
+    @IBAction func logout(sender: AnyObject) {
+        PFUser.logOut()
+        var currentUser = PFUser.currentUser()
+        if currentUser == nil {
+            logoutMessage()
+        }
+    }
     @IBAction func changeAuth(sender: UISwitch) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(sender.selected, forKey: "auth")

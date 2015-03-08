@@ -569,6 +569,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
+                                                        <action selector="logout:" destination="iDY-Ab-WLI" eventType="touchUpInside" id="UH7-Vi-M7H"/>
                                                         <segue destination="FOo-gZ-6GG" kind="show" id="aYV-3X-4On"/>
                                                     </connections>
                                                 </button>
