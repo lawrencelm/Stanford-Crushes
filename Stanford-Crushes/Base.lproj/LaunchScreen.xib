@@ -16,7 +16,7 @@
                     <color key="backgroundColor" red="0.95294117649999999" green="0.44705882349999998" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stanford Crushes" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="20" y="309" width="441" height="43"/>
+                    <rect key="frame" x="20" y="363" width="441" height="43"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -31,9 +31,9 @@
                 <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="W5O-lf-U4y" secondAttribute="bottom" constant="70" id="ErY-18-b71"/>
                 <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="Koa-jz-hwk"/>
                 <constraint firstAttribute="bottom" secondItem="kId-c2-rCX" secondAttribute="bottom" constant="85" id="XcZ-TP-Ubo"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="W5O-lf-U4y" secondAttribute="bottom" constant="62" id="axi-Z8-IWQ"/>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="fvb-Df-36g"/>
                 <constraint firstItem="W5O-lf-U4y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="42" id="pp0-MO-Xw9"/>
-                <constraint firstAttribute="bottom" secondItem="kId-c2-rCX" secondAttribute="bottom" constant="128" id="vGm-cI-fV6"/>
                 <constraint firstItem="W5O-lf-U4y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="45" id="y6n-36-D3G"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

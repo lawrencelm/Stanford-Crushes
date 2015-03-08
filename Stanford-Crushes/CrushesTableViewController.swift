@@ -33,6 +33,14 @@ class CrushesTableViewController: UITableViewController, UITextFieldDelegate
         }
     }
     
+    func reloadTable() {
+        println("RELOADING")
+
+        tableView.reloadData() // clear out the table view
+        refresh()
+        viewDidLoad()
+    }
+    
     // MARK: - View Controller Lifecycle
     
     override func viewDidLoad() {
