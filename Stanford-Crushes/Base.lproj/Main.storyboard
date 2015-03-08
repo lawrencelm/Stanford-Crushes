@@ -110,26 +110,33 @@
             </objects>
             <point key="canvasLocation" x="969" y="332"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="lHh-AR-vn2">
             <objects>
-                <collectionViewController id="F0Y-TH-HLM" sceneMemberID="viewController">
+                <collectionViewController id="F0Y-TH-HLM" customClass="ChatViewController" customModule="Stanford_Crushes" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="EnM-um-bF5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.95294117647058818" green="0.44705882352941179" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rmv-ZG-Iby">
-                            <size key="itemSize" width="267" height="172"/>
+                            <size key="itemSize" width="287" height="186"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="chat" id="JOb-yW-UkY">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="chat" id="JOb-yW-UkY" customClass="ChatCell" customModule="Stanford_Crushes" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="267" height="172"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="186"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TLl-uV-Ab5">
+                                            <rect key="frame" x="8" y="7" width="267" height="172"/>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" red="0.79480350379999998" green="0.10372675169999999" blue="0.1036643355" alpha="1" colorSpace="calibratedRGB"/>

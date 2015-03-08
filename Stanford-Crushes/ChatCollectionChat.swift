@@ -6,4 +6,20 @@
 //  Copyright (c) 2015 Lawrence Lin Murata. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ChatCell: UICollectionViewCell {
+    
+    var row: Int? {
+        didSet {
+            updateUI()
+        }
+    }
+    
+    var section: Int?
+    
+    func updateUI() {
+    
+    }
+    
+}

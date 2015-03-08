@@ -16,19 +16,39 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
     
     //1
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 1
+        //section 0 is for MatchChat
+        //section 1 is for AnonChat
+        return 2
     }
     
     //2
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        if section == 0 {
+            var query = PFQuery(className: "MatchChat")
+            var array = query.findObjects()
+            if array.count < 100 {
+                return array.count
+            } else {
+                return 100
+            }
+        } else {
+            var query = PFQuery(className: "AnonChat")
+            var array = query.findObjects()
+            if array.count < 100 {
+                return array.count
+            } else {
+                return 100
+            }
+        }
     }
     
     //3
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as UICollectionViewCell
-        cell.backgroundColor = UIColor.purpleColor()
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as ChatCell
+        cell.backgroundColor = UIColor.whiteColor()
         // Configure the cell
+        cell.section = indexPath.section
+        cell.row = indexPath.row
         return cell
     }
     
@@ -46,7 +66,33 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
                 size.height += 10
                 return size
             }*/
-            return CGSize(width: 100, height: 100)
+            var width = 100
+            var height = 100
+            
+            var multiply = 1
+            
+            var convo = Array<String>()
+            var index = Int()
+            var classType = String()
+            
+            if indexPath.section == 0 {
+                //MatchChat
+                classType = "MatchChat"
+            } else {
+                //AnonChat
+                classType = "AnonChat"
+            }
+            
+            
+            var query = PFQuery(className: classType)
+            var array = query.findObjects()
+            if (array != nil) {
+                var index: Int = array.count - 1 - indexPath.row
+                convo = array[index].objectForKey("conversation") as Array
+                multiply *= 2//convo.count % 5
+            }
+            
+            return CGSize(width: width*multiply, height: height*multiply)
     }
     
     //3

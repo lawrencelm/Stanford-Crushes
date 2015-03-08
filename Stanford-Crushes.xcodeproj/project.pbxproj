@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21BE692A1AABF44900E0B790 /* ChatCollectionChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BE69291AABF44900E0B790 /* ChatCollectionChat.swift */; };
 		21E3280A1AA4678300ABFDC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E328091AA4678300ABFDC0 /* AppDelegate.swift */; };
 		21E3280C1AA4678300ABFDC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E3280B1AA4678300ABFDC0 /* ViewController.swift */; };
 		21E3280F1AA4678300ABFDC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21E3280D1AA4678300ABFDC0 /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21BE69291AABF44900E0B790 /* ChatCollectionChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCollectionChat.swift; sourceTree = "<group>"; };
 		21E328041AA4678300ABFDC0 /* Stanford-Crushes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stanford-Crushes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21E328081AA4678300ABFDC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21E328091AA4678300ABFDC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				21E66C011AA7FEAA005FD649 /* AuthController.swift */,
 				21E66C071AA81346005FD649 /* LoginViewController.swift */,
 				21E66C0F1AA83D5B005FD649 /* SettingsViewController.swift */,
+				21BE69291AABF44900E0B790 /* ChatCollectionChat.swift */,
 			);
 			path = "Stanford-Crushes";
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				21E3285F1AA5C16700ABFDC0 /* MatchViewController.swift in Sources */,
 				21E3280C1AA4678300ABFDC0 /* ViewController.swift in Sources */,
 				21E328301AA5806B00ABFDC0 /* CrushesNavigationViewController.swift in Sources */,
+				21BE692A1AABF44900E0B790 /* ChatCollectionChat.swift in Sources */,
 				21E3285B1AA593A600ABFDC0 /* Data.swift in Sources */,
 				21E3282C1AA5702700ABFDC0 /* CrushesTableviewCell.swift in Sources */,
 				21E66C021AA7FEAA005FD649 /* AuthController.swift in Sources */,

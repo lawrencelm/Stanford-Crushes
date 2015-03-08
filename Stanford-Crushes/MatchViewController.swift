@@ -34,7 +34,7 @@ class MatchViewController: UIViewController {
         alert.addButtonWithTitle("OK")
         alert.show()
         
-        var post = PFObject(className: "Chat")
+        var post = PFObject(className: "MatchChat")
         post.setObject("match", forKey: "type")
         post.setObject([user, crush], forKey: "members")
         post.saveInBackgroundWithBlock {
