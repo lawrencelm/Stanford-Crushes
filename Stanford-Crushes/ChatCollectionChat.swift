@@ -16,10 +16,14 @@ class ChatCell: UICollectionViewCell {
         }
     }
     
+    @IBOutlet weak var imageView: UIImageView!
+    
+    var chat: AnyObject?
+    
     var section: Int?
     
     func updateUI() {
-    
+    //figur eout what to do with the chat. maybe pass the chat object to perform the segue
     }
     
 }

@@ -48,7 +48,26 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
         cell.backgroundColor = UIColor.whiteColor()
         // Configure the cell
         cell.section = indexPath.section
+        
+        if indexPath.section == 0 {
+            var query = PFQuery(className: "MatchChat")
+            var array = query.findObjects()
+            var index: Int = array.count - 1 - indexPath.row
+            cell.chat = array[index]
+
+        } else {
+            var query = PFQuery(className: "AnonChat")
+            var array = query.findObjects()
+            var index: Int = array.count - 1 - indexPath.row
+            cell.chat = array[index]
+
+        }
+        
+        cell.imageView.image = UIImage(named: "pic1.jpg")
+        cell.imageView.sizeThatFits(cell.bounds.size)
+        
         cell.row = indexPath.row
+        
         return cell
     }
     
@@ -83,7 +102,6 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
                 //AnonChat
                 classType = "AnonChat"
             }
-            
             
             var query = PFQuery(className: classType)
             var array = query.findObjects()

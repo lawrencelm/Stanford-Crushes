@@ -133,13 +133,34 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="186"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TLl-uV-Ab5">
-                                            <rect key="frame" x="8" y="7" width="267" height="172"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TLl-uV-Ab5">
+                                            <rect key="frame" x="8" y="13" width="266" height="160"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" red="0.79480350379999998" green="0.10372675169999999" blue="0.1036643355" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="TLl-uV-Ab5" secondAttribute="trailing" constant="4" id="G5R-EU-Tyr"/>
+                                    <constraint firstItem="TLl-uV-Ab5" firstAttribute="top" secondItem="JOb-yW-UkY" secondAttribute="topMargin" constant="5" id="UsJ-Lj-5E8"/>
+                                    <constraint firstItem="TLl-uV-Ab5" firstAttribute="leading" secondItem="JOb-yW-UkY" secondAttribute="leadingMargin" id="YV0-KT-IOf"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="TLl-uV-Ab5" secondAttribute="bottom" constant="5" id="Yhy-HU-oe0"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="TLl-uV-Ab5" secondAttribute="bottom" constant="-1" id="clY-tj-PSI"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="TLl-uV-Ab5" secondAttribute="trailing" constant="5" id="dxA-w1-q2c"/>
+                                    <constraint firstItem="TLl-uV-Ab5" firstAttribute="top" secondItem="JOb-yW-UkY" secondAttribute="topMargin" constant="-1" id="nX0-LD-hJ2"/>
+                                    <constraint firstItem="TLl-uV-Ab5" firstAttribute="leading" secondItem="JOb-yW-UkY" secondAttribute="leadingMargin" id="nk2-pZ-mqN"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="G5R-EU-Tyr"/>
+                                        <exclude reference="clY-tj-PSI"/>
+                                        <exclude reference="nX0-LD-hJ2"/>
+                                        <exclude reference="nk2-pZ-mqN"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="imageView" destination="TLl-uV-Ab5" id="fQa-LD-IVJ"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -151,7 +172,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bd3-wg-W6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="791" y="-331"/>
+            <point key="canvasLocation" x="795" y="-351"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="hFU-HJ-lTA">
