@@ -21,6 +21,8 @@ class ChatRoomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var message: UILabel!
     
+    @IBOutlet weak var username: UILabel!
+    
     func update() {
         
         /*message?.attributedText = nil
@@ -47,6 +49,12 @@ class ChatRoomTableViewCell: UITableViewCell {
                 self.contentView.backgroundColor = UIColor.whiteColor()
                 println("white")
             }
+            
+            if type == "MatchChat" {
+                username.text = conversation![index][0] as NSString
+            }
+            
+            //self.parentViewController?.navigationItem.title = "Hi"
            // }
         }
         
@@ -76,5 +84,7 @@ class ChatRoomTableViewCell: UITableViewCell {
        // }
         //}
     }
+    
+    
     
 }

@@ -214,16 +214,32 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nqk-9V-RnQ" id="TmS-bE-61G">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xp-hx-Vke">
-                                            <rect key="frame" x="8" y="1" width="584" height="89"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xp-hx-Vke">
+                                            <rect key="frame" x="8" y="2" width="497" height="89"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7B-GT-rqX">
+                                            <rect key="frame" x="513" y="67" width="79" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="8Xp-hx-Vke" secondAttribute="trailing" constant="87" id="0TN-aJ-IIN"/>
+                                        <constraint firstItem="8Xp-hx-Vke" firstAttribute="leading" secondItem="TmS-bE-61G" secondAttribute="leadingMargin" id="1KQ-LY-6e7"/>
+                                        <constraint firstItem="8Xp-hx-Vke" firstAttribute="top" secondItem="TmS-bE-61G" secondAttribute="topMargin" constant="-6" id="3gI-RA-GCX"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="8Xp-hx-Vke" secondAttribute="bottom" constant="-3" id="J8M-L7-7Kh"/>
+                                        <constraint firstItem="S7B-GT-rqX" firstAttribute="trailing" secondItem="TmS-bE-61G" secondAttribute="trailingMargin" id="eme-Ja-iWn"/>
+                                        <constraint firstItem="S7B-GT-rqX" firstAttribute="bottom" secondItem="TmS-bE-61G" secondAttribute="bottomMargin" id="nHp-pJ-P2v"/>
+                                        <constraint firstItem="S7B-GT-rqX" firstAttribute="top" secondItem="TmS-bE-61G" secondAttribute="topMargin" constant="59" id="p9u-Kw-6ve"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="message" destination="8Xp-hx-Vke" id="pPd-Uw-zwX"/>
+                                    <outlet property="username" destination="S7B-GT-rqX" id="dHq-sQ-7g3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -235,7 +251,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aq-hc-11u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1470" y="-469"/>
+            <point key="canvasLocation" x="1470" y="-470"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="hFU-HJ-lTA">

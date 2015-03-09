@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Stanford-Crushes/ChatRoomCell.swift"
-            timestampString = "447621177.809222"
+            timestampString = "447624108.720318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "update()"
             landmarkType = "5">
          </BreakpointContent>
