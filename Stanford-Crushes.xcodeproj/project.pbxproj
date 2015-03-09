@@ -150,6 +150,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2177FFAE1AAD709800295C7C /* Chat Functionality */ = {
+			isa = PBXGroup;
+			children = (
+				21E66BFF1AA7FE67005FD649 /* ChatCollectionView.swift */,
+				21BE69291AABF44900E0B790 /* ChatCollectionChat.swift */,
+				2177FFAA1AAD0A0D00295C7C /* ChatRoomTableViewController.swift */,
+				2177FFAC1AAD64B500295C7C /* ChatRoomCell.swift */,
+			);
+			name = "Chat Functionality";
+			sourceTree = "<group>";
+		};
+		2177FFAF1AAD70F600295C7C /* Matching */ = {
+			isa = PBXGroup;
+			children = (
+				21E3285E1AA5C16600ABFDC0 /* MatchViewController.swift */,
+			);
+			name = Matching;
+			sourceTree = "<group>";
+		};
+		2177FFB01AAD710000295C7C /* Anonymous Crushes */ = {
+			isa = PBXGroup;
+			children = (
+				21E3282D1AA5785400ABFDC0 /* WriteViewController.swift */,
+				21E3282F1AA5806B00ABFDC0 /* CrushesNavigationViewController.swift */,
+				21E328291AA547CB00ABFDC0 /* CrushesTableViewController.swift */,
+				21E3282B1AA5702700ABFDC0 /* CrushesTableviewCell.swift */,
+			);
+			name = "Anonymous Crushes";
+			sourceTree = "<group>";
+		};
 		21E327FB1AA4678200ABFDC0 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +203,9 @@
 		21E328061AA4678300ABFDC0 /* Stanford-Crushes */ = {
 			isa = PBXGroup;
 			children = (
+				2177FFB01AAD710000295C7C /* Anonymous Crushes */,
+				2177FFAF1AAD70F600295C7C /* Matching */,
+				2177FFAE1AAD709800295C7C /* Chat Functionality */,
 				21E328091AA4678300ABFDC0 /* AppDelegate.swift */,
 				21E3280B1AA4678300ABFDC0 /* ViewController.swift */,
 				21E3280D1AA4678300ABFDC0 /* Main.storyboard */,
@@ -180,25 +213,16 @@
 				21E328561AA5916E00ABFDC0 /* Parse.framework */,
 				21E328121AA4678300ABFDC0 /* LaunchScreen.xib */,
 				21E328071AA4678300ABFDC0 /* Supporting Files */,
-				21E328291AA547CB00ABFDC0 /* CrushesTableViewController.swift */,
-				21E3282B1AA5702700ABFDC0 /* CrushesTableviewCell.swift */,
 				21E66C091AA819E6005FD649 /* pic2.jpg */,
 				21E66C0A1AA819E6005FD649 /* pic3.jpg */,
-				21E3282D1AA5785400ABFDC0 /* WriteViewController.swift */,
-				21E3282F1AA5806B00ABFDC0 /* CrushesNavigationViewController.swift */,
 				21E328531AA5906200ABFDC0 /* Stanford-Crushes-Bridging-Header.h */,
 				21E66C0D1AA81A6A005FD649 /* archery_target.png */,
 				21E66C031AA80795005FD649 /* pic1.jpg */,
 				21E3285A1AA593A600ABFDC0 /* Data.swift */,
 				21BE692B1AAC2DE300E0B790 /* flat-circle-christmas-tree+8-icon.png */,
-				21E3285E1AA5C16600ABFDC0 /* MatchViewController.swift */,
-				21E66BFF1AA7FE67005FD649 /* ChatCollectionView.swift */,
 				21E66C011AA7FEAA005FD649 /* AuthController.swift */,
 				21E66C071AA81346005FD649 /* LoginViewController.swift */,
 				21E66C0F1AA83D5B005FD649 /* SettingsViewController.swift */,
-				21BE69291AABF44900E0B790 /* ChatCollectionChat.swift */,
-				2177FFAA1AAD0A0D00295C7C /* ChatRoomTableViewController.swift */,
-				2177FFAC1AAD64B500295C7C /* ChatRoomCell.swift */,
 			);
 			path = "Stanford-Crushes";
 			sourceTree = "<group>";
