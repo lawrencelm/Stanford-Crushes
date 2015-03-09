@@ -51,12 +51,16 @@ class ChatRoomTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var query = PFQuery(className: "AnonCrush")
-        var array = query.findObjects()
-        if array.count < 100 {
-            return array.count
+        
+        var conversation = (chat as? NSArray) as Array?
+        if conversation != nil {
+            if conversation!.count < 100 {
+                return conversation!.count
+            } else {
+                return 100
+            }
         } else {
-            return 100
+            return 0
         }
     }
     

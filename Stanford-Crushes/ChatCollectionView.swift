@@ -97,13 +97,18 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
             var array = query.findObjects()
             var index: Int = array.count - 1 - indexPath.row
             cell.chat = array[index]
+            
+            println("matchxyz")
+            println(array[index])
 
         } else {
             var query = PFQuery(className: "AnonChat")
             var array = query.findObjects()
             var index: Int = array.count - 1 - indexPath.row
             cell.chat = array[index]
-
+            
+            println("anonxyz")
+            println(array[index])
         }
         
         var randomNum : Int = Int(CGFloat.random(numPics))
