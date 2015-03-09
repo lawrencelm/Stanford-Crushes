@@ -71,6 +71,16 @@ class ChatRoomTableViewController: UITableViewController {
             
         }
         
+        /*The code below first casts "chat" to an object of type NSArray (which conforms to the protocol AnyObject) and then to of type Array, which can be converted from it's Objective-C counterpart, NSArray.
+        
+        Note that this is a forced downcast. Only use this if you're sure that twData is going to be an instance of NSArray. Otherwise, use optionals:
+        
+        var conversation = (chat as? NSArray) as Array?*/
+        
+        var conversation = (chat as? NSArray) as Array?
+        
+        cell.conversation = conversation
+        
         cell.type = type
         
         cell.row = indexPath.row
