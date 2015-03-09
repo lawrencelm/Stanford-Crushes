@@ -8,9 +8,18 @@
 
 import UIKit
 import Foundation
+import HealthKit
 
 
 class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
+    
+    func testingHearRate() {
+        if(isHealthDataAvailable()) {
+            //do health stuff
+            var health = HKHealthStore()
+            health.
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +27,6 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     func reloadTable() {
-       // println("update")
         tableView.reloadData()
     }
     
@@ -32,13 +40,14 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
     var chat: AnyObject?
     var chatNum : Int?
     private var convoID: String?
+    var type: String?
+
     
     
     func refresh() {
         //refresh information
     }
     
-    var type: String?
     
     private var sendMessage: String? {
         didSet {
