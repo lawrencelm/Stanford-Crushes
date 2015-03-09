@@ -9,7 +9,7 @@
 import UIKit
 
 class ChatCell: UICollectionViewCell {
-    
+        
     var row: Int? {
         didSet {
             updateUI()

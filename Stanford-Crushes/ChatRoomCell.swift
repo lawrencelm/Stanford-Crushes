@@ -16,6 +16,8 @@ class ChatRoomTableViewCell: UITableViewCell {
         }
     }
     
+    var type: String?
+    
     @IBOutlet weak var message: UILabel!
     
     func update() {
@@ -28,7 +30,7 @@ class ChatRoomTableViewCell: UITableViewCell {
             let newText: AnyObject? = array[index].objectForKey("post")
             let newNumber: AnyObject? = array[array.count - 1 - row!].objectForKey("upvotes")
             if newText != nil && newNumber != nil {
-                anonPost.text = newText as? String
+               // anonPost.text = newText as? String
             }
         }
     }

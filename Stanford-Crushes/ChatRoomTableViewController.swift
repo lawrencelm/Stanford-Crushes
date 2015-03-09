@@ -11,6 +11,7 @@ import Foundation
 
 
 class ChatRoomTableViewController: UITableViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("reloadTable"), userInfo: nil, repeats: true)
@@ -20,6 +21,21 @@ class ChatRoomTableViewController: UITableViewController {
         println("update")
         tableView.reloadData()
     }
+    
+    var needReload : Bool? {
+        didSet {
+            tableView.reloadData() // clear out the table view
+            refresh()
+        }
+    }
+    
+    var chat: AnyObject?
+    
+    func refresh() {
+        //refresh information
+    }
+    
+    var type: String?
     
     // MARK: - Storyboard Connectivity
     
@@ -54,6 +70,8 @@ class ChatRoomTableViewController: UITableViewController {
         } else {
             
         }
+        
+        cell.type = type
         
         cell.row = indexPath.row
         

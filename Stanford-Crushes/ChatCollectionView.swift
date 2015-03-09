@@ -14,7 +14,40 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
     
     private let reuseIdentifier = "chat"
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var destination = segue.destinationViewController as? UIViewController
+        if let navCon = destination as? UINavigationController {
+            destination = navCon.visibleViewController
+        }
+        if let mtvc = destination as? ChatRoomTableViewController {
+            //means that clicked post
+            println("SEGUE")
+            
+            if section == 0 {
+                mtvc.type = "MatchChat"
+                
+                var query = PFQuery(className: "MatchChat")
+                var array = query.findObjects()
+                var index: Int = array.count - 1 - row
+                
+                mtvc.chat = array[index]
+            } else {
+                mtvc.type = "AnonChat"
+                
+                var query = PFQuery(className: "AnonChat")
+                var array = query.findObjects()
+                var index: Int = array.count - 1 - row
+                
+                mtvc.chat = array[index]
+            }
+            mtvc.needReload = true
+        }
+    }
+    
     // MARK: UICollectionViewDataSource
+    
+    var row = Int()
+    var section = Int()
     
     //1
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -51,6 +84,10 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as ChatCell
         cell.backgroundColor = UIColor.whiteColor()
         // Configure the cell
+        
+        row = indexPath.row
+        section = indexPath.section
+        
         cell.section = indexPath.section
         
         if indexPath.section == 0 {
