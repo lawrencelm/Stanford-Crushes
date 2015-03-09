@@ -13,13 +13,21 @@ import HealthKit
 
 class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
     
-    func testingHearRate() {
+   /* func testingHearRate() {
         if(isHealthDataAvailable()) {
             //do health stuff
-            var health = HKHealthStore()
-            health.
+           /* var health = HKHealthStore()
+            var heartRate = HKQuantityTypeIdentifierHeartRate)*/
+            let heartRateUnit: HKUnit = HKUnit.countUnit().unitDividedByUnit(HKUnit.minuteUnit())
+            let heartRateQuantity: HKQuantity = HKQuantity(unit: heartRateUnit, doubleValue: height)
+            
+            var heartRate : HKQuantityType = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate)
+            
+            println("heart rate is \(heartRate)")
+            
+            //let nowDate: NSDate = NSDate()
         }
-    }
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -170,11 +178,13 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.CellReuseIdentifier, forIndexPath: indexPath) as ChatRoomTableViewCell
         
-        if indexPath.section == 0 {
+        /*if indexPath.section == 0 {
             cell.type = "MatchChat"
         } else {
             cell.type = "AnonChat"
-        }
+        }*/
+        
+        cell.type = type
         
         /*The code below first casts "chat" to an object of type NSArray (which conforms to the protocol AnyObject) and then to of type Array, which can be converted from it's Objective-C counterpart, NSArray.
         

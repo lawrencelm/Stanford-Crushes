@@ -37,6 +37,8 @@ class ChatRoomTableViewCell: UITableViewCell {
         
         if conversation != nil {
             
+            println("chat room type is \(type)")
+            
             var index = conversation!.count - 1 - row!
             
             //downcasting to String. Thus, "as?"
