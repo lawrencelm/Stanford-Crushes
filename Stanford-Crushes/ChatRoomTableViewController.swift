@@ -30,6 +30,8 @@ class ChatRoomTableViewController: UITableViewController {
     }
     
     var chat: AnyObject?
+    var chatNum : Int?
+    var chatSize: Int?
     
     func refresh() {
         //refresh information
@@ -53,10 +55,27 @@ class ChatRoomTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         println("rows")
-        var conversation = (chat as? NSArray) as Array?
+        println(type)
+        var query = PFQuery(className: type!)
+        var array = query.findObjects()
+        println(chatNum)
+        var index = array.count - 1 - chatNum!
+        //println(array)
+        
+        if index >= 0 {
+            chat = array[index].objectForKey("conversation")
+           // println(array[index].objectForKey("conversation"))
+        } else {
+            return 0
+        }
+      //  var conversation = (array[index] as? NSArray) as Array?
+      //  println(conversation)
+        
+        var conversation: AnyObject? = array[index].objectForKey("conversation")
+        //conversation?.count
         if conversation != nil {
-            if conversation!.count < 100 {
-                return conversation!.count
+            if conversation?.count < 100 {
+                return (conversation?.count)!
             } else {
                 return 100
             }
@@ -67,7 +86,7 @@ class ChatRoomTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        println("CHATROOMTABLEVIEWCONTROLLER")
+        //println("CHATROOMTABLEVIEWCONTROLLER")
         
         let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.CellReuseIdentifier, forIndexPath: indexPath) as ChatRoomTableViewCell
         
@@ -86,6 +105,22 @@ class ChatRoomTableViewController: UITableViewController {
         var conversation = (chat as? NSArray) as Array?
         
         cell.conversation = conversation
+        
+        cell.contentView.backgroundColor = UIColor.clearColor()
+        
+        if conversation != nil {
+            for message in conversation! {
+                println("user is " + PFUser.currentUser().username)
+                if message[0] as NSString == PFUser.currentUser().username {
+                    cell.backgroundColor = UIColor(netHex: 0xF3726D)
+                    println("theme color")
+                } else {
+                    cell.backgroundColor = UIColor.whiteColor()
+                    println("white")
+                }
+                
+            }
+        }
         
        // println("type is")
        // println(type)

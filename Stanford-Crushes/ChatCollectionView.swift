@@ -22,23 +22,29 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
         if let mtvc = destination as? ChatRoomTableViewController {
             //means that clicked post
             println("SEGUE")
-            
+           // println(row)
+          //  mtvc.chatNum = row
+            //            var row: Int = (self.tableView.indexPathForCell(sender as UITableViewCell)?.row)!
+           // self.collectionView?.indexPathForCell(se)
+            row = (self.collectionView?.indexPathForCell(sender as UICollectionViewCell)?.row)!
+            mtvc.chatNum  = row//(self.collectionView?.indexPathForCell(sender as UICollectionViewCell)?.row)!
+            println(mtvc.chatNum)
             if section == 0 {
                 mtvc.type = "MatchChat"
                 
-                var query = PFQuery(className: "MatchChat")
-                var array = query.findObjects()
-                var index: Int = array.count - 1 - row
+              //  var query = PFQuery(className: "MatchChat")
+               // var array = query.findObjects()
+               // var index: Int = array.count - 1 - row
                 
-                mtvc.chat = array[index]
+               // mtvc.chat = array[index]
             } else {
                 mtvc.type = "AnonChat"
                 
-                var query = PFQuery(className: "AnonChat")
-                var array = query.findObjects()
-                var index: Int = array.count - 1 - row
+                //var query = PFQuery(className: "AnonChat")
+                //var array = query.findObjects()
+                //var index: Int = array.count - 1 - row
                 
-                mtvc.chat = array[index]
+                //mtvc.chat = array[index]
             }
             mtvc.needReload = true
         }

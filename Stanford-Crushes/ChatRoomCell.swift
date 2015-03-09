@@ -29,19 +29,34 @@ class ChatRoomTableViewCell: UITableViewCell {
         
         println(conversation!)*/
         
-        println("UPDATEXYZ")
+        message?.attributedText = nil
         
-        if type != nil {
+       // println("UPDATEXYZ")
         
-        var query = PFQuery(className: type)
-        var array = query.findObjects()
-        var index = array.count - 1 - row!
+        if conversation != nil {
             
-        if index >= 0 {
-            let chatLog: AnyObject? = array[index].objectForKey("conversation")
-            println("GETTING CHAT")
+            var index = conversation!.count - 1 - row!
+            
+            //downcasting to String. Thus, "as?"
+           // if (conversation![index] != nil) {// && (conversation![index].count == 2 {
+                message.text = conversation![index][1] as? String
+           // }
+        }
+        
+       // if type != nil {
+        
+        //var query = PFQuery(className: type)
+        //var array = query.findObjects()
+        //var index = array.count - 1 - row!
+            
+        //if index >= 0 {
+           // let chatLog: AnyObject? = array[index].objectForKey("conversation")
+     //       println(conversation)
+            
+            
+            
             //let newNumber: AnyObject? = array[array.count - 1 - row!].objectForKey("upvotes")
-            if chatLog != nil {// && newNumber != nil {
+          /*  if chatLog != nil {// && newNumber != nil {
                // anonPost.text = newText as? String
                 println(chatLog)
                 let conversation = (chatLog as? NSArray) as Array?
@@ -50,9 +65,9 @@ class ChatRoomTableViewCell: UITableViewCell {
                     
                 }
                 }
-            }
-        }
-        }
+            }*/
+       // }
+        //}
     }
     
 }
