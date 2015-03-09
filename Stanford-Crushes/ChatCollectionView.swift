@@ -77,12 +77,14 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
         }
     }
     
-    private var numPics = 3 //number of pics available
+    private var numPics = 31 //number of pics available
+    private var imageType = ".png"
+    private var imageName = "icon"
     
     //3
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as ChatCell
-        cell.backgroundColor = UIColor.whiteColor()
+        
         // Configure the cell
         
         row = indexPath.row
@@ -105,11 +107,13 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
         }
         
         var randomNum : Int = Int(CGFloat.random(numPics))
-        if randomNum == 0 {
-            randomNum++
-        }
         
-        var picName: String = "pic" + String(randomNum) + ".jpg"
+        //only need this if your first picture starts at 1
+        /*if randomNum == 0 {
+            randomNum++
+        }*/
+        
+        var picName: String = imageName + String(randomNum) + imageType
         println(picName)
         
         cell.imageView.image = UIImage(named: picName)
@@ -179,6 +183,10 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
 
                             if width*CGFloat(multiplyWidth) >= maxWidth{
                                 println("RESIZING")
+                                
+                                multiplyHeader = 1
+                                height = maxWidth
+                                
                                 multiplyWidth = 1
                                 width = maxWidth
                             }

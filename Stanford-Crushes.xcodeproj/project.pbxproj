@@ -9,6 +9,38 @@
 /* Begin PBXBuildFile section */
 		2177FFAB1AAD0A0D00295C7C /* ChatRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2177FFAA1AAD0A0D00295C7C /* ChatRoomTableViewController.swift */; };
 		2177FFAD1AAD64B500295C7C /* ChatRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2177FFAC1AAD64B500295C7C /* ChatRoomCell.swift */; };
+		2177FFBE1AAD738E00295C7C /* icon0.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFB21AAD738E00295C7C /* icon0.png */; };
+		2177FFBF1AAD738E00295C7C /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFB31AAD738E00295C7C /* icon1.png */; };
+		2177FFC01AAD738E00295C7C /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFB41AAD738E00295C7C /* icon2.png */; };
+		2177FFC11AAD738E00295C7C /* icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFB51AAD738E00295C7C /* icon3.png */; };
+		2177FFC21AAD738E00295C7C /* icon4.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFB61AAD738E00295C7C /* icon4.png */; };
+		2177FFC31AAD738E00295C7C /* icon5.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFB71AAD738E00295C7C /* icon5.png */; };
+		2177FFC41AAD738E00295C7C /* icon6.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFB81AAD738E00295C7C /* icon6.png */; };
+		2177FFC51AAD738E00295C7C /* icon7.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFB91AAD738E00295C7C /* icon7.png */; };
+		2177FFC61AAD738E00295C7C /* icon8.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFBA1AAD738E00295C7C /* icon8.png */; };
+		2177FFC71AAD738E00295C7C /* icon9.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFBB1AAD738E00295C7C /* icon9.png */; };
+		2177FFC81AAD738E00295C7C /* icon10.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFBC1AAD738E00295C7C /* icon10.png */; };
+		2177FFC91AAD738E00295C7C /* icon11.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFBD1AAD738E00295C7C /* icon11.png */; };
+		2177FFDE1AAD759400295C7C /* icon12.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFCA1AAD759400295C7C /* icon12.png */; };
+		2177FFDF1AAD759400295C7C /* icon13.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFCB1AAD759400295C7C /* icon13.png */; };
+		2177FFE01AAD759400295C7C /* icon14.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFCC1AAD759400295C7C /* icon14.png */; };
+		2177FFE11AAD759400295C7C /* icon15.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFCD1AAD759400295C7C /* icon15.png */; };
+		2177FFE21AAD759400295C7C /* icon16.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFCE1AAD759400295C7C /* icon16.png */; };
+		2177FFE31AAD759400295C7C /* icon17.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFCF1AAD759400295C7C /* icon17.png */; };
+		2177FFE41AAD759400295C7C /* icon18.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFD01AAD759400295C7C /* icon18.png */; };
+		2177FFE51AAD759400295C7C /* icon19.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFD11AAD759400295C7C /* icon19.png */; };
+		2177FFE61AAD759400295C7C /* icon20.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFD21AAD759400295C7C /* icon20.png */; };
+		2177FFE71AAD759400295C7C /* icon21.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFD31AAD759400295C7C /* icon21.png */; };
+		2177FFE81AAD759400295C7C /* icon22.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFD41AAD759400295C7C /* icon22.png */; };
+		2177FFE91AAD759400295C7C /* icon23.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFD51AAD759400295C7C /* icon23.png */; };
+		2177FFEA1AAD759400295C7C /* icon24.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFD61AAD759400295C7C /* icon24.png */; };
+		2177FFEB1AAD759400295C7C /* icon25.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFD71AAD759400295C7C /* icon25.png */; };
+		2177FFEC1AAD759400295C7C /* icon26.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFD81AAD759400295C7C /* icon26.png */; };
+		2177FFED1AAD759400295C7C /* icon27.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFD91AAD759400295C7C /* icon27.png */; };
+		2177FFEE1AAD759400295C7C /* icon28.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFDA1AAD759400295C7C /* icon28.png */; };
+		2177FFEF1AAD759400295C7C /* icon29.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFDB1AAD759400295C7C /* icon29.png */; };
+		2177FFF01AAD759400295C7C /* icon30.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFDC1AAD759400295C7C /* icon30.png */; };
+		2177FFF11AAD759400295C7C /* icon31.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFDD1AAD759400295C7C /* icon31.png */; };
 		21BE692A1AABF44900E0B790 /* ChatCollectionChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BE69291AABF44900E0B790 /* ChatCollectionChat.swift */; };
 		21BE692C1AAC2DE300E0B790 /* flat-circle-christmas-tree+8-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 21BE692B1AAC2DE300E0B790 /* flat-circle-christmas-tree+8-icon.png */; };
 		21E3280A1AA4678300ABFDC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E328091AA4678300ABFDC0 /* AppDelegate.swift */; };
@@ -65,6 +97,38 @@
 /* Begin PBXFileReference section */
 		2177FFAA1AAD0A0D00295C7C /* ChatRoomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewController.swift; sourceTree = "<group>"; };
 		2177FFAC1AAD64B500295C7C /* ChatRoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomCell.swift; sourceTree = "<group>"; };
+		2177FFB21AAD738E00295C7C /* icon0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon0.png; path = "circle-icons/christmas circle/png/icon0.png"; sourceTree = "<group>"; };
+		2177FFB31AAD738E00295C7C /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon1.png; path = "circle-icons/christmas circle/png/icon1.png"; sourceTree = "<group>"; };
+		2177FFB41AAD738E00295C7C /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon2.png; path = "circle-icons/christmas circle/png/icon2.png"; sourceTree = "<group>"; };
+		2177FFB51AAD738E00295C7C /* icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon3.png; path = "circle-icons/christmas circle/png/icon3.png"; sourceTree = "<group>"; };
+		2177FFB61AAD738E00295C7C /* icon4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon4.png; path = "circle-icons/christmas circle/png/icon4.png"; sourceTree = "<group>"; };
+		2177FFB71AAD738E00295C7C /* icon5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon5.png; path = "circle-icons/christmas circle/png/icon5.png"; sourceTree = "<group>"; };
+		2177FFB81AAD738E00295C7C /* icon6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon6.png; path = "circle-icons/christmas circle/png/icon6.png"; sourceTree = "<group>"; };
+		2177FFB91AAD738E00295C7C /* icon7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon7.png; path = "circle-icons/christmas circle/png/icon7.png"; sourceTree = "<group>"; };
+		2177FFBA1AAD738E00295C7C /* icon8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon8.png; path = "circle-icons/christmas circle/png/icon8.png"; sourceTree = "<group>"; };
+		2177FFBB1AAD738E00295C7C /* icon9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon9.png; path = "circle-icons/christmas circle/png/icon9.png"; sourceTree = "<group>"; };
+		2177FFBC1AAD738E00295C7C /* icon10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon10.png; path = "circle-icons/christmas circle/png/icon10.png"; sourceTree = "<group>"; };
+		2177FFBD1AAD738E00295C7C /* icon11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon11.png; path = "circle-icons/christmas circle/png/icon11.png"; sourceTree = "<group>"; };
+		2177FFCA1AAD759400295C7C /* icon12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon12.png; path = "circle-icons/christmas circle/png/icon12.png"; sourceTree = "<group>"; };
+		2177FFCB1AAD759400295C7C /* icon13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon13.png; path = "circle-icons/christmas circle/png/icon13.png"; sourceTree = "<group>"; };
+		2177FFCC1AAD759400295C7C /* icon14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon14.png; path = "circle-icons/christmas circle/png/icon14.png"; sourceTree = "<group>"; };
+		2177FFCD1AAD759400295C7C /* icon15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon15.png; path = "circle-icons/christmas circle/png/icon15.png"; sourceTree = "<group>"; };
+		2177FFCE1AAD759400295C7C /* icon16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon16.png; path = "circle-icons/christmas circle/png/icon16.png"; sourceTree = "<group>"; };
+		2177FFCF1AAD759400295C7C /* icon17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon17.png; path = "circle-icons/christmas circle/png/icon17.png"; sourceTree = "<group>"; };
+		2177FFD01AAD759400295C7C /* icon18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon18.png; path = "circle-icons/christmas circle/png/icon18.png"; sourceTree = "<group>"; };
+		2177FFD11AAD759400295C7C /* icon19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon19.png; path = "circle-icons/christmas circle/png/icon19.png"; sourceTree = "<group>"; };
+		2177FFD21AAD759400295C7C /* icon20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon20.png; path = "circle-icons/christmas circle/png/icon20.png"; sourceTree = "<group>"; };
+		2177FFD31AAD759400295C7C /* icon21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon21.png; path = "circle-icons/christmas circle/png/icon21.png"; sourceTree = "<group>"; };
+		2177FFD41AAD759400295C7C /* icon22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon22.png; path = "circle-icons/christmas circle/png/icon22.png"; sourceTree = "<group>"; };
+		2177FFD51AAD759400295C7C /* icon23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon23.png; path = "circle-icons/christmas circle/png/icon23.png"; sourceTree = "<group>"; };
+		2177FFD61AAD759400295C7C /* icon24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon24.png; path = "circle-icons/christmas circle/png/icon24.png"; sourceTree = "<group>"; };
+		2177FFD71AAD759400295C7C /* icon25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon25.png; path = "circle-icons/christmas circle/png/icon25.png"; sourceTree = "<group>"; };
+		2177FFD81AAD759400295C7C /* icon26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon26.png; path = "circle-icons/christmas circle/png/icon26.png"; sourceTree = "<group>"; };
+		2177FFD91AAD759400295C7C /* icon27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon27.png; path = "circle-icons/christmas circle/png/icon27.png"; sourceTree = "<group>"; };
+		2177FFDA1AAD759400295C7C /* icon28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon28.png; path = "circle-icons/christmas circle/png/icon28.png"; sourceTree = "<group>"; };
+		2177FFDB1AAD759400295C7C /* icon29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon29.png; path = "circle-icons/christmas circle/png/icon29.png"; sourceTree = "<group>"; };
+		2177FFDC1AAD759400295C7C /* icon30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon30.png; path = "circle-icons/christmas circle/png/icon30.png"; sourceTree = "<group>"; };
+		2177FFDD1AAD759400295C7C /* icon31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon31.png; path = "circle-icons/christmas circle/png/icon31.png"; sourceTree = "<group>"; };
 		21BE69291AABF44900E0B790 /* ChatCollectionChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCollectionChat.swift; sourceTree = "<group>"; };
 		21BE692B1AAC2DE300E0B790 /* flat-circle-christmas-tree+8-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flat-circle-christmas-tree+8-icon.png"; sourceTree = "<group>"; };
 		21E328041AA4678300ABFDC0 /* Stanford-Crushes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stanford-Crushes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +244,50 @@
 			name = "Anonymous Crushes";
 			sourceTree = "<group>";
 		};
+		2177FFB11AAD722100295C7C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2177FFB21AAD738E00295C7C /* icon0.png */,
+				2177FFB31AAD738E00295C7C /* icon1.png */,
+				2177FFB41AAD738E00295C7C /* icon2.png */,
+				2177FFB51AAD738E00295C7C /* icon3.png */,
+				2177FFB61AAD738E00295C7C /* icon4.png */,
+				2177FFB71AAD738E00295C7C /* icon5.png */,
+				2177FFB81AAD738E00295C7C /* icon6.png */,
+				2177FFB91AAD738E00295C7C /* icon7.png */,
+				2177FFBA1AAD738E00295C7C /* icon8.png */,
+				2177FFBB1AAD738E00295C7C /* icon9.png */,
+				2177FFBC1AAD738E00295C7C /* icon10.png */,
+				2177FFBD1AAD738E00295C7C /* icon11.png */,
+				2177FFCA1AAD759400295C7C /* icon12.png */,
+				2177FFCB1AAD759400295C7C /* icon13.png */,
+				2177FFCC1AAD759400295C7C /* icon14.png */,
+				2177FFCD1AAD759400295C7C /* icon15.png */,
+				2177FFCE1AAD759400295C7C /* icon16.png */,
+				2177FFCF1AAD759400295C7C /* icon17.png */,
+				2177FFD01AAD759400295C7C /* icon18.png */,
+				2177FFD11AAD759400295C7C /* icon19.png */,
+				2177FFD21AAD759400295C7C /* icon20.png */,
+				2177FFD31AAD759400295C7C /* icon21.png */,
+				2177FFD41AAD759400295C7C /* icon22.png */,
+				2177FFD51AAD759400295C7C /* icon23.png */,
+				2177FFD61AAD759400295C7C /* icon24.png */,
+				2177FFD71AAD759400295C7C /* icon25.png */,
+				2177FFD81AAD759400295C7C /* icon26.png */,
+				2177FFD91AAD759400295C7C /* icon27.png */,
+				2177FFDA1AAD759400295C7C /* icon28.png */,
+				2177FFDB1AAD759400295C7C /* icon29.png */,
+				2177FFDC1AAD759400295C7C /* icon30.png */,
+				2177FFDD1AAD759400295C7C /* icon31.png */,
+				21BE692B1AAC2DE300E0B790 /* flat-circle-christmas-tree+8-icon.png */,
+				21E66C0D1AA81A6A005FD649 /* archery_target.png */,
+				21E66C031AA80795005FD649 /* pic1.jpg */,
+				21E66C091AA819E6005FD649 /* pic2.jpg */,
+				21E66C0A1AA819E6005FD649 /* pic3.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		21E327FB1AA4678200ABFDC0 = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +311,7 @@
 		21E328061AA4678300ABFDC0 /* Stanford-Crushes */ = {
 			isa = PBXGroup;
 			children = (
+				2177FFB11AAD722100295C7C /* Images */,
 				2177FFB01AAD710000295C7C /* Anonymous Crushes */,
 				2177FFAF1AAD70F600295C7C /* Matching */,
 				2177FFAE1AAD709800295C7C /* Chat Functionality */,
@@ -213,13 +322,8 @@
 				21E328561AA5916E00ABFDC0 /* Parse.framework */,
 				21E328121AA4678300ABFDC0 /* LaunchScreen.xib */,
 				21E328071AA4678300ABFDC0 /* Supporting Files */,
-				21E66C091AA819E6005FD649 /* pic2.jpg */,
-				21E66C0A1AA819E6005FD649 /* pic3.jpg */,
 				21E328531AA5906200ABFDC0 /* Stanford-Crushes-Bridging-Header.h */,
-				21E66C0D1AA81A6A005FD649 /* archery_target.png */,
-				21E66C031AA80795005FD649 /* pic1.jpg */,
 				21E3285A1AA593A600ABFDC0 /* Data.swift */,
-				21BE692B1AAC2DE300E0B790 /* flat-circle-christmas-tree+8-icon.png */,
 				21E66C011AA7FEAA005FD649 /* AuthController.swift */,
 				21E66C071AA81346005FD649 /* LoginViewController.swift */,
 				21E66C0F1AA83D5B005FD649 /* SettingsViewController.swift */,
@@ -365,14 +469,46 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2177FFC61AAD738E00295C7C /* icon8.png in Resources */,
+				2177FFEF1AAD759400295C7C /* icon29.png in Resources */,
+				2177FFEA1AAD759400295C7C /* icon24.png in Resources */,
+				2177FFC81AAD738E00295C7C /* icon10.png in Resources */,
 				21E66C0E1AA81A6B005FD649 /* archery_target.png in Resources */,
+				2177FFC21AAD738E00295C7C /* icon4.png in Resources */,
+				2177FFDF1AAD759400295C7C /* icon13.png in Resources */,
+				2177FFE41AAD759400295C7C /* icon18.png in Resources */,
+				2177FFED1AAD759400295C7C /* icon27.png in Resources */,
+				2177FFC91AAD738E00295C7C /* icon11.png in Resources */,
+				2177FFDE1AAD759400295C7C /* icon12.png in Resources */,
 				21E66C0B1AA819E6005FD649 /* pic2.jpg in Resources */,
 				21E66C041AA80795005FD649 /* pic1.jpg in Resources */,
 				21E3280F1AA4678300ABFDC0 /* Main.storyboard in Resources */,
+				2177FFE91AAD759400295C7C /* icon23.png in Resources */,
 				21E328141AA4678300ABFDC0 /* LaunchScreen.xib in Resources */,
+				2177FFE51AAD759400295C7C /* icon19.png in Resources */,
+				2177FFE61AAD759400295C7C /* icon20.png in Resources */,
 				21E328111AA4678300ABFDC0 /* Images.xcassets in Resources */,
+				2177FFC71AAD738E00295C7C /* icon9.png in Resources */,
 				21E66C0C1AA819E6005FD649 /* pic3.jpg in Resources */,
+				2177FFEB1AAD759400295C7C /* icon25.png in Resources */,
+				2177FFE31AAD759400295C7C /* icon17.png in Resources */,
+				2177FFC41AAD738E00295C7C /* icon6.png in Resources */,
+				2177FFEE1AAD759400295C7C /* icon28.png in Resources */,
+				2177FFE71AAD759400295C7C /* icon21.png in Resources */,
+				2177FFC01AAD738E00295C7C /* icon2.png in Resources */,
+				2177FFF01AAD759400295C7C /* icon30.png in Resources */,
+				2177FFEC1AAD759400295C7C /* icon26.png in Resources */,
+				2177FFE01AAD759400295C7C /* icon14.png in Resources */,
+				2177FFC11AAD738E00295C7C /* icon3.png in Resources */,
+				2177FFC31AAD738E00295C7C /* icon5.png in Resources */,
+				2177FFC51AAD738E00295C7C /* icon7.png in Resources */,
+				2177FFE11AAD759400295C7C /* icon15.png in Resources */,
+				2177FFF11AAD759400295C7C /* icon31.png in Resources */,
 				21BE692C1AAC2DE300E0B790 /* flat-circle-christmas-tree+8-icon.png in Resources */,
+				2177FFBF1AAD738E00295C7C /* icon1.png in Resources */,
+				2177FFBE1AAD738E00295C7C /* icon0.png in Resources */,
+				2177FFE81AAD759400295C7C /* icon22.png in Resources */,
+				2177FFE21AAD759400295C7C /* icon16.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
