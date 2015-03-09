@@ -29,6 +29,8 @@ class ChatRoomTableViewCell: UITableViewCell {
         
         println(conversation!)*/
         
+        println("UPDATEXYZ")
+        
         if type != nil {
         
         var query = PFQuery(className: type)

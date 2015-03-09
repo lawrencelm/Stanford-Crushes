@@ -18,7 +18,7 @@ class ChatRoomTableViewController: UITableViewController {
     }
     
     func reloadTable() {
-        println("update")
+       // println("update")
         tableView.reloadData()
     }
     
@@ -66,13 +66,14 @@ class ChatRoomTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
+        println("CHATROOMTABLEVIEWCONTROLLER")
         
         let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.CellReuseIdentifier, forIndexPath: indexPath) as ChatRoomTableViewCell
         
         if indexPath.section == 0 {
-            
+            cell.type = "MatchChat"
         } else {
-            
+            cell.type = "AnonChat"
         }
         
         /*The code below first casts "chat" to an object of type NSArray (which conforms to the protocol AnyObject) and then to of type Array, which can be converted from it's Objective-C counterpart, NSArray.
@@ -85,7 +86,10 @@ class ChatRoomTableViewController: UITableViewController {
         
         cell.conversation = conversation
         
-        cell.type = type
+       // println("type is")
+       // println(type)
+        
+        //cell.type = type
         
         cell.row = indexPath.row
         
