@@ -40,6 +40,13 @@ class ChatRoomTableViewCell: UITableViewCell {
             //downcasting to String. Thus, "as?"
            // if (conversation![index] != nil) {// && (conversation![index].count == 2 {
                 message.text = conversation![index][1] as? String
+            if conversation![index][0] as NSString == PFUser.currentUser().username {
+                self.contentView.backgroundColor = UIColor(netHex: 0xF3726D)
+                println("theme color")
+            } else {
+                self.contentView.backgroundColor = UIColor.whiteColor()
+                println("white")
+            }
            // }
         }
         

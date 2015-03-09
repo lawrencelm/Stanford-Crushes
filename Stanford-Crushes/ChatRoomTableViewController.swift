@@ -84,6 +84,7 @@ class ChatRoomTableViewController: UITableViewController {
         }
     }
     
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         //println("CHATROOMTABLEVIEWCONTROLLER")
@@ -106,21 +107,21 @@ class ChatRoomTableViewController: UITableViewController {
         
         cell.conversation = conversation
         
-        cell.contentView.backgroundColor = UIColor.clearColor()
+      //  cell.contentView.backgroundColor = UIColor.clearColor()
         
-        if conversation != nil {
+       /* if conversation != nil {
             for message in conversation! {
                 println("user is " + PFUser.currentUser().username)
                 if message[0] as NSString == PFUser.currentUser().username {
-                    cell.backgroundColor = UIColor(netHex: 0xF3726D)
+                    cell.contentView.backgroundColor = UIColor(netHex: 0xF3726D)
                     println("theme color")
                 } else {
-                    cell.backgroundColor = UIColor.whiteColor()
+                    cell.contentView.backgroundColor = UIColor.whiteColor()
                     println("white")
                 }
                 
             }
-        }
+        }*/
         
        // println("type is")
        // println(type)
