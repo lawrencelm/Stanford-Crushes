@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 
-class ChatRoomTableViewController: UITableViewController {
+class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +31,78 @@ class ChatRoomTableViewController: UITableViewController {
     
     var chat: AnyObject?
     var chatNum : Int?
-    var chatSize: Int?
+    private var convoID: String?
+    
     
     func refresh() {
         //refresh information
     }
     
     var type: String?
+    
+    private var sendMessage: String? {
+        didSet {
+            sendMessageField?.text = sendMessage
+            tableView.reloadData() // clear out the table view
+            sendMessageToPerson()
+            println("did set string" + sendMessage!)
+        }
+    }
+    
+    @IBOutlet weak var sendMessageField: UITextField! {
+        didSet {
+            println("did set text field" + sendMessageField.text)
+            sendMessageField.delegate = self
+            sendMessageField.text = sendMessage
+        }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == sendMessageField {
+            textField.resignFirstResponder()
+            sendMessage = textField.text
+        }
+        return true
+    }
+    
+    func sendMessageToPerson() {
+        println("sending message")
+        //println(chat)
+        //println(chatNum)
+        
+        if chat == nil {
+            chat = []
+        }
+        
+        var conversation = (chat as? NSArray) as Array?
+        conversation!.append([PFUser.currentUser().username, sendMessage!])
+        
+        println(type)
+        var query = PFQuery(className: type!)
+        var object = query.getObjectWithId(convoID)
+        println(convoID)
+        println(object)
+        object.setObject(conversation, forKey: "conversation")
+        println(object)
+        object.saveInBackgroundWithBlock { (success: Bool!, error: NSError!) -> Void in
+            if success! {
+                NSLog("Object updated")
+            } else {
+                NSLog("%@", error)
+            }
+        }
+        
+        /*var query = PFQuery(className: type!)
+        var array = query.findObjects()
+        println(chatNum)*/
+        /*var index = array.count - 1 - chatNum!
+        
+        if index >= 0 {
+            chat = array[index].objectForKey("conversation")
+        } else {
+            
+        }*/
+    }
     
     // MARK: - Storyboard Connectivity
     
@@ -64,6 +129,11 @@ class ChatRoomTableViewController: UITableViewController {
         
         if index >= 0 {
             chat = array[index].objectForKey("conversation")
+            println("convo is \(chat)")
+
+            convoID = array[index].objectId
+            
+            println("set convoID as \(convoID)")
            // println(array[index].objectForKey("conversation"))
         } else {
             return 0

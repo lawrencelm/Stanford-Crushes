@@ -217,10 +217,9 @@
 		2177FFAE1AAD709800295C7C /* Chat Functionality */ = {
 			isa = PBXGroup;
 			children = (
+				2177FFF21AAE34A500295C7C /* Chat Room/Mesaging Functionalities */,
 				21E66BFF1AA7FE67005FD649 /* ChatCollectionView.swift */,
 				21BE69291AABF44900E0B790 /* ChatCollectionChat.swift */,
-				2177FFAA1AAD0A0D00295C7C /* ChatRoomTableViewController.swift */,
-				2177FFAC1AAD64B500295C7C /* ChatRoomCell.swift */,
 			);
 			name = "Chat Functionality";
 			sourceTree = "<group>";
@@ -286,6 +285,15 @@
 				21E66C0A1AA819E6005FD649 /* pic3.jpg */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		2177FFF21AAE34A500295C7C /* Chat Room/Mesaging Functionalities */ = {
+			isa = PBXGroup;
+			children = (
+				2177FFAA1AAD0A0D00295C7C /* ChatRoomTableViewController.swift */,
+				2177FFAC1AAD64B500295C7C /* ChatRoomCell.swift */,
+			);
+			name = "Chat Room/Mesaging Functionalities";
 			sourceTree = "<group>";
 		};
 		21E327FB1AA4678200ABFDC0 = {
