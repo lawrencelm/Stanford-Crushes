@@ -47,11 +47,12 @@ class ChatRoomTableViewController: UITableViewController {
     // MARK: - Table View Data Source
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        println("sections")
         return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+        println("rows")
         var conversation = (chat as? NSArray) as Array?
         if conversation != nil {
             if conversation!.count < 100 {
