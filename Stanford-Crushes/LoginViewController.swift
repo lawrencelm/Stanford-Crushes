@@ -42,16 +42,19 @@ class LoginViewController: UIViewController {
 
         if identifier == "loginSegue" || identifier == "signupSegue" {
             if PFUser.currentUser() == nil {
-            let alert = UIAlertView()
-            alert.title = "Wrong information!"
-            alert.message = "Enter correct e-mail/password"
-            alert.addButtonWithTitle("OK")
-            alert.show()
-            
-            return false
+                alertWrong()
+                return false
             }
         }
         return true
+    }
+    
+    func alertWrong() {
+        let alert = UIAlertView()
+        alert.title = "Wrong information!"
+        alert.message = "Enter correct e-mail/password"
+        alert.addButtonWithTitle("OK")
+        alert.show()
     }
     
     override func didReceiveMemoryWarning() {

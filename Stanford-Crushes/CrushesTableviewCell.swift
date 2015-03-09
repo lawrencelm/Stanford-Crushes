@@ -64,13 +64,5 @@ class CrushesTableViewCell: UITableViewCell
                 countLabel.text = String(newNumber as Int)
             }
         }
-        //println(index)
-        //if index == 0 {
-         //   sleep(1)
-          //  println("time to reload")
-          //  var table = CrushesTableViewController()
-          //  table.reloadTable()
-            //table.needReload = true
-        //}
     }
 }

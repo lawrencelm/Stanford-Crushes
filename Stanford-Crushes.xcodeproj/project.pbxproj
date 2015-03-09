@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2177FFAB1AAD0A0D00295C7C /* ChatRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2177FFAA1AAD0A0D00295C7C /* ChatRoomTableViewController.swift */; };
+		2177FFAD1AAD64B500295C7C /* ChatRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2177FFAC1AAD64B500295C7C /* ChatRoomCell.swift */; };
 		21BE692A1AABF44900E0B790 /* ChatCollectionChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BE69291AABF44900E0B790 /* ChatCollectionChat.swift */; };
 		21BE692C1AAC2DE300E0B790 /* flat-circle-christmas-tree+8-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 21BE692B1AAC2DE300E0B790 /* flat-circle-christmas-tree+8-icon.png */; };
 		21E3280A1AA4678300ABFDC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E328091AA4678300ABFDC0 /* AppDelegate.swift */; };
@@ -63,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		2177FFAA1AAD0A0D00295C7C /* ChatRoomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewController.swift; sourceTree = "<group>"; };
+		2177FFAC1AAD64B500295C7C /* ChatRoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomCell.swift; sourceTree = "<group>"; };
 		21BE69291AABF44900E0B790 /* ChatCollectionChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCollectionChat.swift; sourceTree = "<group>"; };
 		21BE692B1AAC2DE300E0B790 /* flat-circle-christmas-tree+8-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flat-circle-christmas-tree+8-icon.png"; sourceTree = "<group>"; };
 		21E328041AA4678300ABFDC0 /* Stanford-Crushes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stanford-Crushes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +198,7 @@
 				21E66C0F1AA83D5B005FD649 /* SettingsViewController.swift */,
 				21BE69291AABF44900E0B790 /* ChatCollectionChat.swift */,
 				2177FFAA1AAD0A0D00295C7C /* ChatRoomTableViewController.swift */,
+				2177FFAC1AAD64B500295C7C /* ChatRoomCell.swift */,
 			);
 			path = "Stanford-Crushes";
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2177FFAB1AAD0A0D00295C7C /* ChatRoomTableViewController.swift in Sources */,
+				2177FFAD1AAD64B500295C7C /* ChatRoomCell.swift in Sources */,
 				21E3285F1AA5C16700ABFDC0 /* MatchViewController.swift in Sources */,
 				21E3280C1AA4678300ABFDC0 /* ViewController.swift in Sources */,
 				21E328301AA5806B00ABFDC0 /* CrushesNavigationViewController.swift in Sources */,

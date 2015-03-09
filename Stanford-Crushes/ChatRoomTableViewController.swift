@@ -47,9 +47,15 @@ class ChatRoomTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.CellReuseIdentifier, forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.CellReuseIdentifier, forIndexPath: indexPath) as ChatRoomTableViewCell
         
-        //cell.row = indexPath.row
+        if indexPath.section == 0 {
+            
+        } else {
+            
+        }
+        
+        cell.row = indexPath.row
         
         return cell
     }

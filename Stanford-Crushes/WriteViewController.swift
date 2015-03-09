@@ -31,30 +31,41 @@ class WriteViewController: UIViewController, MFMailComposeViewControllerDelegate
         if let mtvc = destination as? CrushesTableViewController {
             //means that clicked post
             if postText != nil && postText.text != "" {
-                var post = PFObject(className: "AnonCrush")
-                post.setObject(postText.text, forKey: "post")
-                
-                if email != nil && email.text != "" {
-                    post.setObject(email.text, forKey: "crush_email")
-                    post.setObject(true, forKey: "set_name")
-                    sendMail()
-                } else {
-                    post.setObject(false, forKey: "set_name")
-                }
-                post.setObject(0, forKey: "upvotes")
-                post.saveInBackgroundWithBlock {
-                    (success: Bool!, error: NSError!) -> Void in
-                    if success! {
-                        NSLog("Object created with id: \(post.objectId)")
-                    } else {
-                        NSLog("%@", error)
-                    }
-                }
-
+                writePost()
             } else {
-               // NSlog("Error D:")
+                alertEmpty()
             }
             mtvc.needReload = true
+        }
+    }
+    
+    func alertEmpty() {
+        let alert = UIAlertView()
+        alert.title = "Empty post!"
+        alert.message = "You cannot make empty posts."
+        alert.addButtonWithTitle("OK")
+        alert.show()
+    }
+    
+    func writePost() {
+        var post = PFObject(className: "AnonCrush")
+        post.setObject(postText.text, forKey: "post")
+        
+        if email != nil && email.text != "" {
+            post.setObject(email.text, forKey: "crush_email")
+            post.setObject(true, forKey: "set_name")
+            sendMail()
+        } else {
+            post.setObject(false, forKey: "set_name")
+        }
+        post.setObject(0, forKey: "upvotes")
+        post.saveInBackgroundWithBlock {
+            (success: Bool!, error: NSError!) -> Void in
+            if success! {
+                NSLog("Object created with id: \(post.objectId)")
+            } else {
+                NSLog("%@", error)
+            }
         }
     }
     
