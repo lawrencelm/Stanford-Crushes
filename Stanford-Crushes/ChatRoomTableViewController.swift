@@ -13,24 +13,72 @@ import HealthKit
 
 class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
     
-   /* func testingHearRate() {
-        if(isHealthDataAvailable()) {
+    var healthStore = HKHealthStore()
+    let myHeight: Double = 1.7
+    
+    func getHearRate() {
+        if(HKHealthStore.isHealthDataAvailable()) {
             //do health stuff
-           /* var health = HKHealthStore()
+            /* var health = HKHealthStore()
             var heartRate = HKQuantityTypeIdentifierHeartRate)*/
+            let height = myHeight
             let heartRateUnit: HKUnit = HKUnit.countUnit().unitDividedByUnit(HKUnit.minuteUnit())
+            //let height: Double = 1.7
             let heartRateQuantity: HKQuantity = HKQuantity(unit: heartRateUnit, doubleValue: height)
             
             var heartRate : HKQuantityType = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate)
             
-            println("heart rate is \(heartRate)")
-            
+            println("heart rate is \(heartRate.aggregationStyle.hashValue)")
+            println("heart rate is \(heartRate.aggregationStyle.rawValue)")
             //let nowDate: NSDate = NSDate()
+            
         }
-    }*/
+    }
+    
+    private func saveHeartRateIntoHealthStore(height:Double) -> Void
+    {
+        if(HKHealthStore.isHealthDataAvailable()) {
+            
+            // Save the user's heart rate into HealthKit.
+            let heartRateUnit: HKUnit = HKUnit.countUnit().unitDividedByUnit(HKUnit.minuteUnit())
+            let heartRateQuantity: HKQuantity = HKQuantity(unit: heartRateUnit, doubleValue: height)
+            
+            var heartRate : HKQuantityType = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate)
+            let nowDate: NSDate = NSDate()
+            
+            let heartRateSample: HKQuantitySample = HKQuantitySample(type: heartRate
+                , quantity: heartRateQuantity, startDate: nowDate, endDate: nowDate)
+            
+            let completion: ((Bool, NSError!) -> Void) = {
+                (success, error) -> Void in
+                
+                if !success {
+                    println("An error occured saving the Heart Rate sample \(heartRateSample). The error was: \(error).")
+                    
+                    abort()
+                } else {
+                    println("Successfully saved the Heart Rate sample \(heartRateSample).")
+                }
+                
+            }
+            /* When your app ID is authorized for HealthKit, you should comment the next line of code out
+            Right now, if you leave this commented out, all you get from the getHearRate() function
+            is the default value of the Heart Rate.
+            
+            Measuring your heart rate requires third-party applications, usually via Bluetooth,
+            that you can use together with this app to store actual heart rate values. The goal of
+            this app is not to be a medical app, but to take advantage of the heart rate data in order
+            to send this heart rate value (in an encoded format that is embedded in messages)
+            to your beloved/person you are talking to. */
+            
+            //self.healthStore.saveObject(heartRateSample, withCompletion: completion)
+        }
+    }// end saveHeartRateIntoHealthStore
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        saveHeartRateIntoHealthStore(myHeight)
+        getHearRate()
         var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("reloadTable"), userInfo: nil, repeats: true)
     }
     
@@ -49,7 +97,7 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
     var chatNum : Int?
     private var convoID: String?
     var type: String?
-
+    
     
     
     func refresh() {
@@ -115,9 +163,9 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         /*var index = array.count - 1 - chatNum!
         
         if index >= 0 {
-            chat = array[index].objectForKey("conversation")
+        chat = array[index].objectForKey("conversation")
         } else {
-            
+        
         }*/
     }
     
@@ -147,16 +195,16 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         if index >= 0 {
             chat = array[index].objectForKey("conversation")
             println("convo is \(chat)")
-
+            
             convoID = array[index].objectId
             
             println("set convoID as \(convoID)")
-           // println(array[index].objectForKey("conversation"))
+            // println(array[index].objectForKey("conversation"))
         } else {
             return 0
         }
-      //  var conversation = (array[index] as? NSArray) as Array?
-      //  println(conversation)
+        //  var conversation = (array[index] as? NSArray) as Array?
+        //  println(conversation)
         
         var conversation: AnyObject? = array[index].objectForKey("conversation")
         //conversation?.count
@@ -171,7 +219,7 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         }
     }
     
-
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         //println("CHATROOMTABLEVIEWCONTROLLER")
@@ -179,9 +227,9 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.CellReuseIdentifier, forIndexPath: indexPath) as ChatRoomTableViewCell
         
         /*if indexPath.section == 0 {
-            cell.type = "MatchChat"
+        cell.type = "MatchChat"
         } else {
-            cell.type = "AnonChat"
+        cell.type = "AnonChat"
         }*/
         
         cell.type = type
@@ -196,7 +244,7 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         
         cell.conversation = conversation
         
-
+        
         
         cell.row = indexPath.row
         

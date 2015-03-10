@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Stanford-Crushes/ChatRoomTableViewController.swift"
-            timestampString = "447637733.322703"
+            timestampString = "447658856.415594"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "sendMessageToPerson()"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,12 +90,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Stanford-Crushes/ChatRoomTableViewController.swift"
-            timestampString = "447637733.322703"
+            timestampString = "447658856.415594"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
             landmarkName = "numberOfSectionsInTableView(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Stanford-Crushes/ChatRoomTableViewController.swift"
+            timestampString = "447658856.415594"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "saveHeartRateIntoHealthStore(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
