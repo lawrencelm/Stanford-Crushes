@@ -23,15 +23,18 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
             //means that clicked post
             
             println("SEGUE")
+            
             row = (self.collectionView?.indexPathForCell(sender as UICollectionViewCell)?.row)!
+            var curSection = (self.collectionView?.indexPathForCell(sender as UICollectionViewCell)?.section)!
+                
             mtvc.chatNum  = row
             println(mtvc.chatNum)
-            if section == 0 {
+            if curSection == 0 {
                 mtvc.type = "MatchChat"
                 println("MatchChatXYZ")
             } else {
-                mtvc.type = "AnonChatXYZ"
-                println("AnonChat")
+                mtvc.type = "AnonChat"
+                println("AnonChatXYZ")
             }
             mtvc.needReload = true
         }

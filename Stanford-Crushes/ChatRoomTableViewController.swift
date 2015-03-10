@@ -70,8 +70,9 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         println("checkPlay")
         var query = PFQuery(className: type!)
         var array = query.findObjects()
-        println(chatNum)
+        println("chat num is \(chatNum). array count is \(array.count). type is \(type!). array is \(array)")
         var index = array.count - 1 - chatNum!
+        println("index is \(index)")
         
         if index >= 0 {
             var playOrNot: Bool? = array[index].objectForKey("play") as? Bool
