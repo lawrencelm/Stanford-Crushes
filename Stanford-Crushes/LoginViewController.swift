@@ -85,12 +85,9 @@ class LoginViewController: UIViewController {
             user.signUpInBackgroundWithBlock {
                 (succeeded: Bool!, error: NSError!) -> Void in
                 if error == nil {
-                    //let defaults = NSUserDefaults.standardUserDefaults()
-                    //defaults.setObject(PFUser.currentUser(), forKey: "user")
-                    //self.performSegueWithIdentifier("signupSegue", sender: self)
 
                     // Hooray! Let them use the app now.
-                    //self.messageLabel.text = "User Signed Up";
+                    
                 } else {
                     // Show the errorString somewhere and let the user try again.
                 }

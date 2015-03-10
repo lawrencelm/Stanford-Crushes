@@ -54,6 +54,8 @@ class ChatRoomTableViewCell: UITableViewCell {
             
             if type == "MatchChat" {
                 username.text = conversation![index][0] as NSString
+            } else {
+                username.text = ""
             }
             
             //self.parentViewController?.navigationItem.title = "Hi"
