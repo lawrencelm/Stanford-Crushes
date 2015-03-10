@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2121BA511AAEB71600B80182 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2121BA501AAEB71600B80182 /* HealthKit.framework */; };
 		2177FFAB1AAD0A0D00295C7C /* ChatRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2177FFAA1AAD0A0D00295C7C /* ChatRoomTableViewController.swift */; };
 		2177FFAD1AAD64B500295C7C /* ChatRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2177FFAC1AAD64B500295C7C /* ChatRoomCell.swift */; };
 		2177FFBE1AAD738E00295C7C /* icon0.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFB21AAD738E00295C7C /* icon0.png */; };
@@ -62,7 +61,6 @@
 		21E3283A1AA58D8300ABFDC0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E328391AA58D8300ABFDC0 /* MobileCoreServices.framework */; };
 		21E3283C1AA58D9B00ABFDC0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E3283B1AA58D9B00ABFDC0 /* QuartzCore.framework */; };
 		21E3283E1AA58DC500ABFDC0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E3283D1AA58DC500ABFDC0 /* Security.framework */; };
-		21E328401AA58DCF00ABFDC0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E3283F1AA58DCF00ABFDC0 /* StoreKit.framework */; };
 		21E328421AA58DDA00ABFDC0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E328411AA58DDA00ABFDC0 /* SystemConfiguration.framework */; };
 		21E328441AA58DEB00ABFDC0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E328431AA58DEB00ABFDC0 /* libz.dylib */; };
 		21E328461AA58DFC00ABFDC0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E328451AA58DFC00ABFDC0 /* libsqlite3.dylib */; };
@@ -98,7 +96,6 @@
 
 /* Begin PBXFileReference section */
 		2121BA4F1AAEB71400B80182 /* Stanford-Crushes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Stanford-Crushes.entitlements"; sourceTree = "<group>"; };
-		2121BA501AAEB71600B80182 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		2177FFAA1AAD0A0D00295C7C /* ChatRoomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewController.swift; sourceTree = "<group>"; };
 		2177FFAC1AAD64B500295C7C /* ChatRoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomCell.swift; sourceTree = "<group>"; };
 		2177FFB21AAD738E00295C7C /* icon0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon0.png; path = "circle-icons/christmas circle/png/icon0.png"; sourceTree = "<group>"; };
@@ -157,7 +154,6 @@
 		21E328391AA58D8300ABFDC0 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		21E3283B1AA58D9B00ABFDC0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		21E3283D1AA58DC500ABFDC0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		21E3283F1AA58DCF00ABFDC0 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		21E328411AA58DDA00ABFDC0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		21E328431AA58DEB00ABFDC0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		21E328451AA58DFC00ABFDC0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -192,11 +188,9 @@
 				21E328441AA58DEB00ABFDC0 /* libz.dylib in Frameworks */,
 				21E328421AA58DDA00ABFDC0 /* SystemConfiguration.framework in Frameworks */,
 				21E3284E1AA58E3600ABFDC0 /* Bolts.framework in Frameworks */,
-				21E328401AA58DCF00ABFDC0 /* StoreKit.framework in Frameworks */,
 				21E328501AA58E3600ABFDC0 /* ParseCrashReporting.framework in Frameworks */,
 				21E328571AA5916F00ABFDC0 /* Parse.framework in Frameworks */,
 				21E328521AA58E3600ABFDC0 /* ParseUI.framework in Frameworks */,
-				2121BA511AAEB71600B80182 /* HealthKit.framework in Frameworks */,
 				21E3283E1AA58DC500ABFDC0 /* Security.framework in Frameworks */,
 				21E3284F1AA58E3600ABFDC0 /* Parse.framework in Frameworks */,
 				21E328511AA58E3600ABFDC0 /* ParseFacebookUtils.framework in Frameworks */,
@@ -316,7 +310,6 @@
 		21E327FB1AA4678200ABFDC0 = {
 			isa = PBXGroup;
 			children = (
-				2121BA501AAEB71600B80182 /* HealthKit.framework */,
 				21E66BFD1AA7FDF5005FD649 /* LocalAuthentication.framework */,
 				21E328471AA58E3600ABFDC0 /* frameworks */,
 				21E328061AA4678300ABFDC0 /* Stanford-Crushes */,
@@ -388,7 +381,6 @@
 				21E328451AA58DFC00ABFDC0 /* libsqlite3.dylib */,
 				21E328431AA58DEB00ABFDC0 /* libz.dylib */,
 				21E328411AA58DDA00ABFDC0 /* SystemConfiguration.framework */,
-				21E3283F1AA58DCF00ABFDC0 /* StoreKit.framework */,
 				21E3283D1AA58DC500ABFDC0 /* Security.framework */,
 				21E3283B1AA58D9B00ABFDC0 /* QuartzCore.framework */,
 				21E328391AA58D8300ABFDC0 /* MobileCoreServices.framework */,
@@ -465,7 +457,10 @@
 						DevelopmentTeam = FUTU96J3U9;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
-								enabled = 1;
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
 							};
 						};
 					};
@@ -697,7 +692,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "Stanford-Crushes/Stanford-Crushes.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -719,7 +713,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "Stanford-Crushes/Stanford-Crushes.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (

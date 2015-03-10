@@ -25,15 +25,7 @@ class ChatRoomTableViewCell: UITableViewCell {
     
     func update() {
         
-        /*message?.attributedText = nil
-        
-        println(conversation!.count)
-        
-        println(conversation!)*/
-        
         message?.attributedText = nil
-        
-       // println("UPDATEXYZ")
         
         if conversation != nil {
             
@@ -42,8 +34,7 @@ class ChatRoomTableViewCell: UITableViewCell {
             var index = conversation!.count - 1 - row!
             
             //downcasting to String. Thus, "as?"
-           // if (conversation![index] != nil) {// && (conversation![index].count == 2 {
-                message.text = conversation![index][1] as? String
+            message.text = conversation![index][1] as? String
             if conversation![index][0] as NSString == PFUser.currentUser().username {
                 self.contentView.backgroundColor = UIColor(netHex: 0xF3726D)
                 println("theme color")
@@ -58,35 +49,7 @@ class ChatRoomTableViewCell: UITableViewCell {
                 username.text = ""
             }
             
-            //self.parentViewController?.navigationItem.title = "Hi"
-           // }
         }
-        
-       // if type != nil {
-        
-        //var query = PFQuery(className: type)
-        //var array = query.findObjects()
-        //var index = array.count - 1 - row!
-            
-        //if index >= 0 {
-           // let chatLog: AnyObject? = array[index].objectForKey("conversation")
-     //       println(conversation)
-            
-            
-            
-            //let newNumber: AnyObject? = array[array.count - 1 - row!].objectForKey("upvotes")
-          /*  if chatLog != nil {// && newNumber != nil {
-               // anonPost.text = newText as? String
-                println(chatLog)
-                let conversation = (chatLog as? NSArray) as Array?
-                if conversation != nil {
-                for message in conversation! {
-                    
-                }
-                }
-            }*/
-       // }
-        //}
     }
     
     

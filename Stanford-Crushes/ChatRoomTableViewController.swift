@@ -23,14 +23,12 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
             var heartRate = HKQuantityTypeIdentifierHeartRate)*/
             let height = myHeight
             let heartRateUnit: HKUnit = HKUnit.countUnit().unitDividedByUnit(HKUnit.minuteUnit())
-            //let height: Double = 1.7
             let heartRateQuantity: HKQuantity = HKQuantity(unit: heartRateUnit, doubleValue: height)
             
             var heartRate : HKQuantityType = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeartRate)
             
             println("heart rate is \(heartRate.aggregationStyle.hashValue)")
             println("heart rate is \(heartRate.aggregationStyle.rawValue)")
-            //let nowDate: NSDate = NSDate()
             
         }
     }
@@ -73,7 +71,7 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
             
             //self.healthStore.saveObject(heartRateSample, withCompletion: completion)
         }
-    }// end saveHeartRateIntoHealthStore
+    } // end saveHeartRateIntoHealthStore
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -132,8 +130,6 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
     
     func sendMessageToPerson() {
         println("sending message")
-        //println(chat)
-        //println(chatNum)
         
         if chat == nil {
             chat = []
@@ -156,17 +152,6 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
                 NSLog("%@", error)
             }
         }
-        
-        /*var query = PFQuery(className: type!)
-        var array = query.findObjects()
-        println(chatNum)*/
-        /*var index = array.count - 1 - chatNum!
-        
-        if index >= 0 {
-        chat = array[index].objectForKey("conversation")
-        } else {
-        
-        }*/
     }
     
     // MARK: - Storyboard Connectivity
@@ -190,7 +175,6 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         var array = query.findObjects()
         println(chatNum)
         var index = array.count - 1 - chatNum!
-        //println(array)
         
         if index >= 0 {
             chat = array[index].objectForKey("conversation")
@@ -199,15 +183,11 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
             convoID = array[index].objectId
             
             println("set convoID as \(convoID)")
-            // println(array[index].objectForKey("conversation"))
         } else {
             return 0
         }
-        //  var conversation = (array[index] as? NSArray) as Array?
-        //  println(conversation)
         
         var conversation: AnyObject? = array[index].objectForKey("conversation")
-        //conversation?.count
         if conversation != nil {
             if conversation?.count < 100 {
                 return (conversation?.count)!
@@ -222,15 +202,8 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        //println("CHATROOMTABLEVIEWCONTROLLER")
         
         let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.CellReuseIdentifier, forIndexPath: indexPath) as ChatRoomTableViewCell
-        
-        /*if indexPath.section == 0 {
-        cell.type = "MatchChat"
-        } else {
-        cell.type = "AnonChat"
-        }*/
         
         cell.type = type
         
