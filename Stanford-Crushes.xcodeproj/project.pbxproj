@@ -41,6 +41,7 @@
 		2177FFEF1AAD759400295C7C /* icon29.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFDB1AAD759400295C7C /* icon29.png */; };
 		2177FFF01AAD759400295C7C /* icon30.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFDC1AAD759400295C7C /* icon30.png */; };
 		2177FFF11AAD759400295C7C /* icon31.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFDD1AAD759400295C7C /* icon31.png */; };
+		2177FFF41AAE6E5500295C7C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFF31AAE6E5300295C7C /* Settings.bundle */; };
 		21BE692A1AABF44900E0B790 /* ChatCollectionChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BE69291AABF44900E0B790 /* ChatCollectionChat.swift */; };
 		21BE692C1AAC2DE300E0B790 /* flat-circle-christmas-tree+8-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 21BE692B1AAC2DE300E0B790 /* flat-circle-christmas-tree+8-icon.png */; };
 		21E3280A1AA4678300ABFDC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E328091AA4678300ABFDC0 /* AppDelegate.swift */; };
@@ -129,6 +130,7 @@
 		2177FFDB1AAD759400295C7C /* icon29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon29.png; path = "circle-icons/christmas circle/png/icon29.png"; sourceTree = "<group>"; };
 		2177FFDC1AAD759400295C7C /* icon30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon30.png; path = "circle-icons/christmas circle/png/icon30.png"; sourceTree = "<group>"; };
 		2177FFDD1AAD759400295C7C /* icon31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon31.png; path = "circle-icons/christmas circle/png/icon31.png"; sourceTree = "<group>"; };
+		2177FFF31AAE6E5300295C7C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		21BE69291AABF44900E0B790 /* ChatCollectionChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCollectionChat.swift; sourceTree = "<group>"; };
 		21BE692B1AAC2DE300E0B790 /* flat-circle-christmas-tree+8-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flat-circle-christmas-tree+8-icon.png"; sourceTree = "<group>"; };
 		21E328041AA4678300ABFDC0 /* Stanford-Crushes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stanford-Crushes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -296,6 +298,17 @@
 			name = "Chat Room/Mesaging Functionalities";
 			sourceTree = "<group>";
 		};
+		2177FFF51AAE705200295C7C /* User Settings and Security */ = {
+			isa = PBXGroup;
+			children = (
+				21E3285A1AA593A600ABFDC0 /* Data.swift */,
+				21E66C011AA7FEAA005FD649 /* AuthController.swift */,
+				21E66C071AA81346005FD649 /* LoginViewController.swift */,
+				21E66C0F1AA83D5B005FD649 /* SettingsViewController.swift */,
+			);
+			name = "User Settings and Security";
+			sourceTree = "<group>";
+		};
 		21E327FB1AA4678200ABFDC0 = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +332,7 @@
 		21E328061AA4678300ABFDC0 /* Stanford-Crushes */ = {
 			isa = PBXGroup;
 			children = (
+				2177FFF51AAE705200295C7C /* User Settings and Security */,
 				2177FFB11AAD722100295C7C /* Images */,
 				2177FFB01AAD710000295C7C /* Anonymous Crushes */,
 				2177FFAF1AAD70F600295C7C /* Matching */,
@@ -331,10 +345,7 @@
 				21E328121AA4678300ABFDC0 /* LaunchScreen.xib */,
 				21E328071AA4678300ABFDC0 /* Supporting Files */,
 				21E328531AA5906200ABFDC0 /* Stanford-Crushes-Bridging-Header.h */,
-				21E3285A1AA593A600ABFDC0 /* Data.swift */,
-				21E66C011AA7FEAA005FD649 /* AuthController.swift */,
-				21E66C071AA81346005FD649 /* LoginViewController.swift */,
-				21E66C0F1AA83D5B005FD649 /* SettingsViewController.swift */,
+				2177FFF31AAE6E5300295C7C /* Settings.bundle */,
 			);
 			path = "Stanford-Crushes";
 			sourceTree = "<group>";
@@ -482,6 +493,7 @@
 				2177FFEA1AAD759400295C7C /* icon24.png in Resources */,
 				2177FFC81AAD738E00295C7C /* icon10.png in Resources */,
 				21E66C0E1AA81A6B005FD649 /* archery_target.png in Resources */,
+				2177FFF41AAE6E5500295C7C /* Settings.bundle in Resources */,
 				2177FFC21AAD738E00295C7C /* icon4.png in Resources */,
 				2177FFDF1AAD759400295C7C /* icon13.png in Resources */,
 				2177FFE41AAD759400295C7C /* icon18.png in Resources */,

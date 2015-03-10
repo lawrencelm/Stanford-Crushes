@@ -701,8 +701,8 @@
         <image name="up" width="66" height="78"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EE9-sX-tEV"/>
         <segue reference="Sua-qW-2B7"/>
         <segue reference="399-hR-Hae"/>
+        <segue reference="ren-m7-Ddy"/>
     </inferredMetricsTieBreakers>
 </document>

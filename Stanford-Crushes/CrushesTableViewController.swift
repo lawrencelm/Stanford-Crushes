@@ -35,11 +35,8 @@ class CrushesTableViewController: UITableViewController, UITextFieldDelegate
     
     //allows auto reload of the data/posts every 10 seconds
     func reloadTable() {
-        println("RELOADING")
 
         tableView.reloadData() // clear out the table view
-       // refresh()
-       // viewDidLoad()
     }
     
     // MARK: - View Controller Lifecycle
@@ -94,10 +91,14 @@ class CrushesTableViewController: UITableViewController, UITextFieldDelegate
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var query = PFQuery(className: "AnonCrush")
         var array = query.findObjects()
-        if array.count < 100 {
-            return array.count
+        if array != nil {
+            if array.count < 100 {
+                return array.count
+            } else {
+                return 100
+            }
         } else {
-            return 100
+            return 0
         }
     }
     
