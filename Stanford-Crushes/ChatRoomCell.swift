@@ -19,6 +19,8 @@ class ChatRoomTableViewCell: UITableViewCell {
     var type: String?
     var conversation: Array<AnyObject>?
     
+   // var playerChat = ChatRoomTableViewController()
+    
     @IBOutlet weak var message: UILabel!
     
     @IBOutlet weak var username: UILabel!

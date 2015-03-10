@@ -9,9 +9,36 @@
 import UIKit
 import Foundation
 import HealthKit
+import AVFoundation
 
 
 class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
+    
+    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var destination = segue.destinationViewController as? UIViewController
+        if let navCon = destination as? UINavigationController {
+            destination = navCon.visibleViewController
+        }
+        if let mtvc = destination as? ChatViewController {
+            println("segue back")
+            if player != nil {
+                player.pause()
+            }
+        }
+    }*/
+    
+    override func viewWillDisappear(animated: Bool) {
+        // back button was pressed. 
+        if player != nil {
+            player.pause()
+        }
+        
+        
+        //self.navigationController?.viewControllers[self]
+        //if self.navigationController?.viewControllers[self] == nil {
+            
+        //}
+    }
     
     var healthStore = HKHealthStore()
     let myHeight: Double = 1.7
@@ -31,6 +58,54 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
             println("heart rate is \(heartRate.aggregationStyle.rawValue)")
             
         }
+    }
+    
+    var player : AVAudioPlayer! = nil
+    var firstTime: Bool = true
+    let songType: String = "mp3"
+    let songName: String = "theme"
+    let numSongs: Int = 4
+    
+    func checkPlay() -> Bool {
+        println("checkPlay")
+        var query = PFQuery(className: type!)
+        var array = query.findObjects()
+        println(chatNum)
+        var index = array.count - 1 - chatNum!
+        
+        if index >= 0 {
+            var playOrNot: Bool? = array[index].objectForKey("play") as? Bool
+            
+            if playOrNot != nil {
+                println("returning \(playOrNot!)")
+                return playOrNot!
+            } else {
+                println("returning false")
+                return false
+            }
+        }
+        println("index out of bounds")
+        return false
+    }
+    
+    func playRandom() {
+        var randomNum : Int = Int(CGFloat.random(numSongs))
+        
+        //only need this if your first song starts at 1
+        /*if randomNum == 0 {
+        randomNum++
+        }*/
+        
+        var song: String = songName + String(randomNum)
+        playMusic(song)
+    }
+    
+    func playMusic(song: String) {
+        let path = NSBundle.mainBundle().pathForResource(song, ofType: songType)
+        let fileURL = NSURL(fileURLWithPath: path!)
+        player = AVAudioPlayer(contentsOfURL: fileURL, error: nil)
+        player.prepareToPlay()
+        player.play()
     }
     
     private func saveHeartRateIntoHealthStore(height:Double) -> Void
@@ -77,7 +152,14 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         super.viewDidLoad()
         saveHeartRateIntoHealthStore(myHeight)
         getHearRate()
+        
         var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("reloadTable"), userInfo: nil, repeats: true)
+       // if player != nil {
+        if (firstTime && checkPlay()) {
+            firstTime = false
+            playRandom()
+        }
+        //}
     }
     
     func reloadTable() {
@@ -224,4 +306,13 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         return cell
     }
     
+}
+
+
+// MARK: - Extensions
+
+private extension CGFloat {
+    static func random(max: Int) -> CGFloat {
+        return CGFloat(arc4random() % UInt32(max))
+    }
 }

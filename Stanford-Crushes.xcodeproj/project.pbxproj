@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2121BA571AAFA9F800B80182 /* theme0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2121BA521AAFA9F800B80182 /* theme0.mp3 */; };
+		2121BA581AAFA9F800B80182 /* theme1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2121BA531AAFA9F800B80182 /* theme1.mp3 */; };
+		2121BA591AAFA9F800B80182 /* theme2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2121BA541AAFA9F800B80182 /* theme2.mp3 */; };
+		2121BA5A1AAFA9F800B80182 /* theme3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2121BA551AAFA9F800B80182 /* theme3.mp3 */; };
+		2121BA5B1AAFA9F800B80182 /* theme4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2121BA561AAFA9F800B80182 /* theme4.mp3 */; };
 		2177FFAB1AAD0A0D00295C7C /* ChatRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2177FFAA1AAD0A0D00295C7C /* ChatRoomTableViewController.swift */; };
 		2177FFAD1AAD64B500295C7C /* ChatRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2177FFAC1AAD64B500295C7C /* ChatRoomCell.swift */; };
 		2177FFBE1AAD738E00295C7C /* icon0.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFB21AAD738E00295C7C /* icon0.png */; };
@@ -96,6 +101,11 @@
 
 /* Begin PBXFileReference section */
 		2121BA4F1AAEB71400B80182 /* Stanford-Crushes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Stanford-Crushes.entitlements"; sourceTree = "<group>"; };
+		2121BA521AAFA9F800B80182 /* theme0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = theme0.mp3; path = "Music and Sounds/theme0.mp3"; sourceTree = "<group>"; };
+		2121BA531AAFA9F800B80182 /* theme1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = theme1.mp3; path = "Music and Sounds/theme1.mp3"; sourceTree = "<group>"; };
+		2121BA541AAFA9F800B80182 /* theme2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = theme2.mp3; path = "Music and Sounds/theme2.mp3"; sourceTree = "<group>"; };
+		2121BA551AAFA9F800B80182 /* theme3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = theme3.mp3; path = "Music and Sounds/theme3.mp3"; sourceTree = "<group>"; };
+		2121BA561AAFA9F800B80182 /* theme4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = theme4.mp3; path = "Music and Sounds/theme4.mp3"; sourceTree = "<group>"; };
 		2177FFAA1AAD0A0D00295C7C /* ChatRoomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewController.swift; sourceTree = "<group>"; };
 		2177FFAC1AAD64B500295C7C /* ChatRoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomCell.swift; sourceTree = "<group>"; };
 		2177FFB21AAD738E00295C7C /* icon0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon0.png; path = "circle-icons/christmas circle/png/icon0.png"; sourceTree = "<group>"; };
@@ -342,6 +352,11 @@
 				21E328581AA5917A00ABFDC0 /* Bolts.framework */,
 				21E328561AA5916E00ABFDC0 /* Parse.framework */,
 				21E328121AA4678300ABFDC0 /* LaunchScreen.xib */,
+				2121BA521AAFA9F800B80182 /* theme0.mp3 */,
+				2121BA531AAFA9F800B80182 /* theme1.mp3 */,
+				2121BA541AAFA9F800B80182 /* theme2.mp3 */,
+				2121BA551AAFA9F800B80182 /* theme3.mp3 */,
+				2121BA561AAFA9F800B80182 /* theme4.mp3 */,
 				21E328071AA4678300ABFDC0 /* Supporting Files */,
 				21E328531AA5906200ABFDC0 /* Stanford-Crushes-Bridging-Header.h */,
 				2177FFF31AAE6E5300295C7C /* Settings.bundle */,
@@ -499,8 +514,10 @@
 				2177FFEA1AAD759400295C7C /* icon24.png in Resources */,
 				2177FFC81AAD738E00295C7C /* icon10.png in Resources */,
 				21E66C0E1AA81A6B005FD649 /* archery_target.png in Resources */,
+				2121BA5B1AAFA9F800B80182 /* theme4.mp3 in Resources */,
 				2177FFF41AAE6E5500295C7C /* Settings.bundle in Resources */,
 				2177FFC21AAD738E00295C7C /* icon4.png in Resources */,
+				2121BA571AAFA9F800B80182 /* theme0.mp3 in Resources */,
 				2177FFDF1AAD759400295C7C /* icon13.png in Resources */,
 				2177FFE41AAD759400295C7C /* icon18.png in Resources */,
 				2177FFED1AAD759400295C7C /* icon27.png in Resources */,
@@ -514,11 +531,14 @@
 				2177FFE51AAD759400295C7C /* icon19.png in Resources */,
 				2177FFE61AAD759400295C7C /* icon20.png in Resources */,
 				21E328111AA4678300ABFDC0 /* Images.xcassets in Resources */,
+				2121BA591AAFA9F800B80182 /* theme2.mp3 in Resources */,
 				2177FFC71AAD738E00295C7C /* icon9.png in Resources */,
 				21E66C0C1AA819E6005FD649 /* pic3.jpg in Resources */,
 				2177FFEB1AAD759400295C7C /* icon25.png in Resources */,
+				2121BA5A1AAFA9F800B80182 /* theme3.mp3 in Resources */,
 				2177FFE31AAD759400295C7C /* icon17.png in Resources */,
 				2177FFC41AAD738E00295C7C /* icon6.png in Resources */,
+				2121BA581AAFA9F800B80182 /* theme1.mp3 in Resources */,
 				2177FFEE1AAD759400295C7C /* icon28.png in Resources */,
 				2177FFE71AAD759400295C7C /* icon21.png in Resources */,
 				2177FFC01AAD738E00295C7C /* icon2.png in Resources */,

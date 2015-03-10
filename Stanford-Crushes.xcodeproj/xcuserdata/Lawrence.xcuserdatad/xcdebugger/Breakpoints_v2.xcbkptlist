@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Stanford-Crushes/ChatCollectionView.swift"
-            timestampString = "447619412.560181"
+            timestampString = "447721029.999056"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Stanford-Crushes/ChatRoomCell.swift"
-            timestampString = "447662040.902283"
+            timestampString = "447718278.94755"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "update()"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Stanford-Crushes/ChatRoomTableViewController.swift"
-            timestampString = "447658856.415594"
+            timestampString = "447721029.999056"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
             landmarkName = "sendMessageToPerson()"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,12 +90,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Stanford-Crushes/ChatRoomTableViewController.swift"
-            timestampString = "447658856.415594"
+            timestampString = "447721029.999056"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
-            landmarkName = "numberOfSectionsInTableView(_:)"
+            startingLineNumber = "265"
+            endingLineNumber = "265"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Stanford-Crushes/ChatRoomTableViewController.swift"
-            timestampString = "447658856.415594"
+            timestampString = "447720558.52446"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "saveHeartRateIntoHealthStore(_:)"
             landmarkType = "5">
          </BreakpointContent>
