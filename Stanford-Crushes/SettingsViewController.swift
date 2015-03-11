@@ -38,6 +38,7 @@ class SettingsViewController: UITableViewController {
             logoutMessage()
         }
     }
+    
     @IBAction func changeAuth(sender: UISwitch) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(sender.selected, forKey: "auth")

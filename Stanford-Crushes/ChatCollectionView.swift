@@ -213,8 +213,10 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        authenticateUser()
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if(defaults.objectForKey("auth") as Bool) {
+            authenticateUser()
+        }
     }
     
     func showPasswordAlert() {
