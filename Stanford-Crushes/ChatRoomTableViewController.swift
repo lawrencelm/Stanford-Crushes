@@ -81,6 +81,26 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         }
     }
     
+    func stopSharingMusic() {
+        var query = PFQuery(className: type!)
+        var object = query.getObjectWithId(convoID)
+        println(convoID)
+        println(object)
+        object.setObject(false, forKey: "play")
+        println(object)
+        object.saveInBackgroundWithBlock { (success: Bool!, error: NSError!) -> Void in
+            if success! {
+                NSLog("Object updated")
+            } else {
+                NSLog("%@", error)
+            }
+        }
+        
+        if firstTime {
+            playRandom()
+        }
+    }
+    
     func checkPlay() -> Bool {
         println("checkPlay")
         var query = PFQuery(className: type!)
