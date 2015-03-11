@@ -32,12 +32,6 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         if player != nil {
             player.pause()
         }
-        
-        
-        //self.navigationController?.viewControllers[self]
-        //if self.navigationController?.viewControllers[self] == nil {
-            
-        //}
     }
     
     var healthStore = HKHealthStore()
@@ -65,6 +59,27 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
     let songType: String = "mp3"
     let songName: String = "theme"
     let numSongs: Int = 4
+    
+    @IBAction func shareMusicNow(sender: AnyObject) {
+        println("shareMusicNow")
+        var query = PFQuery(className: type!)
+        var object = query.getObjectWithId(convoID)
+        println(convoID)
+        println(object)
+        object.setObject(true, forKey: "play")
+        println(object)
+        object.saveInBackgroundWithBlock { (success: Bool!, error: NSError!) -> Void in
+            if success! {
+                NSLog("Object updated")
+            } else {
+                NSLog("%@", error)
+            }
+        }
+        
+        if firstTime {
+            playRandom()
+        }
+    }
     
     func checkPlay() -> Bool {
         println("checkPlay")
@@ -248,11 +263,12 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         println("sections")
-        return 1
+        return 2
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         println("rows")
+        if section == 1 {
         println(type)
         var query = PFQuery(className: type!)
         var array = query.findObjects()
@@ -280,12 +296,14 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         } else {
             return 0
         }
+        }
+        return 1
     }
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        
+        if indexPath.section == 1 {
         let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.CellReuseIdentifier, forIndexPath: indexPath) as ChatRoomTableViewCell
         
         cell.type = type
@@ -305,6 +323,11 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         cell.row = indexPath.row
         
         return cell
+        }
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("options", forIndexPath: indexPath) as UITableViewCell
+        return cell
+
     }
     
 }

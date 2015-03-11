@@ -209,6 +209,45 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="options" rowHeight="91" id="qcG-tu-x9l">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qcG-tu-x9l" id="xQX-hw-yKd">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQS-0l-g29">
+                                            <rect key="frame" x="47" y="8" width="86" height="74"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="86" id="2Cu-KR-RzV"/>
+                                            </constraints>
+                                            <state key="normal" title="Button" image="playButton.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="shareMusicNow:" destination="XHS-rq-2yK" eventType="touchUpInside" id="xPx-vC-gcZ"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjj-eQ-nQd">
+                                            <rect key="frame" x="254" y="8" width="81" height="78"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="81" id="xnN-O7-zLo"/>
+                                            </constraints>
+                                            <state key="normal" title="Button" image="heartBeat.gif">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="pjj-eQ-nQd" firstAttribute="top" secondItem="xQX-hw-yKd" secondAttribute="topMargin" constant="-2" id="AUL-4X-bO8"/>
+                                        <constraint firstItem="pjj-eQ-nQd" firstAttribute="leading" secondItem="QQS-0l-g29" secondAttribute="trailing" constant="121" id="CoV-xe-LKa"/>
+                                        <constraint firstItem="QQS-0l-g29" firstAttribute="leading" secondItem="xQX-hw-yKd" secondAttribute="leadingMargin" constant="39" id="HCo-2E-vf6"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="QQS-0l-g29" secondAttribute="bottom" constant="2" id="KAU-L9-8ee"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="pjj-eQ-nQd" secondAttribute="bottom" constant="-2" id="L8k-Sp-Pil"/>
+                                        <constraint firstItem="QQS-0l-g29" firstAttribute="top" secondItem="xQX-hw-yKd" secondAttribute="topMargin" constant="-2" id="gcR-Id-C3E"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="QQS-0l-g29" secondAttribute="bottom" constant="2" id="zYN-dh-e1i"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="convo" rowHeight="97" id="Nqk-9V-RnQ" customClass="ChatRoomTableViewCell" customModule="Stanford_Crushes" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nqk-9V-RnQ" id="TmS-bE-61G">
@@ -220,8 +259,8 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7B-GT-rqX">
-                                            <rect key="frame" x="513" y="67" width="79" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7B-GT-rqX">
+                                            <rect key="frame" x="535" y="67" width="57" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -254,7 +293,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aq-hc-11u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1470" y="-470"/>
+            <point key="canvasLocation" x="1470" y="-475"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="hFU-HJ-lTA">
@@ -698,6 +737,8 @@
     </scenes>
     <resources>
         <image name="archery_target.png" width="32" height="32"/>
+        <image name="heartBeat.gif" width="480" height="480"/>
+        <image name="playButton.png" width="300" height="300"/>
         <image name="up" width="66" height="78"/>
     </resources>
     <inferredMetricsTieBreakers>

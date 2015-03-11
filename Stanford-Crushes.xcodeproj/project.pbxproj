@@ -12,6 +12,8 @@
 		2121BA591AAFA9F800B80182 /* theme2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2121BA541AAFA9F800B80182 /* theme2.mp3 */; };
 		2121BA5A1AAFA9F800B80182 /* theme3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2121BA551AAFA9F800B80182 /* theme3.mp3 */; };
 		2121BA5B1AAFA9F800B80182 /* theme4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2121BA561AAFA9F800B80182 /* theme4.mp3 */; };
+		2121BA5D1AAFD84E00B80182 /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2121BA5C1AAFD84E00B80182 /* playButton.png */; };
+		2121BA5F1AAFDD9C00B80182 /* heartBeat.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2121BA5E1AAFDD9B00B80182 /* heartBeat.gif */; };
 		2177FFAB1AAD0A0D00295C7C /* ChatRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2177FFAA1AAD0A0D00295C7C /* ChatRoomTableViewController.swift */; };
 		2177FFAD1AAD64B500295C7C /* ChatRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2177FFAC1AAD64B500295C7C /* ChatRoomCell.swift */; };
 		2177FFBE1AAD738E00295C7C /* icon0.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFB21AAD738E00295C7C /* icon0.png */; };
@@ -106,6 +108,8 @@
 		2121BA541AAFA9F800B80182 /* theme2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = theme2.mp3; path = "Music and Sounds/theme2.mp3"; sourceTree = "<group>"; };
 		2121BA551AAFA9F800B80182 /* theme3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = theme3.mp3; path = "Music and Sounds/theme3.mp3"; sourceTree = "<group>"; };
 		2121BA561AAFA9F800B80182 /* theme4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = theme4.mp3; path = "Music and Sounds/theme4.mp3"; sourceTree = "<group>"; };
+		2121BA5C1AAFD84E00B80182 /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playButton.png; sourceTree = "<group>"; };
+		2121BA5E1AAFDD9B00B80182 /* heartBeat.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = heartBeat.gif; sourceTree = "<group>"; };
 		2177FFAA1AAD0A0D00295C7C /* ChatRoomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewController.swift; sourceTree = "<group>"; };
 		2177FFAC1AAD64B500295C7C /* ChatRoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomCell.swift; sourceTree = "<group>"; };
 		2177FFB21AAD738E00295C7C /* icon0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon0.png; path = "circle-icons/christmas circle/png/icon0.png"; sourceTree = "<group>"; };
@@ -348,6 +352,8 @@
 				2177FFAE1AAD709800295C7C /* Chat Functionality */,
 				21E328091AA4678300ABFDC0 /* AppDelegate.swift */,
 				21E3280B1AA4678300ABFDC0 /* ViewController.swift */,
+				2121BA5C1AAFD84E00B80182 /* playButton.png */,
+				2121BA5E1AAFDD9B00B80182 /* heartBeat.gif */,
 				21E3280D1AA4678300ABFDC0 /* Main.storyboard */,
 				21E328581AA5917A00ABFDC0 /* Bolts.framework */,
 				21E328561AA5916E00ABFDC0 /* Parse.framework */,
@@ -542,10 +548,12 @@
 				2177FFEE1AAD759400295C7C /* icon28.png in Resources */,
 				2177FFE71AAD759400295C7C /* icon21.png in Resources */,
 				2177FFC01AAD738E00295C7C /* icon2.png in Resources */,
+				2121BA5F1AAFDD9C00B80182 /* heartBeat.gif in Resources */,
 				2177FFF01AAD759400295C7C /* icon30.png in Resources */,
 				2177FFEC1AAD759400295C7C /* icon26.png in Resources */,
 				2177FFE01AAD759400295C7C /* icon14.png in Resources */,
 				2177FFC11AAD738E00295C7C /* icon3.png in Resources */,
+				2121BA5D1AAFD84E00B80182 /* playButton.png in Resources */,
 				2177FFC31AAD738E00295C7C /* icon5.png in Resources */,
 				2177FFC51AAD738E00295C7C /* icon7.png in Resources */,
 				2177FFE11AAD759400295C7C /* icon15.png in Resources */,
