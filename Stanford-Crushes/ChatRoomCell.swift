@@ -51,7 +51,7 @@ class ChatRoomTableViewCell: UITableViewCell {
                 for ch in newMessage! {
                     println("character \(ch) at index \(i)")
                     if i >= 3 {
-                        stringNumberBeat += stringNumberBeat
+                        stringNumberBeat = stringNumberBeat + String(ch)
                     }
                     
                     i++
@@ -64,6 +64,9 @@ class ChatRoomTableViewCell: UITableViewCell {
               //  var valueBeat: Int = newMessage!.substringWithRange(Range<String.Index>(start: "3", end: count(newMessage) - 1))
                 
                 for var i = 0; i < valueBeat; i++ {
+                    
+                    //heart pic is intensified according to how fast
+                    //your heart is beating
                     changeNewMessage = changeNewMessage + "♥️"
                 }
                 newMessage = changeNewMessage
