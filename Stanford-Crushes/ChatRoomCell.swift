@@ -19,8 +19,6 @@ class ChatRoomTableViewCell: UITableViewCell {
     var type: String?
     var conversation: Array<AnyObject>?
     
-   // var playerChat = ChatRoomTableViewController()
-    
     @IBOutlet weak var message: UILabel!
     
     @IBOutlet weak var username: UILabel!
@@ -42,6 +40,9 @@ class ChatRoomTableViewCell: UITableViewCell {
             
             if newMessage?.rangeOfString("#hb") != nil {
                 //it's an encoded heart beat
+                //it encodes your heart beat into a mesage that is stored
+                //in our database. then decoded when we read the message
+                
                 println("found encoded heart beat \(newMessage)")
                 var changeNewMessage = ""
                 var stringNumberBeat = ""
@@ -60,8 +61,6 @@ class ChatRoomTableViewCell: UITableViewCell {
                 println("string number beat \(stringNumberBeat)")
                 var valueBeat = stringNumberBeat.toInt()
                 println("valueBeat is \(valueBeat)")
-                
-              //  var valueBeat: Int = newMessage!.substringWithRange(Range<String.Index>(start: "3", end: count(newMessage) - 1))
                 
                 for var i = 0; i < valueBeat; i++ {
                     

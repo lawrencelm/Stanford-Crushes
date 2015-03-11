@@ -8,40 +8,28 @@
 
 import UIKit
 import Foundation
-import HealthKit
-import AVFoundation
+import HealthKit // heart beat functionality
+import AVFoundation // music sharing option
 
 
 class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
     
-    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var destination = segue.destinationViewController as? UIViewController
-        if let navCon = destination as? UINavigationController {
-            destination = navCon.visibleViewController
-        }
-        if let mtvc = destination as? ChatViewController {
-            println("segue back")
-            if player != nil {
-                player.pause()
-            }
-        }
-    }*/
-    
     override func viewWillDisappear(animated: Bool) {
-        // back button was pressed. 
+        // back button was pressed.
         if player != nil {
             player.pause()
         }
     }
     
-    var healthStore = HKHealthStore()
-    let myHeight: Double = 1.7
+    // MARK: - Heart Beat Functionality
     
-    func getHearRate() -> Int {
+    private var healthStore = HKHealthStore()
+    private let myHeight: Double = 1.7
+    
+    private func getHearRate() -> Int {
         if(HKHealthStore.isHealthDataAvailable()) {
             //do health stuff
-            /* var health = HKHealthStore()
-            var heartRate = HKQuantityTypeIdentifierHeartRate)*/
+            
             let height = myHeight
             let heartRateUnit: HKUnit = HKUnit.countUnit().unitDividedByUnit(HKUnit.minuteUnit())
             let heartRateQuantity: HKQuantity = HKQuantity(unit: heartRateUnit, doubleValue: height)
@@ -64,7 +52,7 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         sendHeartToPerson(heartRate)
     }
     
-    func sendHeartToPerson(heartRate: Int) {
+    private func sendHeartToPerson(heartRate: Int) {
         println("sending my heart rate")
         
         if chat == nil {
@@ -91,95 +79,6 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         }
     }
     
-    var player : AVAudioPlayer! = nil
-    var firstTime: Bool = true
-    let songType: String = "mp3"
-    let songName: String = "theme"
-    let numSongs: Int = 4
-    
-    @IBAction func shareMusicNow(sender: AnyObject) {
-        println("shareMusicNow")
-        var query = PFQuery(className: type!)
-        var object = query.getObjectWithId(convoID)
-        println(convoID)
-        println(object)
-        object.setObject(true, forKey: "play")
-        println(object)
-        object.saveInBackgroundWithBlock { (success: Bool!, error: NSError!) -> Void in
-            if success! {
-                NSLog("Object updated")
-            } else {
-                NSLog("%@", error)
-            }
-        }
-        
-        if firstTime {
-            playRandom()
-        }
-    }
-    
-    func stopSharingMusic() {
-        var query = PFQuery(className: type!)
-        var object = query.getObjectWithId(convoID)
-        println(convoID)
-        println(object)
-        object.setObject(false, forKey: "play")
-        println(object)
-        object.saveInBackgroundWithBlock { (success: Bool!, error: NSError!) -> Void in
-            if success! {
-                NSLog("Object updated")
-            } else {
-                NSLog("%@", error)
-            }
-        }
-        
-        if firstTime {
-            playRandom()
-        }
-    }
-    
-    func checkPlay() -> Bool {
-        println("checkPlay")
-        var query = PFQuery(className: type!)
-        var array = query.findObjects()
-        println("chat num is \(chatNum). array count is \(array.count). type is \(type!). array is \(array)")
-        var index = array.count - 1 - chatNum!
-        println("index is \(index)")
-        
-        if index >= 0 {
-            var playOrNot: Bool? = array[index].objectForKey("play") as? Bool
-            
-            if playOrNot != nil {
-                println("returning \(playOrNot!)")
-                return playOrNot!
-            } else {
-                println("returning false")
-                return false
-            }
-        }
-        println("index out of bounds")
-        return false
-    }
-    
-    func playRandom() {
-        var randomNum : Int = Int(CGFloat.random(numSongs))
-        
-        //only need this if your first song starts at 1
-        /*if randomNum == 0 {
-        randomNum++
-        }*/
-        
-        var song: String = songName + String(randomNum)
-        playMusic(song)
-    }
-    
-    func playMusic(song: String) {
-        let path = NSBundle.mainBundle().pathForResource(song, ofType: songType)
-        let fileURL = NSURL(fileURLWithPath: path!)
-        player = AVAudioPlayer(contentsOfURL: fileURL, error: nil)
-        player.prepareToPlay()
-        player.play()
-    }
     
     private func saveHeartRateIntoHealthStore(height:Double) -> Void
     {
@@ -221,18 +120,121 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         }
     } // end saveHeartRateIntoHealthStore
     
+    // MARK: - Music Sharing
+    
+    private var player : AVAudioPlayer! = nil
+    private var firstTime: Bool = true
+    private let songType: String = "mp3"
+    private let songName: String = "theme"
+    private let numSongs: Int = 4
+    
+    //Instantly starts music sharing for everybody who is
+    //connected with the chat room
+    
+    //So if there is a chat between user 1 and 2. If user 1 turns
+    //on music sharing, both users 1 and 2 will start listening to
+    //the same music at the same moment, ressembling the feeling of
+    //listening to music together with friends in a room (but without
+    //being necessarily in the same place)
+    @IBAction func shareMusicNow(sender: AnyObject) {
+        println("shareMusicNow")
+        var query = PFQuery(className: type!)
+        var object = query.getObjectWithId(convoID)
+        println(convoID)
+        println(object)
+        object.setObject(true, forKey: "play")
+        println(object)
+        object.saveInBackgroundWithBlock { (success: Bool!, error: NSError!) -> Void in
+            if success! {
+                NSLog("Object updated")
+            } else {
+                NSLog("%@", error)
+            }
+        }
+        
+        if firstTime {
+            playRandom()
+        }
+    }
+    
+    //Stops music sharing
+    private func stopSharingMusic() {
+        var query = PFQuery(className: type!)
+        var object = query.getObjectWithId(convoID)
+        println(convoID)
+        println(object)
+        object.setObject(false, forKey: "play")
+        println(object)
+        object.saveInBackgroundWithBlock { (success: Bool!, error: NSError!) -> Void in
+            if success! {
+                NSLog("Object updated")
+            } else {
+                NSLog("%@", error)
+            }
+        }
+        
+        if firstTime {
+            playRandom()
+        }
+    }
+    
+    //Checks if the music sharing functionality is ON
+    private func checkPlay() -> Bool {
+        println("checkPlay")
+        var query = PFQuery(className: type!)
+        var array = query.findObjects()
+        println("chat num is \(chatNum). array count is \(array.count). type is \(type!). array is \(array)")
+        var index = array.count - 1 - chatNum!
+        println("index is \(index)")
+        
+        if index >= 0 {
+            var playOrNot: Bool? = array[index].objectForKey("play") as? Bool
+            
+            if playOrNot != nil {
+                println("returning \(playOrNot!)")
+                return playOrNot!
+            } else {
+                println("returning false")
+                return false
+            }
+        }
+        println("index out of bounds")
+        return false
+    }
+    
+    //Play a random song
+    private func playRandom() {
+        var randomNum : Int = Int(CGFloat.random(numSongs))
+        
+        //only need this if your first song starts at 1
+        
+        var song: String = songName + String(randomNum)
+        playMusic(song)
+    }
+    
+    //Play a song with the given name
+    private func playMusic(song: String) {
+        let path = NSBundle.mainBundle().pathForResource(song, ofType: songType)
+        let fileURL = NSURL(fileURLWithPath: path!)
+        player = AVAudioPlayer(contentsOfURL: fileURL, error: nil)
+        player.prepareToPlay()
+        player.play()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //timer reloads table so that every time a user enters a new message,
+        //the message instantly appears on screen. Another way to do this would
+        //be by using Notifications, but that'd require a very different implementation
         var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("reloadTable"), userInfo: nil, repeats: true)
-       // if player != nil {
         if (firstTime && checkPlay()) {
             firstTime = false
             playRandom()
         }
-        //}
     }
     
+    //reloads entire table
     func reloadTable() {
         tableView.reloadData()
     }
@@ -240,22 +242,16 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
     var needReload : Bool? {
         didSet {
             tableView.reloadData() // clear out the table view
-            refresh()
         }
     }
     
+    //specify data about the chat room
     var chat: AnyObject?
     var chatNum : Int?
     private var convoID: String?
     var type: String?
     
-    
-    
-    func refresh() {
-        //refresh information
-    }
-    
-    
+    //message to be sent
     private var sendMessage: String? {
         didSet {
             sendMessageField?.text = sendMessage
@@ -281,6 +277,10 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         return true
     }
     
+    //Sends a message to the person
+    //Our chat/messaging functionality works using
+    //only 100% iOS SDK elements, except for Parse,
+    //which is used to store messages
     func sendMessageToPerson() {
         println("sending message")
         
@@ -318,39 +318,41 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         println("sections")
+        //0 is for settings/options
+        //1 is for messages
         return 2
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         println("rows")
         if section == 1 {
-        println(type)
-        var query = PFQuery(className: type!)
-        var array = query.findObjects()
-        println(chatNum)
-        var index = array.count - 1 - chatNum!
-        
-        if index >= 0 {
-            chat = array[index].objectForKey("conversation")
-            println("convo is \(chat)")
+            println(type)
+            var query = PFQuery(className: type!)
+            var array = query.findObjects()
+            println(chatNum)
+            var index = array.count - 1 - chatNum!
             
-            convoID = array[index].objectId
-            
-            println("set convoID as \(convoID)")
-        } else {
-            return 0
-        }
-        
-        var conversation: AnyObject? = array[index].objectForKey("conversation")
-        if conversation != nil {
-            if conversation?.count < 100 {
-                return (conversation?.count)!
+            if index >= 0 {
+                chat = array[index].objectForKey("conversation")
+                println("convo is \(chat)")
+                
+                convoID = array[index].objectId
+                
+                println("set convoID as \(convoID)")
             } else {
-                return 100
+                return 0
             }
-        } else {
-            return 0
-        }
+            
+            var conversation: AnyObject? = array[index].objectForKey("conversation")
+            if conversation != nil {
+                if conversation?.count < 100 {
+                    return (conversation?.count)!
+                } else {
+                    return 100
+                }
+            } else {
+                return 0
+            }
         }
         return 1
     }
@@ -359,30 +361,32 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         if indexPath.section == 1 {
-        let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.CellReuseIdentifier, forIndexPath: indexPath) as ChatRoomTableViewCell
-        
-        cell.type = type
-        
-        /*The code below first casts "chat" to an object of type NSArray (which conforms to the protocol AnyObject) and then to of type Array, which can be converted from it's Objective-C counterpart, NSArray.
-        
-        Note that this is a forced downcast. Only use this if you're sure that twData is going to be an instance of NSArray. Otherwise, use optionals:
-        
-        var conversation = (chat as? NSArray) as Array?*/
-        
-        var conversation = (chat as? NSArray) as Array?
-        
-        cell.conversation = conversation
-        
-        
-        
-        cell.row = indexPath.row
-        
-        return cell
+            //Message
+            let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.CellReuseIdentifier, forIndexPath: indexPath) as ChatRoomTableViewCell
+            
+            cell.type = type
+            
+            /*The code below first casts "chat" to an object of type NSArray (which conforms to the protocol AnyObject) and then to of type Array, which can be converted from it's Objective-C counterpart, NSArray.
+            
+            Note that this is a forced downcast. Only use this if you're sure that twData is going to be an instance of NSArray. Otherwise, use optionals:
+            
+            var conversation = (chat as? NSArray) as Array?*/
+            
+            var conversation = (chat as? NSArray) as Array?
+            
+            cell.conversation = conversation
+            
+            
+            
+            cell.row = indexPath.row
+            
+            return cell
         }
         
+        //Settings/options:
         let cell = tableView.dequeueReusableCellWithIdentifier("options", forIndexPath: indexPath) as UITableViewCell
         return cell
-
+        
     }
     
 }
