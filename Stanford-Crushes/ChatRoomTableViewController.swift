@@ -37,7 +37,7 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
     var healthStore = HKHealthStore()
     let myHeight: Double = 1.7
     
-    func getHearRate() {
+    func getHearRate() -> Int {
         if(HKHealthStore.isHealthDataAvailable()) {
             //do health stuff
             /* var health = HKHealthStore()
@@ -51,6 +51,43 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
             println("heart rate is \(heartRate.aggregationStyle.hashValue)")
             println("heart rate is \(heartRate.aggregationStyle.rawValue)")
             
+            return heartRate.aggregationStyle.rawValue
+        }
+        
+        return 0
+    }
+    
+    
+    @IBAction func shareHeartBeatNow(sender: AnyObject) {
+        saveHeartRateIntoHealthStore(myHeight)
+        var heartRate: Int = getHearRate()
+        sendHeartToPerson(heartRate)
+    }
+    
+    func sendHeartToPerson(heartRate: Int) {
+        println("sending my heart rate")
+        
+        if chat == nil {
+            chat = []
+        }
+        
+        var conversation = (chat as? NSArray) as Array?
+        
+        conversation!.append([PFUser.currentUser().username, "#hb" + String(heartRate)])
+        
+        println(type)
+        var query = PFQuery(className: type!)
+        var object = query.getObjectWithId(convoID)
+        println(convoID)
+        println(object)
+        object.setObject(conversation, forKey: "conversation")
+        println(object)
+        object.saveInBackgroundWithBlock { (success: Bool!, error: NSError!) -> Void in
+            if success! {
+                NSLog("Object updated")
+            } else {
+                NSLog("%@", error)
+            }
         }
     }
     
@@ -186,8 +223,6 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        saveHeartRateIntoHealthStore(myHeight)
-        getHearRate()
         
         var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("reloadTable"), userInfo: nil, repeats: true)
        // if player != nil {

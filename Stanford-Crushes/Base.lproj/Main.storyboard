@@ -235,6 +235,9 @@
                                             <state key="normal" title="Button" image="heartBeat.gif">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="shareHeartBeatNow:" destination="XHS-rq-2yK" eventType="touchUpInside" id="eDQ-dv-uWJ"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>

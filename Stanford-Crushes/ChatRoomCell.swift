@@ -36,7 +36,41 @@ class ChatRoomTableViewCell: UITableViewCell {
             var index = conversation!.count - 1 - row!
             
             //downcasting to String. Thus, "as?"
-            message.text = conversation![index][1] as? String
+            var newMessage = conversation![index][1] as? String
+            
+            
+            
+            if newMessage?.rangeOfString("#hb") != nil {
+                //it's an encoded heart beat
+                println("found encoded heart beat \(newMessage)")
+                var changeNewMessage = ""
+                var stringNumberBeat = ""
+                
+                var i = 0
+                
+                for ch in newMessage! {
+                    println("character \(ch) at index \(i)")
+                    if i >= 3 {
+                        stringNumberBeat += stringNumberBeat
+                    }
+                    
+                    i++
+                }
+                
+                println("string number beat \(stringNumberBeat)")
+                var valueBeat = stringNumberBeat.toInt()
+                println("valueBeat is \(valueBeat)")
+                
+              //  var valueBeat: Int = newMessage!.substringWithRange(Range<String.Index>(start: "3", end: count(newMessage) - 1))
+                
+                for var i = 0; i < valueBeat; i++ {
+                    changeNewMessage = changeNewMessage + "♥️"
+                }
+                newMessage = changeNewMessage
+            }
+            
+            message.text = newMessage
+            
             if conversation![index][0] as NSString == PFUser.currentUser().username {
                 self.contentView.backgroundColor = UIColor(netHex: 0xF3726D)
                 println("theme color")
