@@ -21,6 +21,44 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func doubleTapAction(sender: UITapGestureRecognizer) {
+        //pause music
+        println("double tap")
+        
+        if sender.state == .Ended {
+            println("double action")
+            if player != nil {
+                player.pause()
+            }
+        }
+    }
+    
+    @IBAction func singleTapAction(sender: UITapGestureRecognizer) {
+        //check if state ended
+        //play music
+        println("single tap")
+        if sender.state == .Ended {
+            println("single action")
+            if player != nil {
+                player.pause()
+            }
+            
+            playRandom()
+            firstTime = false
+        }
+    }
+    
+    
+    
+    @IBAction func tripeTapAction(sender: UITapGestureRecognizer) {
+        //send heart beat
+        println("triple tap")
+        if sender.state == .Ended {
+            shareHeartBeatNow()
+        }
+    }
+    
+    
     // MARK: - Heart Beat Functionality
     
     private var healthStore = HKHealthStore()
@@ -47,6 +85,12 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
     
     
     @IBAction func shareHeartBeatNow(sender: AnyObject) {
+        saveHeartRateIntoHealthStore(myHeight)
+        var heartRate: Int = getHearRate()
+        sendHeartToPerson(heartRate)
+    }
+    
+    private func shareHeartBeatNow() {
         saveHeartRateIntoHealthStore(myHeight)
         var heartRate: Int = getHearRate()
         sendHeartToPerson(heartRate)
@@ -385,6 +429,7 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         
         //Settings/options:
         let cell = tableView.dequeueReusableCellWithIdentifier("options", forIndexPath: indexPath) as UITableViewCell
+        //cell.contentView.backgroundColor = UIColor(netHex: 0xF3726D)
         return cell
         
     }

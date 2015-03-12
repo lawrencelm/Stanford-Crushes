@@ -197,7 +197,7 @@
         <scene sceneID="oD3-lY-Ztk">
             <objects>
                 <tableViewController id="XHS-rq-2yK" customClass="ChatRoomTableViewController" customModule="Stanford_Crushes" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="97" sectionHeaderHeight="22" sectionFooterHeight="22" id="WaS-VY-AVZ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="97" sectionHeaderHeight="22" sectionFooterHeight="22" id="WaS-VY-AVZ" customClass="ChatRoomTableView" customModule="Stanford_Crushes" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -288,6 +288,9 @@
                         <connections>
                             <outlet property="dataSource" destination="XHS-rq-2yK" id="Moe-Lx-DK1"/>
                             <outlet property="delegate" destination="XHS-rq-2yK" id="1XE-DZ-v4M"/>
+                            <outletCollection property="gestureRecognizers" destination="XyN-Nf-dgU" appends="YES" id="xI1-HP-lyE"/>
+                            <outletCollection property="gestureRecognizers" destination="92A-aT-Sc5" appends="YES" id="Zaz-wW-lcg"/>
+                            <outletCollection property="gestureRecognizers" destination="k7h-xT-Z2s" appends="YES" id="MRh-xw-k85"/>
                         </connections>
                     </tableView>
                     <connections>
@@ -295,8 +298,24 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aq-hc-11u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="XyN-Nf-dgU">
+                    <connections>
+                        <action selector="doubleTapAction:" destination="XHS-rq-2yK" id="4np-kI-Pnc"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="92A-aT-Sc5">
+                    <connections>
+                        <action selector="singleTapAction:" destination="XHS-rq-2yK" id="Ure-5u-iTq"/>
+                        <outlet property="delegate" destination="WaS-VY-AVZ" id="PVB-g2-ZY2"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="3" id="k7h-xT-Z2s">
+                    <connections>
+                        <action selector="tripeTapAction:" destination="XHS-rq-2yK" id="PAD-Eb-58F"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1470" y="-475"/>
+            <point key="canvasLocation" x="1454" y="-555"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="hFU-HJ-lTA">

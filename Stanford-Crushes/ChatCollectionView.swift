@@ -214,7 +214,7 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let defaults = NSUserDefaults.standardUserDefaults()
-        if(defaults.objectForKey("auth") as Bool) {
+        if((defaults.objectForKey("auth") == nil) || (defaults.objectForKey("auth") as Bool)) {
             authenticateUser()
         }
     }
