@@ -213,6 +213,8 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.navigationController?.navigationBar.barTintColor = UIColor(netHex: 0xF3726D)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         let defaults = NSUserDefaults.standardUserDefaults()
         if((defaults.objectForKey("auth") == nil) || (defaults.objectForKey("auth") as Bool)) {
             authenticateUser()

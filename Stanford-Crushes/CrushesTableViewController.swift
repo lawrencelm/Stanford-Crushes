@@ -55,7 +55,7 @@ class CrushesTableViewController: UITableViewController, UITextFieldDelegate
         refresh()
         
         self.navigationController?.navigationBar.barTintColor = UIColor(netHex: 0xF3726D)
-        self.navigationController?.navigationBar
+       // self.navigationController?.navigationBar
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
     }

@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="flat-circle-christmas-tree+8-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="W5O-lf-U4y">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Stanford-Crushes.png" translatesAutoresizingMaskIntoConstraints="NO" id="W5O-lf-U4y">
                     <rect key="frame" x="90" y="45" width="300" height="256"/>
                     <color key="backgroundColor" red="0.95294117649999999" green="0.44705882349999998" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </imageView>
@@ -50,6 +50,6 @@
         </view>
     </objects>
     <resources>
-        <image name="flat-circle-christmas-tree+8-icon.png" width="256" height="256"/>
+        <image name="Stanford-Crushes.png" width="258" height="258"/>
     </resources>
 </document>

@@ -50,6 +50,9 @@
 		2177FFF01AAD759400295C7C /* icon30.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFDC1AAD759400295C7C /* icon30.png */; };
 		2177FFF11AAD759400295C7C /* icon31.png in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFDD1AAD759400295C7C /* icon31.png */; };
 		2177FFF41AAE6E5500295C7C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2177FFF31AAE6E5300295C7C /* Settings.bundle */; };
+		218EE36E1AB16DAD001787B0 /* Stanford-Crushes.png in Resources */ = {isa = PBXBuildFile; fileRef = 218EE36D1AB16DAD001787B0 /* Stanford-Crushes.png */; };
+		218EE3711AB16EA1001787B0 /* Stanford-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 218EE36F1AB16EA1001787B0 /* Stanford-circle.png */; };
+		218EE3721AB16EA1001787B0 /* Stanford-tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 218EE3701AB16EA1001787B0 /* Stanford-tree.png */; };
 		21BE692A1AABF44900E0B790 /* ChatCollectionChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BE69291AABF44900E0B790 /* ChatCollectionChat.swift */; };
 		21BE692C1AAC2DE300E0B790 /* flat-circle-christmas-tree+8-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 21BE692B1AAC2DE300E0B790 /* flat-circle-christmas-tree+8-icon.png */; };
 		21E3280A1AA4678300ABFDC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E328091AA4678300ABFDC0 /* AppDelegate.swift */; };
@@ -147,6 +150,9 @@
 		2177FFDC1AAD759400295C7C /* icon30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon30.png; path = "circle-icons/christmas circle/png/icon30.png"; sourceTree = "<group>"; };
 		2177FFDD1AAD759400295C7C /* icon31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon31.png; path = "circle-icons/christmas circle/png/icon31.png"; sourceTree = "<group>"; };
 		2177FFF31AAE6E5300295C7C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		218EE36D1AB16DAD001787B0 /* Stanford-Crushes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Stanford-Crushes.png"; path = "circle-icons/Stanford-Crushes.png"; sourceTree = "<group>"; };
+		218EE36F1AB16EA1001787B0 /* Stanford-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stanford-circle.png"; sourceTree = "<group>"; };
+		218EE3701AB16EA1001787B0 /* Stanford-tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stanford-tree.png"; sourceTree = "<group>"; };
 		21BE69291AABF44900E0B790 /* ChatCollectionChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCollectionChat.swift; sourceTree = "<group>"; };
 		21BE692B1AAC2DE300E0B790 /* flat-circle-christmas-tree+8-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flat-circle-christmas-tree+8-icon.png"; sourceTree = "<group>"; };
 		21E328041AA4678300ABFDC0 /* Stanford-Crushes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stanford-Crushes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -355,6 +361,9 @@
 				2177FFAE1AAD709800295C7C /* Chat Functionality */,
 				21E328091AA4678300ABFDC0 /* AppDelegate.swift */,
 				21E3280B1AA4678300ABFDC0 /* ViewController.swift */,
+				218EE36F1AB16EA1001787B0 /* Stanford-circle.png */,
+				218EE3701AB16EA1001787B0 /* Stanford-tree.png */,
+				218EE36D1AB16DAD001787B0 /* Stanford-Crushes.png */,
 				2121BA5C1AAFD84E00B80182 /* playButton.png */,
 				2121BA5E1AAFDD9B00B80182 /* heartBeat.gif */,
 				21E3280D1AA4678300ABFDC0 /* Main.storyboard */,
@@ -520,10 +529,13 @@
 			files = (
 				2177FFC61AAD738E00295C7C /* icon8.png in Resources */,
 				2177FFEF1AAD759400295C7C /* icon29.png in Resources */,
+				218EE3711AB16EA1001787B0 /* Stanford-circle.png in Resources */,
 				2177FFEA1AAD759400295C7C /* icon24.png in Resources */,
 				2177FFC81AAD738E00295C7C /* icon10.png in Resources */,
 				21E66C0E1AA81A6B005FD649 /* archery_target.png in Resources */,
 				2121BA5B1AAFA9F800B80182 /* theme4.mp3 in Resources */,
+				218EE36E1AB16DAD001787B0 /* Stanford-Crushes.png in Resources */,
+				218EE3721AB16EA1001787B0 /* Stanford-tree.png in Resources */,
 				2177FFF41AAE6E5500295C7C /* Settings.bundle in Resources */,
 				2177FFC21AAD738E00295C7C /* icon4.png in Resources */,
 				2121BA571AAFA9F800B80182 /* theme0.mp3 in Resources */,
