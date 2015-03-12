@@ -53,6 +53,8 @@
 		218EE36E1AB16DAD001787B0 /* Stanford-Crushes.png in Resources */ = {isa = PBXBuildFile; fileRef = 218EE36D1AB16DAD001787B0 /* Stanford-Crushes.png */; };
 		218EE3711AB16EA1001787B0 /* Stanford-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 218EE36F1AB16EA1001787B0 /* Stanford-circle.png */; };
 		218EE3721AB16EA1001787B0 /* Stanford-tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 218EE3701AB16EA1001787B0 /* Stanford-tree.png */; };
+		218EE3751AB1762D001787B0 /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 218EE3731AB1762D001787B0 /* chat.png */; };
+		218EE3761AB1762D001787B0 /* sliders_up_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 218EE3741AB1762D001787B0 /* sliders_up_2.png */; };
 		21BE692A1AABF44900E0B790 /* ChatCollectionChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BE69291AABF44900E0B790 /* ChatCollectionChat.swift */; };
 		21BE692C1AAC2DE300E0B790 /* flat-circle-christmas-tree+8-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 21BE692B1AAC2DE300E0B790 /* flat-circle-christmas-tree+8-icon.png */; };
 		21E3280A1AA4678300ABFDC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E328091AA4678300ABFDC0 /* AppDelegate.swift */; };
@@ -153,6 +155,8 @@
 		218EE36D1AB16DAD001787B0 /* Stanford-Crushes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Stanford-Crushes.png"; path = "circle-icons/Stanford-Crushes.png"; sourceTree = "<group>"; };
 		218EE36F1AB16EA1001787B0 /* Stanford-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stanford-circle.png"; sourceTree = "<group>"; };
 		218EE3701AB16EA1001787B0 /* Stanford-tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stanford-tree.png"; sourceTree = "<group>"; };
+		218EE3731AB1762D001787B0 /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
+		218EE3741AB1762D001787B0 /* sliders_up_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliders_up_2.png; sourceTree = "<group>"; };
 		21BE69291AABF44900E0B790 /* ChatCollectionChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCollectionChat.swift; sourceTree = "<group>"; };
 		21BE692B1AAC2DE300E0B790 /* flat-circle-christmas-tree+8-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flat-circle-christmas-tree+8-icon.png"; sourceTree = "<group>"; };
 		21E328041AA4678300ABFDC0 /* Stanford-Crushes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stanford-Crushes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -361,6 +365,8 @@
 				2177FFAE1AAD709800295C7C /* Chat Functionality */,
 				21E328091AA4678300ABFDC0 /* AppDelegate.swift */,
 				21E3280B1AA4678300ABFDC0 /* ViewController.swift */,
+				218EE3731AB1762D001787B0 /* chat.png */,
+				218EE3741AB1762D001787B0 /* sliders_up_2.png */,
 				218EE36F1AB16EA1001787B0 /* Stanford-circle.png */,
 				218EE3701AB16EA1001787B0 /* Stanford-tree.png */,
 				218EE36D1AB16DAD001787B0 /* Stanford-Crushes.png */,
@@ -554,6 +560,7 @@
 				21E328111AA4678300ABFDC0 /* Images.xcassets in Resources */,
 				2121BA591AAFA9F800B80182 /* theme2.mp3 in Resources */,
 				2177FFC71AAD738E00295C7C /* icon9.png in Resources */,
+				218EE3751AB1762D001787B0 /* chat.png in Resources */,
 				21E66C0C1AA819E6005FD649 /* pic3.jpg in Resources */,
 				2177FFEB1AAD759400295C7C /* icon25.png in Resources */,
 				2121BA5A1AAFA9F800B80182 /* theme3.mp3 in Resources */,
@@ -561,6 +568,7 @@
 				2177FFC41AAD738E00295C7C /* icon6.png in Resources */,
 				2121BA581AAFA9F800B80182 /* theme1.mp3 in Resources */,
 				2177FFEE1AAD759400295C7C /* icon28.png in Resources */,
+				218EE3761AB1762D001787B0 /* sliders_up_2.png in Resources */,
 				2177FFE71AAD759400295C7C /* icon21.png in Resources */,
 				2177FFC01AAD738E00295C7C /* icon2.png in Resources */,
 				2121BA5F1AAFDD9C00B80182 /* heartBeat.gif in Resources */,

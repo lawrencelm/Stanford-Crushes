@@ -14,14 +14,6 @@ import UIKit
 //extra credit: additional push setting
 class SettingsViewController: UITableViewController {
     
-    @IBOutlet weak var numBounciness: UILabel!
-    
-    @IBAction func changeBounciness(sender: UIStepper) {
-        numBounciness.text = String(format:"%f", sender.value)
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject(sender.value, forKey: "bounciness")
-    }
-    
     func logoutMessage() {
         let alert = UIAlertView()
         alert.title = "Successfully logged out!"
@@ -40,32 +32,15 @@ class SettingsViewController: UITableViewController {
     }
     
     @IBAction func changeAuth(sender: UISwitch) {
+
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(sender.selected, forKey: "auth")
     }
     
-    @IBAction func changePush(sender: UIStepper) {
+    @IBAction func setGender(sender: UISegmentedControl) {
         let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject(CGFloat(sender.value), forKey: "push")
+        defaults.setObject(sender.selectedSegmentIndex, forKey: "gender")
     }
-    
-    @IBAction func changeTeam(sender: UISegmentedControl) {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject(sender.selectedSegmentIndex, forKey: "team")
-    }
-    
-    @IBAction func changeRows(sender: UIStepper) {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject(sender.value, forKey: "numRows")
-    }
-    
-    @IBAction func changeGravity(sender: UISwitch) {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject(sender.selected, forKey: "gravity")
-        
-    }
-    
-    
     
     
 }

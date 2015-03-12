@@ -216,6 +216,10 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
         self.navigationController?.navigationBar.barTintColor = UIColor(netHex: 0xF3726D)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         let defaults = NSUserDefaults.standardUserDefaults()
+        
+        //just for testing:
+        //defaults.setObject(true, forKey: "auth")
+        
         if((defaults.objectForKey("auth") == nil) || (defaults.objectForKey("auth") as Bool)) {
             authenticateUser()
         }
