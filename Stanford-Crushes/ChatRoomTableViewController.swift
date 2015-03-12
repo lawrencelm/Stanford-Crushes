@@ -21,6 +21,7 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         }
     }
     
+    // MARK: - Customized pull-to-refresh view
     
     var refreshLoadingView : UIView!
     var refreshColorView : UIView!
@@ -72,16 +73,13 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     func refresh(){
-        
-        reloadTable()
-        // This is where you'll make requests to an API, reload data, or process information
-       /* var delayInSeconds = 3.0;
+        var delayInSeconds = 3.0;
         var popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delayInSeconds * Double(NSEC_PER_SEC)));
+        reloadTable()
         dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
             // When done requesting/reloading/processing invoke endRefreshing, to close the control
             self.refreshControl!.endRefreshing()
-        }*/
-        // -- FINISHED SOMETHING AWESOME, WOO! --
+        }
     }
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -199,7 +197,8 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         self.isRefreshIconsOverlap = false;
         self.refreshColorView.backgroundColor = UIColor.clearColor()
     }
-    //Tap gesture actions:
+    
+    // MARK: - Tap gesture actions:
     
     @IBAction func doubleTapAction(sender: UITapGestureRecognizer) {
         //pause music
