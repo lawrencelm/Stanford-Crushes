@@ -20,7 +20,7 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
             destination = navCon.visibleViewController
         }
         if let mtvc = destination as? ChatRoomTableViewController {
-            //means that clicked post
+            // Means that clicked post
             
             println("SEGUE")
             
@@ -47,8 +47,8 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
     
     //1
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        //section 0 is for MatchChat
-        //section 1 is for AnonChat
+        // Section 0 is for MatchChat
+        // Section 1 is for AnonChat
         return 2
     }
     
@@ -73,7 +73,7 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
         }
     }
     
-    private var numPics = 31 //number of pics available
+    private var numPics = 31 // Number of pics available
     private var imageType = ".png"
     private var imageName = "icon"
     
@@ -127,25 +127,18 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
     
     // MARK: UICollectionViewDelegateFlowLayout
     
-    //1
+    // Sets up the size of each cell, which varies according to
+    // How important each chat is (measure through number of messages).
     func collectionView(collectionView: UICollectionView!,
         layout collectionViewLayout: UICollectionViewLayout!,
         sizeForItemAtIndexPath indexPath: NSIndexPath!) -> CGSize {
             
-            /*let flickrPhoto =  photoForIndexPath(indexPath)
-            //2
-            if var size = flickrPhoto.thumbnail?.size {
-                size.width += 10
-                size.height += 10
-                return size
-            }*/
             var width: CGFloat = 100
             var height: CGFloat = 100
             
             var multiplyWidth = 1
             var multiplyHeader = 1
             
-           // var convo : Array<String>?
             var index = Int()
             var classType = String()
             
@@ -162,11 +155,7 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
             let factor = 5
             let margin = 20
             let maxWidth = UIScreen.mainScreen().bounds.size.width - 2*CGFloat(margin)
-            
-            //let otherMaxWidth = self.view.bounds.size.width
-            
-            //println(UIScreen.mainScreen().bounds.size.width)
-            //println(self.view.bounds.size.width)
+
             
             if (array != nil) {
                 println("ARRAY NOT NIL")
@@ -176,7 +165,6 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
                 if conversations != nil {
                     var convo = (conversations as? NSArray) as Array?
                     if convo != nil {
-               // convo = array[index].objectForKey("conversation") as Array
                         println("MULTIPLYING CONVO")
                         if convo!.count > factor {
                             multiplyHeader *= convo!.count / factor
@@ -199,7 +187,7 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
             return CGSize(width: width*CGFloat(multiplyWidth), height: height*CGFloat(multiplyHeader))
     }
     
-    //3
+    // Edge insets
     private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
     
     func collectionView(collectionView: UICollectionView!,
@@ -217,7 +205,7 @@ class ChatViewController : UICollectionViewController, UICollectionViewDelegateF
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         let defaults = NSUserDefaults.standardUserDefaults()
         
-        //just for testing:
+        // Just for testing:
         //defaults.setObject(true, forKey: "auth")
         
         if((defaults.objectForKey("auth") == nil) || (defaults.objectForKey("auth") as Bool)) {

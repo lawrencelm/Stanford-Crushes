@@ -272,6 +272,13 @@
 		2177FFB11AAD722100295C7C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				218EE3731AB1762D001787B0 /* chat.png */,
+				218EE3741AB1762D001787B0 /* sliders_up_2.png */,
+				218EE36F1AB16EA1001787B0 /* Stanford-circle.png */,
+				218EE3701AB16EA1001787B0 /* Stanford-tree.png */,
+				218EE36D1AB16DAD001787B0 /* Stanford-Crushes.png */,
+				2121BA5C1AAFD84E00B80182 /* playButton.png */,
+				2121BA5E1AAFDD9B00B80182 /* heartBeat.gif */,
 				2177FFB21AAD738E00295C7C /* icon0.png */,
 				2177FFB31AAD738E00295C7C /* icon1.png */,
 				2177FFB41AAD738E00295C7C /* icon2.png */,
@@ -365,13 +372,6 @@
 				2177FFAE1AAD709800295C7C /* Chat Functionality */,
 				21E328091AA4678300ABFDC0 /* AppDelegate.swift */,
 				21E3280B1AA4678300ABFDC0 /* ViewController.swift */,
-				218EE3731AB1762D001787B0 /* chat.png */,
-				218EE3741AB1762D001787B0 /* sliders_up_2.png */,
-				218EE36F1AB16EA1001787B0 /* Stanford-circle.png */,
-				218EE3701AB16EA1001787B0 /* Stanford-tree.png */,
-				218EE36D1AB16DAD001787B0 /* Stanford-Crushes.png */,
-				2121BA5C1AAFD84E00B80182 /* playButton.png */,
-				2121BA5E1AAFDD9B00B80182 /* heartBeat.gif */,
 				21E3280D1AA4678300ABFDC0 /* Main.storyboard */,
 				21E328581AA5917A00ABFDC0 /* Bolts.framework */,
 				21E328561AA5916E00ABFDC0 /* Parse.framework */,
@@ -755,6 +755,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Stanford-Crushes/Stanford-Crushes-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -776,6 +777,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Stanford-Crushes/Stanford-Crushes-Bridging-Header.h";
 			};
 			name = Release;

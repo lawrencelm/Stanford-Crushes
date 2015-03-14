@@ -20,6 +20,7 @@ class AuthController: UITabBarController, UIAlertViewDelegate
         
         //might turn it ON later.
         //you can turn it on by uncommenting the following line:
+        
         //authenticateUser()
     }
     

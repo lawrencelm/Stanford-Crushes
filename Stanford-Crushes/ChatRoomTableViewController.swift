@@ -8,14 +8,14 @@
 
 import UIKit
 import Foundation
-import HealthKit // heart beat functionality
-import AVFoundation // music sharing option
+import HealthKit // Heart beat functionality
+import AVFoundation // Music sharing option
 
 
 class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewWillDisappear(animated: Bool) {
-        // back button was pressed.
+        // Back button was pressed.
         if player != nil {
             player.pause()
         }
@@ -72,12 +72,13 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         self.refreshControl?.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
     }
     
+    // Refresh everything
     func refresh(){
         var delayInSeconds = 3.0;
         var popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delayInSeconds * Double(NSEC_PER_SEC)));
         reloadTable()
         dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
-            // When done requesting/reloading/processing invoke endRefreshing, to close the control
+            // When done reload, invoke endRefreshing, to close the control
             self.refreshControl!.endRefreshing()
         }
     }
@@ -201,7 +202,7 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
     // MARK: - Tap gesture actions:
     
     @IBAction func doubleTapAction(sender: UITapGestureRecognizer) {
-        //pause music
+        // Pause music
         println("double tap")
         
         if sender.state == .Ended {
@@ -213,8 +214,8 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     @IBAction func singleTapAction(sender: UITapGestureRecognizer) {
-        //check if state ended
-        //play music
+        // Check if state ended
+        // Play music
         println("single tap")
         if sender.state == .Ended {
             println("single action")
@@ -230,7 +231,7 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
     
     
     @IBAction func tripeTapAction(sender: UITapGestureRecognizer) {
-        //send heart beat
+        // Send heart beat
         println("triple tap")
         if sender.state == .Ended {
             shareHeartBeatNow()
@@ -243,9 +244,10 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
     private var healthStore = HKHealthStore()
     private let myHeight: Double = 1.7
     
+    // Gets data about the user's heart beat stored in the Health Store
     private func getHearRate() -> Int {
         if(HKHealthStore.isHealthDataAvailable()) {
-            //do health stuff
+            // Do health stuff
             
             let height = myHeight
             let heartRateUnit: HKUnit = HKUnit.countUnit().unitDividedByUnit(HKUnit.minuteUnit())
@@ -262,7 +264,7 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         return 0
     }
     
-    
+    // Shares your heart beat with the person you're talking to
     @IBAction func shareHeartBeatNow(sender: AnyObject) {
         saveHeartRateIntoHealthStore(myHeight)
         var heartRate: Int = getHearRate()
@@ -275,6 +277,8 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         sendHeartToPerson(heartRate)
     }
     
+    // Encodes your heart beat into a string that can be read as a message
+    // And will be decoded later.
     private func sendHeartToPerson(heartRate: Int) {
         println("sending my heart rate")
         
@@ -302,7 +306,7 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         }
     }
     
-    
+    // Measures and stores user's heart beat
     private func saveHeartRateIntoHealthStore(height:Double) -> Void
     {
         if(HKHealthStore.isHealthDataAvailable()) {
@@ -462,28 +466,28 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         }
     }
     
-    //reloads entire table
+    // Reloads entire table
     func reloadTable() {
         tableView.reloadData()
     }
     
     var needReload : Bool? {
         didSet {
-            tableView.reloadData() // clear out the table view
+            tableView.reloadData() // Clear out the table view
         }
     }
     
-    //specify data about the chat room
+    // Specify data about the chat room
     var chat: AnyObject?
     var chatNum : Int?
     private var convoID: String?
     var type: String?
     
-    //message to be sent
+    // Message to be sent
     private var sendMessage: String? {
         didSet {
             sendMessageField?.text = sendMessage
-            tableView.reloadData() // clear out the table view
+            tableView.reloadData() // Clear out the table view
             sendMessageToPerson()
             println("did set string" + sendMessage!)
         }
@@ -613,7 +617,6 @@ class ChatRoomTableViewController: UITableViewController, UITextFieldDelegate {
         
         //Settings/options:
         let cell = tableView.dequeueReusableCellWithIdentifier("options", forIndexPath: indexPath) as UITableViewCell
-        //cell.contentView.backgroundColor = UIColor(netHex: 0xF3726D)
         return cell
         
     }

@@ -23,7 +23,7 @@ class ChatCell: UICollectionViewCell {
     var section: Int?
     
     func updateUI() {
-    //figur eout what to do with the chat. maybe pass the chat object to perform the segue
+        // Maybe do something here later. Like adding titles to the chat rooms.
     }
     
 }

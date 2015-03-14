@@ -28,13 +28,13 @@ class CrushesTableViewController: UITableViewController, UITextFieldDelegate
     
     var needReload : Bool? {
         didSet {
-            tableView.reloadData() // clear out the table view
+            tableView.reloadData() // Clear out the table view
         }
     }
     
-    //allows auto reload of the data/posts every 10 seconds
+    //Allows auto reload of the data/posts every 10 seconds
     func reloadTable() {
-
+        
         tableView.reloadData() // clear out the table view
     }
     
@@ -53,14 +53,12 @@ class CrushesTableViewController: UITableViewController, UITextFieldDelegate
         self.parentViewController?.navigationItem.rightBarButtonItem = rightBarButton;
         rightBarButton.action = "buttonAction:"
         rightBarButton.target = self
-        //refresh()
         
         self.navigationController?.navigationBar.barTintColor = UIColor(netHex: 0xF3726D)
-       // self.navigationController?.navigationBar
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
     }
-
+    
     
     @IBAction func unwindToRecent(segue: UIStoryboardSegue) {
         
@@ -84,6 +82,7 @@ class CrushesTableViewController: UITableViewController, UITextFieldDelegate
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //Rows for anonymous posts
         var query = PFQuery(className: "AnonCrush")
         var array = query.findObjects()
         if array != nil {
@@ -99,7 +98,7 @@ class CrushesTableViewController: UITableViewController, UITextFieldDelegate
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-
+        
         let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.CellReuseIdentifier, forIndexPath: indexPath) as CrushesTableViewCell
         
         cell.row = indexPath.row
@@ -164,7 +163,7 @@ class CrushesTableViewController: UITableViewController, UITextFieldDelegate
         var popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delayInSeconds * Double(NSEC_PER_SEC)));
         reloadTable()
         dispatch_after(popTime, dispatch_get_main_queue()) { () -> Void in
-            // When done requesting/reloading/processing invoke endRefreshing, to close the control
+            // When done reloading, invoke endRefreshing, to close the control
             self.refreshControl!.endRefreshing()
         }
     }
@@ -246,7 +245,6 @@ class CrushesTableViewController: UITableViewController, UITextFieldDelegate
         
         var colorArray = [UIColor.redColor(), UIColor.blueColor(), UIColor.purpleColor(), UIColor.cyanColor(), UIColor.orangeColor(), UIColor.magentaColor()]
         
-        // In Swift, static variables must be members of a struct or class
         struct ColorIndex {
             static var colorIndex = 0
         }

@@ -2,6 +2,9 @@
 //  WriteViewController.swift
 //  Stanford-Crushes
 //
+//  Lets you write an anonymous post about your crush and notify
+//  them via e-mail.
+//
 //  Created by Lawrence Lin Murata on 3/2/15.
 //  Copyright (c) 2015 Lawrence Lin Murata. All rights reserved.
 //
@@ -39,6 +42,7 @@ class WriteViewController: UIViewController, MFMailComposeViewControllerDelegate
         }
     }
     
+    //alert message about empty post
     func alertEmpty() {
         let alert = UIAlertView()
         alert.title = "Empty post!"
@@ -47,6 +51,7 @@ class WriteViewController: UIViewController, MFMailComposeViewControllerDelegate
         alert.show()
     }
     
+    //write and store the post
     func writePost() {
         var post = PFObject(className: "AnonCrush")
         post.setObject(postText.text, forKey: "post")
@@ -72,7 +77,6 @@ class WriteViewController: UIViewController, MFMailComposeViewControllerDelegate
     @IBOutlet weak var postText: UITextField!
     
     @IBOutlet weak var email: UITextField!
-    // MARK: - Public API
     
     // MARK: - View Controller Lifecycle
     
@@ -90,6 +94,7 @@ class WriteViewController: UIViewController, MFMailComposeViewControllerDelegate
         
     }
     
+    //configure e-mail fields
     func configuredMailComposeViewController() -> MFMailComposeViewController {
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
@@ -101,6 +106,7 @@ class WriteViewController: UIViewController, MFMailComposeViewControllerDelegate
         return mailComposerVC
     }
     
+    //send email to crush
     func sendMail() {
         var mailComposeViewController = configuredMailComposeViewController()
 
@@ -111,6 +117,7 @@ class WriteViewController: UIViewController, MFMailComposeViewControllerDelegate
         }
     }
     
+    //show error message
     func showSendMailErrorAlert() {
         let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
         sendMailErrorAlert.show()

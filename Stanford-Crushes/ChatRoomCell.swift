@@ -39,7 +39,7 @@ class ChatRoomTableViewCell: UITableViewCell {
             
             
             if newMessage?.rangeOfString("#hb") != nil {
-                //it's an encoded heart beat
+                // It's an encoded heart beat
                 //it encodes your heart beat into a mesage that is stored
                 //in our database. then decoded when we read the message
                 
@@ -64,8 +64,8 @@ class ChatRoomTableViewCell: UITableViewCell {
                 
                 for var i = 0; i < valueBeat; i++ {
                     
-                    //heart pic is intensified according to how fast
-                    //your heart is beating
+                    // Heart pic is intensified according to how fast
+                    // your heart is beating
                     changeNewMessage = changeNewMessage + "♥️"
                 }
                 newMessage = changeNewMessage

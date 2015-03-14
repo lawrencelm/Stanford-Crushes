@@ -28,12 +28,15 @@ class MatchViewController: UIViewController {
     @IBOutlet weak var message: UILabel!
     
     func matchFound(crush: String, user: String) {
+        
+        // Show that match has been found
         let alert = UIAlertView()
         alert.title = "Match found!"
         alert.message = "You matched with " + crush
         alert.addButtonWithTitle("OK")
         alert.show()
         
+        // Makes post
         var post = PFObject(className: "MatchChat")
         post.setObject("match", forKey: "type")
         post.setObject([user, crush], forKey: "members")
@@ -48,6 +51,8 @@ class MatchViewController: UIViewController {
     }
     
     func findMatch() {
+        
+        // Finds if there is a match
         var user = PFUser.currentUser()
         var query = PFQuery(className: "CrushList")
         var array = query.findObjects()
@@ -71,6 +76,8 @@ class MatchViewController: UIViewController {
     }
     
     @IBAction func enteredCrush(sender: UITextField) {
+        
+        // Enter and send a crush name
         var user = PFUser.currentUser()
         if user != nil {
             sender.hidden = true
@@ -99,8 +106,6 @@ class MatchViewController: UIViewController {
                     NSLog("%@", error)
                 }
             }
-            
-            //use graphics to cover
             
             findMatch()
         }
