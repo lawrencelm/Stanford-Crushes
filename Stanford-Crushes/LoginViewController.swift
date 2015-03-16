@@ -64,6 +64,10 @@ class LoginViewController: UIViewController {
     
     //login user
     @IBAction func loginAction(sender: AnyObject) {
+        
+        //the following line is just for testing
+        PFUser.logInWithUsername("you123@stanford.edu", password: "123")
+
         if email.text != nil && password.text != nil {
             PFUser.logInWithUsername(email.text, password: password.text)
         }
