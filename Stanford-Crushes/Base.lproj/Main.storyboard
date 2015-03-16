@@ -330,17 +330,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Stanford e-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="55i-Pk-xLa">
+                            <textField autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Stanford e-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="55i-Pk-xLa">
                                 <rect key="frame" x="103" y="174" width="394" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ig3-4a-R8F">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ig3-4a-R8F">
                                 <rect key="frame" x="103" y="285" width="394" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJl-w5-QGj">
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJl-w5-QGj">
                                 <rect key="frame" x="103" y="440" width="52" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="sign up">
@@ -352,7 +352,7 @@
                                     <segue destination="cmb-dy-NKd" kind="show" identifier="signupSegue" id="EE9-sX-tEV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eZ-yA-cKx">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eZ-yA-cKx">
                                 <rect key="frame" x="462" y="440" width="35" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="login">
@@ -367,17 +367,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SJl-w5-QGj" firstAttribute="leading" secondItem="55i-Pk-xLa" secondAttribute="leading" id="49F-1g-Zaz"/>
-                            <constraint firstItem="55i-Pk-xLa" firstAttribute="leading" secondItem="5fc-I9-95U" secondAttribute="leadingMargin" constant="87" id="4OW-3w-Bbb"/>
-                            <constraint firstItem="SJl-w5-QGj" firstAttribute="top" secondItem="ig3-4a-R8F" secondAttribute="bottom" constant="125" id="9Uv-3h-nIL"/>
-                            <constraint firstItem="ig3-4a-R8F" firstAttribute="top" secondItem="55i-Pk-xLa" secondAttribute="bottom" constant="81" id="KUx-wa-Xqj"/>
-                            <constraint firstItem="4eZ-yA-cKx" firstAttribute="trailing" secondItem="ig3-4a-R8F" secondAttribute="trailing" id="Mft-oJ-X6F"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="55i-Pk-xLa" secondAttribute="trailing" constant="87" id="QwY-PS-rLN"/>
-                            <constraint firstItem="55i-Pk-xLa" firstAttribute="top" secondItem="Zcx-Qh-juW" secondAttribute="bottom" constant="154" id="aBl-ZZ-6tG"/>
-                            <constraint firstItem="SJl-w5-QGj" firstAttribute="bottom" secondItem="4eZ-yA-cKx" secondAttribute="bottom" id="eis-X7-OHI"/>
-                            <constraint firstItem="4eZ-yA-cKx" firstAttribute="trailing" secondItem="55i-Pk-xLa" secondAttribute="trailing" id="i3f-FL-5Rm"/>
-                            <constraint firstItem="SJl-w5-QGj" firstAttribute="leading" secondItem="ig3-4a-R8F" secondAttribute="leading" id="kjs-S4-B5p"/>
-                            <constraint firstItem="Ni5-8j-8FV" firstAttribute="top" secondItem="4eZ-yA-cKx" secondAttribute="bottom" constant="130" id="to1-kT-GTp"/>
+                            <constraint firstItem="Ni5-8j-8FV" firstAttribute="top" secondItem="4eZ-yA-cKx" secondAttribute="bottom" constant="81" id="6Ee-HJ-hHD"/>
+                            <constraint firstItem="ig3-4a-R8F" firstAttribute="top" secondItem="55i-Pk-xLa" secondAttribute="bottom" constant="81" id="Avw-Ja-4G1"/>
+                            <constraint firstItem="4eZ-yA-cKx" firstAttribute="top" secondItem="ig3-4a-R8F" secondAttribute="bottom" constant="125" id="CGB-vo-AT9"/>
+                            <constraint firstItem="Ni5-8j-8FV" firstAttribute="top" secondItem="SJl-w5-QGj" secondAttribute="bottom" constant="81" id="Drt-0O-z5E"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4eZ-yA-cKx" secondAttribute="trailing" constant="87" id="JU2-MG-b5K"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ig3-4a-R8F" secondAttribute="trailing" constant="87" id="K2x-pv-EDc"/>
+                            <constraint firstItem="SJl-w5-QGj" firstAttribute="top" secondItem="ig3-4a-R8F" secondAttribute="bottom" constant="125" id="KfC-eS-GJM"/>
+                            <constraint firstItem="55i-Pk-xLa" firstAttribute="leading" secondItem="5fc-I9-95U" secondAttribute="leadingMargin" constant="87" id="LwH-Dg-b6i"/>
+                            <constraint firstItem="SJl-w5-QGj" firstAttribute="leading" secondItem="5fc-I9-95U" secondAttribute="leadingMargin" constant="87" id="Q4p-Jt-FHv"/>
+                            <constraint firstItem="SJl-w5-QGj" firstAttribute="bottom" secondItem="4eZ-yA-cKx" secondAttribute="bottom" id="aOe-wo-fuu"/>
+                            <constraint firstItem="Ni5-8j-8FV" firstAttribute="top" secondItem="ig3-4a-R8F" secondAttribute="bottom" constant="236" id="agl-id-e33"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="55i-Pk-xLa" secondAttribute="trailing" constant="87" id="ph4-aG-5D0"/>
+                            <constraint firstItem="ig3-4a-R8F" firstAttribute="leading" secondItem="5fc-I9-95U" secondAttribute="leadingMargin" constant="87" id="rw4-PF-L3C"/>
+                            <constraint firstItem="55i-Pk-xLa" firstAttribute="top" secondItem="Zcx-Qh-juW" secondAttribute="bottom" constant="154" id="zxO-Qs-WgC"/>
                         </constraints>
                     </view>
                     <connections>
