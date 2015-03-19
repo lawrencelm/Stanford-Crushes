@@ -5,6 +5,8 @@
 //  Created by Lawrence Lin Murata on 3/8/15.
 //  Copyright (c) 2015 Lawrence Lin Murata. All rights reserved.
 //
+//  Citations: Apple documentation for Healthkit and StackOverflow for consulting how to use Healthkit functions
+//
 
 import UIKit
 import Foundation

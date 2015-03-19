@@ -5,6 +5,9 @@
 //  Created by Lawrence Lin Murata on 3/2/15.
 //  Copyright (c) 2015 Lawrence Lin Murata. All rights reserved.
 //
+//  Citations: Stackoverflow discussion on how to use hex values for colors
+//  Citations: Tutorial on how to make animated and customized pull-to-refresh view form Jackrabbit Mobile
+//
 
 import UIKit
 

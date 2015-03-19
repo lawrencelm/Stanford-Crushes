@@ -5,6 +5,13 @@
 //  Created by Lawrence Lin Murata on 3/4/15.
 //  Copyright (c) 2015 Lawrence Lin Murata. All rights reserved.
 //
+//  Note: made a few changes:
+//  1. Improved autolayout for login screen on Storyboard
+//  2. Added icon
+//  3. Added tetsing code for login. The line that says "the following line is just for testing"
+//
+//  Citations: Parse documentation for login and for other Parse code used throughout the program
+//
 
 import UIKit
 
